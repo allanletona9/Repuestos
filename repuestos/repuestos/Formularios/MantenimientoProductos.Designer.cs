@@ -42,13 +42,18 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Repuestos = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.Repuestos.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(549, 334);
+            this.button1.Location = new System.Drawing.Point(867, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -57,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(468, 334);
+            this.button2.Location = new System.Drawing.Point(668, 99);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -66,7 +71,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(367, 334);
+            this.button3.Location = new System.Drawing.Point(935, 346);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -127,9 +132,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(351, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 182);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(1347, 255);
             this.dataGridView1.TabIndex = 9;
             // 
             // label4
@@ -152,7 +157,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(405, 39);
+            this.label5.Location = new System.Drawing.Point(347, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(279, 29);
             this.label5.TabIndex = 12;
@@ -168,31 +173,64 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(21, 59);
+            this.groupBox1.Location = new System.Drawing.Point(19, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(309, 205);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Repuestos);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1397, 477);
+            this.tabControl1.TabIndex = 14;
+            // 
+            // Repuestos
+            // 
+            this.Repuestos.Controls.Add(this.groupBox1);
+            this.Repuestos.Controls.Add(this.label5);
+            this.Repuestos.Controls.Add(this.dataGridView1);
+            this.Repuestos.Controls.Add(this.button1);
+            this.Repuestos.Controls.Add(this.button2);
+            this.Repuestos.Location = new System.Drawing.Point(4, 22);
+            this.Repuestos.Name = "Repuestos";
+            this.Repuestos.Padding = new System.Windows.Forms.Padding(3);
+            this.Repuestos.Size = new System.Drawing.Size(1389, 451);
+            this.Repuestos.TabIndex = 0;
+            this.Repuestos.Text = "Repuestos";
+            this.Repuestos.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1389, 451);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Proveedores";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1411, 501);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "MantenimientoProductos";
             this.Text = "MantenimientoProductos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.Repuestos.ResumeLayout(false);
+            this.Repuestos.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -212,5 +250,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Repuestos;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
