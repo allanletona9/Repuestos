@@ -30,7 +30,22 @@ namespace repuestos.Formularios
                 }
             }
             label5.ForeColor = ThemeColor.PrimaryColor;
-            groupBox1.ForeColor = ThemeColor.SecondaryColor;
+            //groupBox1.ForeColor = ThemeColor.SecondaryColor;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Repuestos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
