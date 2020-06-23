@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conexion.cs" />
     <Compile Include="DALpublic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
