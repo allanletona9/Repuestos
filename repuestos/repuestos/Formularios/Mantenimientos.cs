@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace repuestos.Formularios
 {
-    public partial class MantenimientoProductos : Form
+    public partial class Mantenimientos : Form
     {
-        public MantenimientoProductos()
+        public Mantenimientos()
         {
             InitializeComponent();
             LoadTheme();
@@ -29,7 +29,7 @@ namespace repuestos.Formularios
                     btn.FlatAppearance.BorderColor= ThemeColor.SecondaryColor;
                 }
             }
-            label5.ForeColor = ThemeColor.PrimaryColor;
+            //label5.ForeColor = ThemeColor.PrimaryColor;
             //groupBox1.ForeColor = ThemeColor.SecondaryColor;
         }
 
@@ -44,6 +44,21 @@ namespace repuestos.Formularios
         }
 
         private void Repuestos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

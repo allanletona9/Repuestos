@@ -114,22 +114,22 @@ namespace repuestos
 
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Formularios.Facturacion(), sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Formularios.Consultas(), sender);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Formularios.Reportes(), sender);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Formularios.MantenimientoProductos(), sender);
+            OpenChildForm(new Formularios.Mantenimientos(), sender);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -139,7 +139,8 @@ namespace repuestos
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+
+           this.Close();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace repuestos.Formularios
 {
-    public partial class MantenimientoProveedores : Form
+    public partial class Consultas : Form
     {
-        public MantenimientoProveedores()
+        public Consultas()
         {
             InitializeComponent();
         }
@@ -33,8 +33,7 @@ namespace repuestos.Formularios
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-            label5.ForeColor = ThemeColor.PrimaryColor;
-            groupBox1.ForeColor = ThemeColor.SecondaryColor;
+          
         }
     }
 }

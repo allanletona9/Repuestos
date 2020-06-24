@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace repuestos.Formularios
 {
-    public partial class MantenimientoEmpleados : Form
+    public partial class Facturacion : Form
     {
-        public MantenimientoEmpleados()
+        public Facturacion()
         {
             InitializeComponent();
         }
