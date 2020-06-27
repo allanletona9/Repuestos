@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace repuestos.Formularios
 {
-    public partial class Reportes : Form
+    public partial class Inventario : Form
     {
-        public Reportes()
+        public Inventario()
         {
             InitializeComponent();
         }

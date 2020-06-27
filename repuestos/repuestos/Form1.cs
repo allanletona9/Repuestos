@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using repuestos.Formularios;
 namespace repuestos
 {
     public partial class Form1 : Form
@@ -124,7 +124,7 @@ namespace repuestos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Formularios.Reportes(), sender);
+            ActivateButton(sender);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -134,7 +134,8 @@ namespace repuestos
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+         
+            OpenChildForm(new Formularios.Inventario(), sender);
         }
 
         private void button6_Click(object sender, EventArgs e)

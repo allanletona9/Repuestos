@@ -33,160 +33,147 @@
             this.Clientes = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_codC = new System.Windows.Forms.TextBox();
+            this.txt_nombreC = new System.Windows.Forms.TextBox();
+            this.txt_nitC = new System.Windows.Forms.TextBox();
+            this.gpb_estadoC = new System.Windows.Forms.GroupBox();
+            this.rdb_inactivoC = new System.Windows.Forms.RadioButton();
+            this.rdb_actioC = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.MantenimientoC = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dvgClientes = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_modC = new System.Windows.Forms.Button();
+            this.btn_guardarC = new System.Windows.Forms.Button();
+            this.btn_eliminarC = new System.Windows.Forms.Button();
+            this.btn_cancelarC = new System.Windows.Forms.Button();
+            this.btn_ingresarC = new System.Windows.Forms.Button();
             this.Repuestos = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.MantenimientoR = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_codigo = new System.Windows.Forms.TextBox();
+            this.gpb_estado = new System.Windows.Forms.GroupBox();
+            this.rdb_inactivo = new System.Windows.Forms.RadioButton();
+            this.rdb_actio = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_descrip = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_precio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgRepuestos = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Btn_modificar = new System.Windows.Forms.Button();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
+            this.Btn_ingresar = new System.Windows.Forms.Button();
+            this.Btn_cancelar = new System.Windows.Forms.Button();
             this.Proveedores = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.MantenimientoP = new System.Windows.Forms.TabPage();
+            this.gpb_estadoP = new System.Windows.Forms.GroupBox();
+            this.rdb_inactivoP = new System.Windows.Forms.RadioButton();
+            this.rdb_actioP = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_direccionP = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txt_codP = new System.Windows.Forms.TextBox();
+            this.txt_nombreP = new System.Windows.Forms.TextBox();
+            this.txt_nitP = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button12 = new System.Windows.Forms.Button();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dvgProveedores = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_modP = new System.Windows.Forms.Button();
+            this.btn_guardarP = new System.Windows.Forms.Button();
+            this.btn_eliminarP = new System.Windows.Forms.Button();
+            this.btn_cancelarP = new System.Windows.Forms.Button();
+            this.btn_ingresarP = new System.Windows.Forms.Button();
             this.Marca = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.MantenimientoM = new System.Windows.Forms.TabPage();
+            this.gpb_estadoM = new System.Windows.Forms.GroupBox();
+            this.rdb_inactivoM = new System.Windows.Forms.RadioButton();
+            this.rdb_actioM = new System.Windows.Forms.RadioButton();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txt_codM = new System.Windows.Forms.TextBox();
+            this.txt_nombreM = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button18 = new System.Windows.Forms.Button();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dvgMarca = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_modificarM = new System.Windows.Forms.Button();
+            this.btn_guardarM = new System.Windows.Forms.Button();
+            this.btn_eliminarM = new System.Windows.Forms.Button();
+            this.btn_cancelarM = new System.Windows.Forms.Button();
+            this.btn_ingresarM = new System.Windows.Forms.Button();
             this.Tipo_Pago = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.MantenimientoT = new System.Windows.Forms.TabPage();
+            this.gpb_estadoT = new System.Windows.Forms.GroupBox();
+            this.rdb_inactivoT = new System.Windows.Forms.RadioButton();
+            this.rdb_actioT = new System.Windows.Forms.RadioButton();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txt_codT = new System.Windows.Forms.TextBox();
+            this.txt_nombreT = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button24 = new System.Windows.Forms.Button();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dvgPago = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_modT = new System.Windows.Forms.Button();
+            this.btn_guardarT = new System.Windows.Forms.Button();
+            this.btn_eliminarT = new System.Windows.Forms.Button();
+            this.btn_cancelarT = new System.Windows.Forms.Button();
+            this.btn_ingresarT = new System.Windows.Forms.Button();
             this.Usuarios = new System.Windows.Forms.TabPage();
             this.tabControl7 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -207,55 +194,59 @@
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Clientes.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gpb_estadoC.SuspendLayout();
+            this.MantenimientoC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgClientes)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.Repuestos.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.MantenimientoR.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gpb_estado.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgRepuestos)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.Proveedores.SuspendLayout();
             this.tabControl4.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.MantenimientoP.SuspendLayout();
+            this.gpb_estadoP.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgProveedores)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.Marca.SuspendLayout();
             this.tabControl5.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.MantenimientoM.SuspendLayout();
+            this.gpb_estadoM.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgMarca)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.Tipo_Pago.SuspendLayout();
             this.tabControl6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.MantenimientoT.SuspendLayout();
+            this.gpb_estadoT.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPago)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             this.Usuarios.SuspendLayout();
             this.tabControl7.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -266,266 +257,169 @@
             this.tabControl1.Controls.Add(this.Marca);
             this.tabControl1.Controls.Add(this.Tipo_Pago);
             this.tabControl1.Controls.Add(this.Usuarios);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(2, -2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1356, 739);
+            this.tabControl1.Size = new System.Drawing.Size(1370, 749);
             this.tabControl1.TabIndex = 14;
             // 
             // Clientes
             // 
-            this.Clientes.BackColor = System.Drawing.Color.DimGray;
+            this.Clientes.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Clientes.Controls.Add(this.tabControl3);
+            this.Clientes.Controls.Add(this.tableLayoutPanel2);
             this.Clientes.Location = new System.Drawing.Point(4, 29);
             this.Clientes.Name = "Clientes";
             this.Clientes.Padding = new System.Windows.Forms.Padding(3);
-            this.Clientes.Size = new System.Drawing.Size(1348, 706);
+            this.Clientes.Size = new System.Drawing.Size(1362, 716);
             this.Clientes.TabIndex = 2;
             this.Clientes.Text = "Clientes";
             // 
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.tabPage1);
-            this.tabControl3.Controls.Add(this.tabPage2);
+            this.tabControl3.Controls.Add(this.MantenimientoC);
             this.tabControl3.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl3.Location = new System.Drawing.Point(6, 6);
+            this.tabControl3.Location = new System.Drawing.Point(0, 107);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.Padding = new System.Drawing.Point(6, 6);
             this.tabControl3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1088, 575);
-            this.tabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl3.Size = new System.Drawing.Size(1357, 581);
             this.tabControl3.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.txt_codC);
+            this.tabPage1.Controls.Add(this.txt_nombreC);
+            this.tabPage1.Controls.Add(this.txt_nitC);
+            this.tabPage1.Controls.Add(this.gpb_estadoC);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage1.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage1.Size = new System.Drawing.Size(1349, 544);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(376, 368);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(346, 98);
-            this.groupBox3.TabIndex = 21;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Estado";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(134, 37);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(93, 26);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Inactivo";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(32, 37);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(79, 26);
-            this.radioButton4.TabIndex = 12;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Activo";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button5, 0, 0);
-            this.tableLayoutPanel2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(289, 68);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(441, 77);
-            this.tableLayoutPanel2.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(165, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 71);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Modificar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(87, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 71);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Guardar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(248, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 71);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Eliminar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(328, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 71);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Cancelar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(3, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(74, 71);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Nuevo";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.textBox8);
-            this.groupBox4.Controls.Add(this.textBox9);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(205, 151);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(623, 181);
-            this.groupBox4.TabIndex = 19;
-            this.groupBox4.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 39);
+            this.label7.Location = new System.Drawing.Point(298, 118);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 22);
-            this.label7.TabIndex = 3;
+            this.label7.Size = new System.Drawing.Size(92, 29);
+            this.label7.TabIndex = 22;
             this.label7.Text = "Codigo";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(70, 71);
+            this.label8.Location = new System.Drawing.Point(298, 150);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 22);
-            this.label8.TabIndex = 4;
+            this.label8.Size = new System.Drawing.Size(101, 29);
+            this.label8.TabIndex = 23;
             this.label8.Text = "Nombre";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(70, 106);
+            this.label9.Location = new System.Drawing.Point(298, 185);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 22);
-            this.label9.TabIndex = 5;
+            this.label9.Size = new System.Drawing.Size(43, 29);
+            this.label9.TabIndex = 24;
             this.label9.Tag = "";
             this.label9.Text = "Nit";
             // 
-            // textBox7
+            // txt_codC
             // 
-            this.textBox7.Location = new System.Drawing.Point(201, 36);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(276, 30);
-            this.textBox7.TabIndex = 6;
+            this.txt_codC.Location = new System.Drawing.Point(429, 115);
+            this.txt_codC.Name = "txt_codC";
+            this.txt_codC.Size = new System.Drawing.Size(276, 35);
+            this.txt_codC.TabIndex = 25;
             // 
-            // textBox8
+            // txt_nombreC
             // 
-            this.textBox8.Location = new System.Drawing.Point(201, 71);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(276, 30);
-            this.textBox8.TabIndex = 7;
+            this.txt_nombreC.Location = new System.Drawing.Point(429, 150);
+            this.txt_nombreC.Name = "txt_nombreC";
+            this.txt_nombreC.Size = new System.Drawing.Size(276, 35);
+            this.txt_nombreC.TabIndex = 26;
             // 
-            // textBox9
+            // txt_nitC
             // 
-            this.textBox9.Location = new System.Drawing.Point(201, 106);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(276, 30);
-            this.textBox9.TabIndex = 8;
+            this.txt_nitC.Location = new System.Drawing.Point(429, 185);
+            this.txt_nitC.Name = "txt_nitC";
+            this.txt_nitC.Size = new System.Drawing.Size(276, 35);
+            this.txt_nitC.TabIndex = 27;
+            // 
+            // gpb_estadoC
+            // 
+            this.gpb_estadoC.Controls.Add(this.rdb_inactivoC);
+            this.gpb_estadoC.Controls.Add(this.rdb_actioC);
+            this.gpb_estadoC.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_estadoC.Location = new System.Drawing.Point(371, 271);
+            this.gpb_estadoC.Name = "gpb_estadoC";
+            this.gpb_estadoC.Size = new System.Drawing.Size(375, 103);
+            this.gpb_estadoC.TabIndex = 21;
+            this.gpb_estadoC.TabStop = false;
+            this.gpb_estadoC.Text = "Estado";
+            this.gpb_estadoC.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // rdb_inactivoC
+            // 
+            this.rdb_inactivoC.AutoSize = true;
+            this.rdb_inactivoC.Location = new System.Drawing.Point(198, 45);
+            this.rdb_inactivoC.Name = "rdb_inactivoC";
+            this.rdb_inactivoC.Size = new System.Drawing.Size(93, 26);
+            this.rdb_inactivoC.TabIndex = 13;
+            this.rdb_inactivoC.TabStop = true;
+            this.rdb_inactivoC.Text = "Inactivo";
+            this.rdb_inactivoC.UseVisualStyleBackColor = true;
+            // 
+            // rdb_actioC
+            // 
+            this.rdb_actioC.AutoSize = true;
+            this.rdb_actioC.Location = new System.Drawing.Point(96, 45);
+            this.rdb_actioC.Name = "rdb_actioC";
+            this.rdb_actioC.Size = new System.Drawing.Size(79, 26);
+            this.rdb_actioC.TabIndex = 12;
+            this.rdb_actioC.TabStop = true;
+            this.rdb_actioC.Text = "Activo";
+            this.rdb_actioC.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(331, 2);
+            this.label11.Location = new System.Drawing.Point(363, 26);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(299, 47);
             this.label11.TabIndex = 18;
             this.label11.Text = " Registro de Clientes";
             // 
-            // tabPage2
+            // MantenimientoC
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 33);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1080, 538);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Registro";
+            this.MantenimientoC.BackColor = System.Drawing.Color.DarkGray;
+            this.MantenimientoC.Controls.Add(this.button6);
+            this.MantenimientoC.Controls.Add(this.textBox10);
+            this.MantenimientoC.Controls.Add(this.label12);
+            this.MantenimientoC.Controls.Add(this.dvgClientes);
+            this.MantenimientoC.Location = new System.Drawing.Point(4, 33);
+            this.MantenimientoC.Name = "MantenimientoC";
+            this.MantenimientoC.Padding = new System.Windows.Forms.Padding(3);
+            this.MantenimientoC.Size = new System.Drawing.Size(1349, 544);
+            this.MantenimientoC.TabIndex = 1;
+            this.MantenimientoC.Text = "Registro";
+            this.MantenimientoC.Click += new System.EventHandler(this.tabPage2_Load);
             // 
             // button6
             // 
@@ -539,6 +433,7 @@
             this.button6.Text = "Buscar";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox10
             // 
@@ -557,18 +452,18 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Clientes Registrados";
             // 
-            // dataGridView2
+            // dvgClientes
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView2.Location = new System.Drawing.Point(263, 193);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(554, 339);
-            this.dataGridView2.TabIndex = 0;
+            this.dvgClientes.Location = new System.Drawing.Point(263, 193);
+            this.dvgClientes.Name = "dvgClientes";
+            this.dvgClientes.Size = new System.Drawing.Size(554, 339);
+            this.dvgClientes.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -592,15 +487,106 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_modC, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_guardarC, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_eliminarC, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_cancelarC, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_ingresarC, 0, 0);
+            this.tableLayoutPanel2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(346, 24);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(441, 77);
+            this.tableLayoutPanel2.TabIndex = 20;
+            // 
+            // btn_modC
+            // 
+            this.btn_modC.Image = ((System.Drawing.Image)(resources.GetObject("btn_modC.Image")));
+            this.btn_modC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_modC.Location = new System.Drawing.Point(165, 3);
+            this.btn_modC.Name = "btn_modC";
+            this.btn_modC.Size = new System.Drawing.Size(77, 71);
+            this.btn_modC.TabIndex = 5;
+            this.btn_modC.Text = "Modificar";
+            this.btn_modC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_modC.UseVisualStyleBackColor = true;
+            this.btn_modC.Click += new System.EventHandler(this.btn_modC_Click);
+            // 
+            // btn_guardarC
+            // 
+            this.btn_guardarC.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardarC.Image")));
+            this.btn_guardarC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_guardarC.Location = new System.Drawing.Point(87, 3);
+            this.btn_guardarC.Name = "btn_guardarC";
+            this.btn_guardarC.Size = new System.Drawing.Size(72, 71);
+            this.btn_guardarC.TabIndex = 4;
+            this.btn_guardarC.Text = "Guardar";
+            this.btn_guardarC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_guardarC.UseVisualStyleBackColor = true;
+            this.btn_guardarC.Click += new System.EventHandler(this.btn_guardarC_Click);
+            // 
+            // btn_eliminarC
+            // 
+            this.btn_eliminarC.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminarC.Image")));
+            this.btn_eliminarC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_eliminarC.Location = new System.Drawing.Point(248, 3);
+            this.btn_eliminarC.Name = "btn_eliminarC";
+            this.btn_eliminarC.Size = new System.Drawing.Size(73, 71);
+            this.btn_eliminarC.TabIndex = 2;
+            this.btn_eliminarC.Text = "Eliminar";
+            this.btn_eliminarC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_eliminarC.UseVisualStyleBackColor = true;
+            this.btn_eliminarC.Click += new System.EventHandler(this.btn_eliminarC_Click);
+            // 
+            // btn_cancelarC
+            // 
+            this.btn_cancelarC.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelarC.Image")));
+            this.btn_cancelarC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cancelarC.Location = new System.Drawing.Point(328, 3);
+            this.btn_cancelarC.Name = "btn_cancelarC";
+            this.btn_cancelarC.Size = new System.Drawing.Size(79, 71);
+            this.btn_cancelarC.TabIndex = 3;
+            this.btn_cancelarC.Text = "Cancelar";
+            this.btn_cancelarC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cancelarC.UseVisualStyleBackColor = true;
+            this.btn_cancelarC.Click += new System.EventHandler(this.btn_cancelarC_Click);
+            // 
+            // btn_ingresarC
+            // 
+            this.btn_ingresarC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ingresarC.BackgroundImage")));
+            this.btn_ingresarC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ingresarC.Image = ((System.Drawing.Image)(resources.GetObject("btn_ingresarC.Image")));
+            this.btn_ingresarC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_ingresarC.Location = new System.Drawing.Point(3, 3);
+            this.btn_ingresarC.Name = "btn_ingresarC";
+            this.btn_ingresarC.Size = new System.Drawing.Size(74, 71);
+            this.btn_ingresarC.TabIndex = 1;
+            this.btn_ingresarC.Text = "Nuevo";
+            this.btn_ingresarC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_ingresarC.UseVisualStyleBackColor = true;
+            this.btn_ingresarC.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Repuestos
             // 
-            this.Repuestos.BackColor = System.Drawing.Color.DimGray;
+            this.Repuestos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Repuestos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Repuestos.Controls.Add(this.tabControl2);
+            this.Repuestos.Controls.Add(this.tableLayoutPanel1);
             this.Repuestos.Location = new System.Drawing.Point(4, 29);
             this.Repuestos.Name = "Repuestos";
             this.Repuestos.Padding = new System.Windows.Forms.Padding(3);
-            this.Repuestos.Size = new System.Drawing.Size(1348, 706);
+            this.Repuestos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Repuestos.Size = new System.Drawing.Size(1362, 716);
             this.Repuestos.TabIndex = 0;
             this.Repuestos.Text = "Repuestos";
             this.Repuestos.Click += new System.EventHandler(this.Repuestos_Click);
@@ -610,262 +596,166 @@
             this.tabControl2.Controls.Add(this.MantenimientoR);
             this.tabControl2.Controls.Add(this.tabPage10);
             this.tabControl2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl2.Location = new System.Drawing.Point(6, 6);
+            this.tabControl2.Location = new System.Drawing.Point(8, 118);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.Padding = new System.Drawing.Point(6, 6);
             this.tabControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1088, 575);
-            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl2.Size = new System.Drawing.Size(1363, 626);
             this.tabControl2.TabIndex = 0;
             // 
             // MantenimientoR
             // 
             this.MantenimientoR.BackColor = System.Drawing.Color.DarkGray;
-            this.MantenimientoR.Controls.Add(this.groupBox2);
-            this.MantenimientoR.Controls.Add(this.tableLayoutPanel1);
-            this.MantenimientoR.Controls.Add(this.groupBox1);
+            this.MantenimientoR.Controls.Add(this.label1);
+            this.MantenimientoR.Controls.Add(this.txt_codigo);
+            this.MantenimientoR.Controls.Add(this.gpb_estado);
+            this.MantenimientoR.Controls.Add(this.label2);
+            this.MantenimientoR.Controls.Add(this.txt_nombre);
+            this.MantenimientoR.Controls.Add(this.txt_descrip);
             this.MantenimientoR.Controls.Add(this.label5);
+            this.MantenimientoR.Controls.Add(this.txt_precio);
+            this.MantenimientoR.Controls.Add(this.label3);
+            this.MantenimientoR.Controls.Add(this.label4);
             this.MantenimientoR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MantenimientoR.Location = new System.Drawing.Point(4, 33);
             this.MantenimientoR.Name = "MantenimientoR";
             this.MantenimientoR.Padding = new System.Windows.Forms.Padding(3);
             this.MantenimientoR.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MantenimientoR.Size = new System.Drawing.Size(1080, 538);
+            this.MantenimientoR.Size = new System.Drawing.Size(1355, 589);
             this.MantenimientoR.TabIndex = 0;
             this.MantenimientoR.Text = "Mantenimiento";
             this.MantenimientoR.Click += new System.EventHandler(this.tabPage9_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(378, 380);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 98);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Estado";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(134, 37);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 26);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inactivo";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(32, 37);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(79, 26);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Activo";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.Controls.Add(this.btnModificar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnGuardar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnEliminar, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnNuevo, 0, 0);
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(289, 68);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(441, 77);
-            this.tableLayoutPanel1.TabIndex = 20;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModificar.Location = new System.Drawing.Point(165, 3);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(77, 71);
-            this.btnModificar.TabIndex = 5;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(87, 3);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(72, 71);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(248, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(73, 71);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(328, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(79, 71);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(3, 3);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(74, 71);
-            this.btnNuevo.TabIndex = 1;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(205, 151);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(623, 203);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 39);
+            this.label1.Location = new System.Drawing.Point(270, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 22);
+            this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Codigo";
+            // 
+            // txt_codigo
+            // 
+            this.txt_codigo.Location = new System.Drawing.Point(472, 170);
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.Size = new System.Drawing.Size(276, 35);
+            this.txt_codigo.TabIndex = 6;
+            // 
+            // gpb_estado
+            // 
+            this.gpb_estado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpb_estado.Controls.Add(this.rdb_inactivo);
+            this.gpb_estado.Controls.Add(this.rdb_actio);
+            this.gpb_estado.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_estado.Location = new System.Drawing.Point(379, 352);
+            this.gpb_estado.Name = "gpb_estado";
+            this.gpb_estado.Size = new System.Drawing.Size(359, 102);
+            this.gpb_estado.TabIndex = 21;
+            this.gpb_estado.TabStop = false;
+            this.gpb_estado.Text = "Estado";
+            // 
+            // rdb_inactivo
+            // 
+            this.rdb_inactivo.AutoSize = true;
+            this.rdb_inactivo.Location = new System.Drawing.Point(178, 58);
+            this.rdb_inactivo.Name = "rdb_inactivo";
+            this.rdb_inactivo.Size = new System.Drawing.Size(93, 26);
+            this.rdb_inactivo.TabIndex = 13;
+            this.rdb_inactivo.TabStop = true;
+            this.rdb_inactivo.Text = "Inactivo";
+            this.rdb_inactivo.UseVisualStyleBackColor = true;
+            // 
+            // rdb_actio
+            // 
+            this.rdb_actio.AutoSize = true;
+            this.rdb_actio.Location = new System.Drawing.Point(76, 58);
+            this.rdb_actio.Name = "rdb_actio";
+            this.rdb_actio.Size = new System.Drawing.Size(79, 26);
+            this.rdb_actio.TabIndex = 12;
+            this.rdb_actio.TabStop = true;
+            this.rdb_actio.Text = "Activo";
+            this.rdb_actio.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 71);
+            this.label2.Location = new System.Drawing.Point(270, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
+            this.label2.Size = new System.Drawing.Size(101, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre";
             // 
-            // textBox4
+            // txt_nombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(201, 139);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(276, 30);
-            this.textBox4.TabIndex = 11;
+            this.txt_nombre.Location = new System.Drawing.Point(472, 205);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(276, 35);
+            this.txt_nombre.TabIndex = 7;
+            this.txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_KeyPress);
             // 
-            // label3
+            // txt_descrip
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Descripcion";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 22);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Precio Unitario";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(201, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 30);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(201, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 30);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(201, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(276, 30);
-            this.textBox3.TabIndex = 8;
+            this.txt_descrip.Location = new System.Drawing.Point(472, 240);
+            this.txt_descrip.Name = "txt_descrip";
+            this.txt_descrip.Size = new System.Drawing.Size(276, 35);
+            this.txt_descrip.TabIndex = 8;
+            this.txt_descrip.TextChanged += new System.EventHandler(this.txt_descrip_TextChanged);
+            this.txt_descrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descrip_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(331, 2);
+            this.label5.Location = new System.Drawing.Point(417, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(330, 47);
             this.label5.TabIndex = 18;
             this.label5.Text = " Registro de Repuestos";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // txt_precio
+            // 
+            this.txt_precio.Location = new System.Drawing.Point(472, 273);
+            this.txt_precio.Name = "txt_precio";
+            this.txt_precio.Size = new System.Drawing.Size(276, 35);
+            this.txt_precio.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(259, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Descripcion";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(246, 261);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 29);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Precio Unitario";
+            // 
             // tabPage10
             // 
-            this.tabPage10.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage10.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.tabPage10.Controls.Add(this.btnBuscar);
-            this.tabPage10.Controls.Add(this.textBox5);
+            this.tabPage10.Controls.Add(this.txtBuscar);
             this.tabPage10.Controls.Add(this.label6);
-            this.tabPage10.Controls.Add(this.dataGridView1);
+            this.tabPage10.Controls.Add(this.dvgRepuestos);
             this.tabPage10.Location = new System.Drawing.Point(4, 33);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage10.Size = new System.Drawing.Size(1355, 589);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "Registro";
+            this.tabPage10.Click += new System.EventHandler(this.tabPage10_Load);
             // 
             // btnBuscar
             // 
@@ -879,13 +769,14 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // textBox5
+            // txtBuscar
             // 
-            this.textBox5.Location = new System.Drawing.Point(301, 117);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(364, 25);
-            this.textBox5.TabIndex = 20;
+            this.txtBuscar.Location = new System.Drawing.Point(301, 117);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(364, 25);
+            this.txtBuscar.TabIndex = 20;
             // 
             // label6
             // 
@@ -897,209 +788,184 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Repuestos Ingresados";
             // 
-            // dataGridView1
+            // dvgRepuestos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cod,
-            this.NombreR,
-            this.DescripR,
-            this.PrecioR,
-            this.EstadoR});
-            this.dataGridView1.Location = new System.Drawing.Point(183, 193);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(708, 339);
-            this.dataGridView1.TabIndex = 0;
+            this.dvgRepuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgRepuestos.Location = new System.Drawing.Point(170, 187);
+            this.dvgRepuestos.Name = "dvgRepuestos";
+            this.dvgRepuestos.Size = new System.Drawing.Size(708, 339);
+            this.dvgRepuestos.TabIndex = 0;
+            this.dvgRepuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dvgRepuestos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRepuestos_CellDoubleClick);
             // 
-            // Cod
+            // tableLayoutPanel1
             // 
-            this.Cod.HeaderText = "Codigo";
-            this.Cod.Name = "Cod";
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.Controls.Add(this.Btn_modificar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Btn_guardar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Btn_eliminar, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Btn_ingresar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Btn_cancelar, 4, 0);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(347, 38);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(441, 77);
+            this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // NombreR
+            // Btn_modificar
             // 
-            this.NombreR.HeaderText = "Nombre";
-            this.NombreR.Name = "NombreR";
-            this.NombreR.Width = 130;
+            this.Btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_modificar.Image")));
+            this.Btn_modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_modificar.Location = new System.Drawing.Point(165, 3);
+            this.Btn_modificar.Name = "Btn_modificar";
+            this.Btn_modificar.Size = new System.Drawing.Size(77, 71);
+            this.Btn_modificar.TabIndex = 5;
+            this.Btn_modificar.Text = "Modificar";
+            this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_modificar.UseVisualStyleBackColor = true;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
-            // DescripR
+            // Btn_guardar
             // 
-            this.DescripR.HeaderText = "Descripcion";
-            this.DescripR.Name = "DescripR";
-            this.DescripR.Width = 135;
+            this.Btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_guardar.Image")));
+            this.Btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_guardar.Location = new System.Drawing.Point(87, 3);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(72, 71);
+            this.Btn_guardar.TabIndex = 4;
+            this.Btn_guardar.Text = "Guardar";
+            this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // PrecioR
+            // Btn_eliminar
             // 
-            this.PrecioR.HeaderText = "Precio Unitario";
-            this.PrecioR.Name = "PrecioR";
-            this.PrecioR.Width = 200;
+            this.Btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_eliminar.Image")));
+            this.Btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_eliminar.Location = new System.Drawing.Point(248, 3);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(73, 71);
+            this.Btn_eliminar.TabIndex = 2;
+            this.Btn_eliminar.Text = "Eliminar";
+            this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_eliminar.UseVisualStyleBackColor = true;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
-            // EstadoR
+            // Btn_ingresar
             // 
-            this.EstadoR.HeaderText = "Estado";
-            this.EstadoR.Name = "EstadoR";
+            this.Btn_ingresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.BackgroundImage")));
+            this.Btn_ingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.Image")));
+            this.Btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_ingresar.Location = new System.Drawing.Point(3, 3);
+            this.Btn_ingresar.Name = "Btn_ingresar";
+            this.Btn_ingresar.Size = new System.Drawing.Size(74, 71);
+            this.Btn_ingresar.TabIndex = 1;
+            this.Btn_ingresar.Text = "Nuevo";
+            this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_ingresar.UseVisualStyleBackColor = true;
+            this.Btn_ingresar.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // Btn_cancelar
+            // 
+            this.Btn_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_cancelar.Image")));
+            this.Btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_cancelar.Location = new System.Drawing.Point(328, 3);
+            this.Btn_cancelar.Name = "Btn_cancelar";
+            this.Btn_cancelar.Size = new System.Drawing.Size(79, 71);
+            this.Btn_cancelar.TabIndex = 3;
+            this.Btn_cancelar.Text = "Cancelar";
+            this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_cancelar.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Proveedores
             // 
-            this.Proveedores.BackColor = System.Drawing.Color.DimGray;
+            this.Proveedores.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Proveedores.Controls.Add(this.tabControl4);
+            this.Proveedores.Controls.Add(this.tableLayoutPanel3);
             this.Proveedores.Location = new System.Drawing.Point(4, 29);
             this.Proveedores.Name = "Proveedores";
             this.Proveedores.Padding = new System.Windows.Forms.Padding(3);
-            this.Proveedores.Size = new System.Drawing.Size(1348, 706);
+            this.Proveedores.Size = new System.Drawing.Size(1362, 716);
             this.Proveedores.TabIndex = 1;
             this.Proveedores.Text = "Proveedores";
             // 
             // tabControl4
             // 
-            this.tabControl4.Controls.Add(this.tabPage3);
+            this.tabControl4.Controls.Add(this.MantenimientoP);
             this.tabControl4.Controls.Add(this.tabPage4);
             this.tabControl4.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl4.Location = new System.Drawing.Point(6, 6);
+            this.tabControl4.Location = new System.Drawing.Point(3, 122);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.Padding = new System.Drawing.Point(6, 6);
             this.tabControl4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(1088, 575);
+            this.tabControl4.Size = new System.Drawing.Size(1427, 575);
             this.tabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl4.TabIndex = 1;
             // 
-            // tabPage3
+            // MantenimientoP
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.DarkGray;
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 33);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(1080, 538);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Mantenimiento";
+            this.MantenimientoP.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MantenimientoP.Controls.Add(this.gpb_estadoP);
+            this.MantenimientoP.Controls.Add(this.groupBox6);
+            this.MantenimientoP.Controls.Add(this.label17);
+            this.MantenimientoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MantenimientoP.Location = new System.Drawing.Point(4, 33);
+            this.MantenimientoP.Name = "MantenimientoP";
+            this.MantenimientoP.Padding = new System.Windows.Forms.Padding(3);
+            this.MantenimientoP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MantenimientoP.Size = new System.Drawing.Size(1419, 538);
+            this.MantenimientoP.TabIndex = 0;
+            this.MantenimientoP.Text = "Mantenimiento";
+            this.MantenimientoP.Click += new System.EventHandler(this.MantenimientoP_Click);
             // 
-            // groupBox5
+            // gpb_estadoP
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gpb_estadoP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.radioButton5);
-            this.groupBox5.Controls.Add(this.radioButton6);
-            this.groupBox5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(378, 380);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(346, 98);
-            this.groupBox5.TabIndex = 21;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Estado";
+            this.gpb_estadoP.Controls.Add(this.rdb_inactivoP);
+            this.gpb_estadoP.Controls.Add(this.rdb_actioP);
+            this.gpb_estadoP.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_estadoP.Location = new System.Drawing.Point(373, 325);
+            this.gpb_estadoP.Name = "gpb_estadoP";
+            this.gpb_estadoP.Size = new System.Drawing.Size(342, 93);
+            this.gpb_estadoP.TabIndex = 21;
+            this.gpb_estadoP.TabStop = false;
+            this.gpb_estadoP.Text = "Estado";
             // 
-            // radioButton5
+            // rdb_inactivoP
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(159, 41);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(93, 26);
-            this.radioButton5.TabIndex = 13;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Inactivo";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdb_inactivoP.AutoSize = true;
+            this.rdb_inactivoP.Location = new System.Drawing.Point(159, 41);
+            this.rdb_inactivoP.Name = "rdb_inactivoP";
+            this.rdb_inactivoP.Size = new System.Drawing.Size(93, 26);
+            this.rdb_inactivoP.TabIndex = 13;
+            this.rdb_inactivoP.TabStop = true;
+            this.rdb_inactivoP.Text = "Inactivo";
+            this.rdb_inactivoP.UseVisualStyleBackColor = true;
+            this.rdb_inactivoP.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
-            // radioButton6
+            // rdb_actioP
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(57, 41);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(79, 26);
-            this.radioButton6.TabIndex = 12;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Activo";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 6;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel3.Controls.Add(this.button7, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button8, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button9, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button10, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button11, 0, 0);
-            this.tableLayoutPanel3.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(289, 68);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(441, 77);
-            this.tableLayoutPanel3.TabIndex = 20;
-            // 
-            // button7
-            // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(165, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(77, 71);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Modificar";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(87, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(72, 71);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Guardar";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.Location = new System.Drawing.Point(248, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(73, 71);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Eliminar";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(328, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(79, 71);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Cancelar";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button11.Location = new System.Drawing.Point(3, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(74, 71);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "Nuevo";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = true;
+            this.rdb_actioP.AutoSize = true;
+            this.rdb_actioP.Location = new System.Drawing.Point(57, 41);
+            this.rdb_actioP.Name = "rdb_actioP";
+            this.rdb_actioP.Size = new System.Drawing.Size(79, 26);
+            this.rdb_actioP.TabIndex = 12;
+            this.rdb_actioP.TabStop = true;
+            this.rdb_actioP.Text = "Activo";
+            this.rdb_actioP.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -1108,17 +974,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.textBox11);
+            this.groupBox6.Controls.Add(this.txt_direccionP);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.textBox12);
-            this.groupBox6.Controls.Add(this.textBox13);
-            this.groupBox6.Controls.Add(this.textBox14);
+            this.groupBox6.Controls.Add(this.txt_codP);
+            this.groupBox6.Controls.Add(this.txt_nombreP);
+            this.groupBox6.Controls.Add(this.txt_nitP);
             this.groupBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(205, 151);
+            this.groupBox6.Location = new System.Drawing.Point(227, 91);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(623, 203);
+            this.groupBox6.Size = new System.Drawing.Size(631, 203);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             // 
@@ -1140,12 +1006,12 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Nombre";
             // 
-            // textBox11
+            // txt_direccionP
             // 
-            this.textBox11.Location = new System.Drawing.Point(201, 139);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(276, 30);
-            this.textBox11.TabIndex = 11;
+            this.txt_direccionP.Location = new System.Drawing.Point(201, 139);
+            this.txt_direccionP.Name = "txt_direccionP";
+            this.txt_direccionP.Size = new System.Drawing.Size(276, 30);
+            this.txt_direccionP.TabIndex = 11;
             // 
             // label15
             // 
@@ -1165,32 +1031,34 @@
             this.label16.TabIndex = 10;
             this.label16.Text = "Direccion";
             // 
-            // textBox12
+            // txt_codP
             // 
-            this.textBox12.Location = new System.Drawing.Point(201, 36);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(276, 30);
-            this.textBox12.TabIndex = 6;
+            this.txt_codP.Location = new System.Drawing.Point(201, 36);
+            this.txt_codP.Name = "txt_codP";
+            this.txt_codP.Size = new System.Drawing.Size(276, 30);
+            this.txt_codP.TabIndex = 6;
             // 
-            // textBox13
+            // txt_nombreP
             // 
-            this.textBox13.Location = new System.Drawing.Point(201, 71);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(276, 30);
-            this.textBox13.TabIndex = 7;
+            this.txt_nombreP.Location = new System.Drawing.Point(201, 71);
+            this.txt_nombreP.Name = "txt_nombreP";
+            this.txt_nombreP.Size = new System.Drawing.Size(276, 30);
+            this.txt_nombreP.TabIndex = 7;
+            this.txt_nombreP.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
+            this.txt_nombreP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox13_KeyPress);
             // 
-            // textBox14
+            // txt_nitP
             // 
-            this.textBox14.Location = new System.Drawing.Point(201, 106);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(276, 30);
-            this.textBox14.TabIndex = 8;
+            this.txt_nitP.Location = new System.Drawing.Point(201, 106);
+            this.txt_nitP.Name = "txt_nitP";
+            this.txt_nitP.Size = new System.Drawing.Size(276, 30);
+            this.txt_nitP.TabIndex = 8;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(331, 2);
+            this.label17.Location = new System.Drawing.Point(386, 41);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(356, 47);
             this.label17.TabIndex = 18;
@@ -1202,13 +1070,14 @@
             this.tabPage4.Controls.Add(this.button12);
             this.tabPage4.Controls.Add(this.textBox15);
             this.tabPage4.Controls.Add(this.label18);
-            this.tabPage4.Controls.Add(this.dataGridView3);
+            this.tabPage4.Controls.Add(this.dvgProveedores);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage4.Size = new System.Drawing.Size(1419, 538);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Registro";
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Load);
             // 
             // button12
             // 
@@ -1222,6 +1091,7 @@
             this.button12.Text = "Buscar";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox15
             // 
@@ -1240,19 +1110,19 @@
             this.label18.TabIndex = 19;
             this.label18.Text = "Proveedores Ingresados";
             // 
-            // dataGridView3
+            // dvgProveedores
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
-            this.dataGridView3.Location = new System.Drawing.Point(183, 193);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(708, 339);
-            this.dataGridView3.TabIndex = 0;
+            this.dvgProveedores.Location = new System.Drawing.Point(183, 193);
+            this.dvgProveedores.Name = "dvgProveedores";
+            this.dvgProveedores.Size = new System.Drawing.Size(708, 339);
+            this.dvgProveedores.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -1282,167 +1152,173 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 6;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel3.Controls.Add(this.btn_modP, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_guardarP, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_eliminarP, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_cancelarP, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_ingresarP, 0, 0);
+            this.tableLayoutPanel3.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(357, 39);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(441, 77);
+            this.tableLayoutPanel3.TabIndex = 20;
+            // 
+            // btn_modP
+            // 
+            this.btn_modP.Image = ((System.Drawing.Image)(resources.GetObject("btn_modP.Image")));
+            this.btn_modP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_modP.Location = new System.Drawing.Point(165, 3);
+            this.btn_modP.Name = "btn_modP";
+            this.btn_modP.Size = new System.Drawing.Size(77, 71);
+            this.btn_modP.TabIndex = 5;
+            this.btn_modP.Text = "Modificar";
+            this.btn_modP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_modP.UseVisualStyleBackColor = true;
+            this.btn_modP.Click += new System.EventHandler(this.btn_modP_Click);
+            // 
+            // btn_guardarP
+            // 
+            this.btn_guardarP.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardarP.Image")));
+            this.btn_guardarP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_guardarP.Location = new System.Drawing.Point(87, 3);
+            this.btn_guardarP.Name = "btn_guardarP";
+            this.btn_guardarP.Size = new System.Drawing.Size(72, 71);
+            this.btn_guardarP.TabIndex = 4;
+            this.btn_guardarP.Text = "Guardar";
+            this.btn_guardarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_guardarP.UseVisualStyleBackColor = true;
+            this.btn_guardarP.Click += new System.EventHandler(this.btn_guardarP_Click);
+            // 
+            // btn_eliminarP
+            // 
+            this.btn_eliminarP.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminarP.Image")));
+            this.btn_eliminarP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_eliminarP.Location = new System.Drawing.Point(248, 3);
+            this.btn_eliminarP.Name = "btn_eliminarP";
+            this.btn_eliminarP.Size = new System.Drawing.Size(73, 71);
+            this.btn_eliminarP.TabIndex = 2;
+            this.btn_eliminarP.Text = "Eliminar";
+            this.btn_eliminarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_eliminarP.UseVisualStyleBackColor = true;
+            this.btn_eliminarP.Click += new System.EventHandler(this.btn_eliminarP_Click);
+            // 
+            // btn_cancelarP
+            // 
+            this.btn_cancelarP.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelarP.Image")));
+            this.btn_cancelarP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cancelarP.Location = new System.Drawing.Point(328, 3);
+            this.btn_cancelarP.Name = "btn_cancelarP";
+            this.btn_cancelarP.Size = new System.Drawing.Size(79, 71);
+            this.btn_cancelarP.TabIndex = 3;
+            this.btn_cancelarP.Text = "Cancelar";
+            this.btn_cancelarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cancelarP.UseVisualStyleBackColor = true;
+            this.btn_cancelarP.Click += new System.EventHandler(this.btn_cancelarP_Click);
+            // 
+            // btn_ingresarP
+            // 
+            this.btn_ingresarP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ingresarP.BackgroundImage")));
+            this.btn_ingresarP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ingresarP.Image = ((System.Drawing.Image)(resources.GetObject("btn_ingresarP.Image")));
+            this.btn_ingresarP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_ingresarP.Location = new System.Drawing.Point(3, 3);
+            this.btn_ingresarP.Name = "btn_ingresarP";
+            this.btn_ingresarP.Size = new System.Drawing.Size(74, 71);
+            this.btn_ingresarP.TabIndex = 1;
+            this.btn_ingresarP.Text = "Nuevo";
+            this.btn_ingresarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_ingresarP.UseVisualStyleBackColor = true;
+            this.btn_ingresarP.Click += new System.EventHandler(this.btn_ingresarP_Click);
+            // 
             // Marca
             // 
-            this.Marca.BackColor = System.Drawing.Color.DimGray;
+            this.Marca.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Marca.Controls.Add(this.tabControl5);
+            this.Marca.Controls.Add(this.tableLayoutPanel4);
             this.Marca.Location = new System.Drawing.Point(4, 29);
             this.Marca.Name = "Marca";
             this.Marca.Padding = new System.Windows.Forms.Padding(3);
-            this.Marca.Size = new System.Drawing.Size(1348, 706);
+            this.Marca.Size = new System.Drawing.Size(1362, 716);
             this.Marca.TabIndex = 3;
             this.Marca.Text = "Marca";
             // 
             // tabControl5
             // 
-            this.tabControl5.Controls.Add(this.tabPage5);
+            this.tabControl5.Controls.Add(this.MantenimientoM);
             this.tabControl5.Controls.Add(this.tabPage6);
             this.tabControl5.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl5.Location = new System.Drawing.Point(6, 6);
+            this.tabControl5.Location = new System.Drawing.Point(8, 113);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.Padding = new System.Drawing.Point(6, 6);
             this.tabControl5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(1088, 575);
+            this.tabControl5.Size = new System.Drawing.Size(1405, 714);
             this.tabControl5.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl5.TabIndex = 1;
             // 
-            // tabPage5
+            // MantenimientoM
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.DarkGray;
-            this.tabPage5.Controls.Add(this.groupBox7);
-            this.tabPage5.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage5.Controls.Add(this.groupBox8);
-            this.tabPage5.Controls.Add(this.label23);
-            this.tabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage5.Location = new System.Drawing.Point(4, 33);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage5.Size = new System.Drawing.Size(1080, 538);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Mantenimiento";
+            this.MantenimientoM.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MantenimientoM.Controls.Add(this.gpb_estadoM);
+            this.MantenimientoM.Controls.Add(this.groupBox8);
+            this.MantenimientoM.Controls.Add(this.label23);
+            this.MantenimientoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MantenimientoM.Location = new System.Drawing.Point(4, 33);
+            this.MantenimientoM.Name = "MantenimientoM";
+            this.MantenimientoM.Padding = new System.Windows.Forms.Padding(3);
+            this.MantenimientoM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MantenimientoM.Size = new System.Drawing.Size(1397, 677);
+            this.MantenimientoM.TabIndex = 0;
+            this.MantenimientoM.Text = "Mantenimiento";
+            this.MantenimientoM.Click += new System.EventHandler(this.MantenimientoM_Load);
             // 
-            // groupBox7
+            // gpb_estadoM
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gpb_estadoM.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Controls.Add(this.radioButton7);
-            this.groupBox7.Controls.Add(this.radioButton8);
-            this.groupBox7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(378, 380);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(346, 98);
-            this.groupBox7.TabIndex = 21;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Estado";
+            this.gpb_estadoM.Controls.Add(this.rdb_inactivoM);
+            this.gpb_estadoM.Controls.Add(this.rdb_actioM);
+            this.gpb_estadoM.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_estadoM.Location = new System.Drawing.Point(359, 340);
+            this.gpb_estadoM.Name = "gpb_estadoM";
+            this.gpb_estadoM.Size = new System.Drawing.Size(290, 118);
+            this.gpb_estadoM.TabIndex = 21;
+            this.gpb_estadoM.TabStop = false;
+            this.gpb_estadoM.Text = "Estado";
             // 
-            // radioButton7
+            // rdb_inactivoM
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(134, 37);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(93, 26);
-            this.radioButton7.TabIndex = 13;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Inactivo";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rdb_inactivoM.AutoSize = true;
+            this.rdb_inactivoM.Location = new System.Drawing.Point(134, 37);
+            this.rdb_inactivoM.Name = "rdb_inactivoM";
+            this.rdb_inactivoM.Size = new System.Drawing.Size(93, 26);
+            this.rdb_inactivoM.TabIndex = 13;
+            this.rdb_inactivoM.TabStop = true;
+            this.rdb_inactivoM.Text = "Inactivo";
+            this.rdb_inactivoM.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rdb_actioM
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(32, 37);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(79, 26);
-            this.radioButton8.TabIndex = 12;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Activo";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 6;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel4.Controls.Add(this.button13, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button14, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button15, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button16, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button17, 0, 0);
-            this.tableLayoutPanel4.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(289, 68);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(441, 77);
-            this.tableLayoutPanel4.TabIndex = 20;
-            // 
-            // button13
-            // 
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button13.Location = new System.Drawing.Point(165, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(77, 71);
-            this.button13.TabIndex = 5;
-            this.button13.Text = "Modificar";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.Location = new System.Drawing.Point(87, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(72, 71);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "Guardar";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button15.Location = new System.Drawing.Point(248, 3);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(73, 71);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Eliminar";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button16.Location = new System.Drawing.Point(328, 3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(79, 71);
-            this.button16.TabIndex = 3;
-            this.button16.Text = "Cancelar";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button17.Image = ((System.Drawing.Image)(resources.GetObject("button17.Image")));
-            this.button17.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button17.Location = new System.Drawing.Point(3, 3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(74, 71);
-            this.button17.TabIndex = 1;
-            this.button17.Text = "Nuevo";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button17.UseVisualStyleBackColor = true;
+            this.rdb_actioM.AutoSize = true;
+            this.rdb_actioM.Location = new System.Drawing.Point(32, 37);
+            this.rdb_actioM.Name = "rdb_actioM";
+            this.rdb_actioM.Size = new System.Drawing.Size(79, 26);
+            this.rdb_actioM.TabIndex = 12;
+            this.rdb_actioM.TabStop = true;
+            this.rdb_actioM.Text = "Activo";
+            this.rdb_actioM.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -1451,13 +1327,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.label19);
             this.groupBox8.Controls.Add(this.label20);
-            this.groupBox8.Controls.Add(this.textBox17);
-            this.groupBox8.Controls.Add(this.textBox18);
+            this.groupBox8.Controls.Add(this.txt_codM);
+            this.groupBox8.Controls.Add(this.txt_nombreM);
             this.groupBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(205, 151);
+            this.groupBox8.Location = new System.Drawing.Point(212, 125);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(623, 172);
+            this.groupBox8.Size = new System.Drawing.Size(605, 195);
             this.groupBox8.TabIndex = 19;
             this.groupBox8.TabStop = false;
             // 
@@ -1479,29 +1355,31 @@
             this.label20.TabIndex = 4;
             this.label20.Text = "Nombre";
             // 
-            // textBox17
+            // txt_codM
             // 
-            this.textBox17.Location = new System.Drawing.Point(211, 58);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(276, 30);
-            this.textBox17.TabIndex = 6;
+            this.txt_codM.Location = new System.Drawing.Point(211, 58);
+            this.txt_codM.Name = "txt_codM";
+            this.txt_codM.Size = new System.Drawing.Size(276, 30);
+            this.txt_codM.TabIndex = 6;
             // 
-            // textBox18
+            // txt_nombreM
             // 
-            this.textBox18.Location = new System.Drawing.Point(211, 93);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(276, 30);
-            this.textBox18.TabIndex = 7;
+            this.txt_nombreM.Location = new System.Drawing.Point(211, 93);
+            this.txt_nombreM.Name = "txt_nombreM";
+            this.txt_nombreM.Size = new System.Drawing.Size(276, 30);
+            this.txt_nombreM.TabIndex = 7;
+            this.txt_nombreM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox18_KeyPress);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(341, 3);
+            this.label23.Location = new System.Drawing.Point(340, 62);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(286, 47);
             this.label23.TabIndex = 18;
             this.label23.Text = " Registro de Marcas";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // tabPage6
             // 
@@ -1509,11 +1387,11 @@
             this.tabPage6.Controls.Add(this.button18);
             this.tabPage6.Controls.Add(this.textBox20);
             this.tabPage6.Controls.Add(this.label24);
-            this.tabPage6.Controls.Add(this.dataGridView4);
+            this.tabPage6.Controls.Add(this.dvgMarca);
             this.tabPage6.Location = new System.Drawing.Point(4, 33);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage6.Size = new System.Drawing.Size(1397, 677);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Registro";
             // 
@@ -1529,6 +1407,7 @@
             this.button18.Text = "Buscar";
             this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // textBox20
             // 
@@ -1547,17 +1426,17 @@
             this.label24.TabIndex = 19;
             this.label24.Text = "Marcas Ingresados";
             // 
-            // dataGridView4
+            // dvgMarca
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn15});
-            this.dataGridView4.Location = new System.Drawing.Point(301, 196);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(443, 339);
-            this.dataGridView4.TabIndex = 0;
+            this.dvgMarca.Location = new System.Drawing.Point(301, 196);
+            this.dvgMarca.Name = "dvgMarca";
+            this.dvgMarca.Size = new System.Drawing.Size(443, 339);
+            this.dvgMarca.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -1575,167 +1454,172 @@
             this.dataGridViewTextBoxColumn15.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel4.Controls.Add(this.btn_modificarM, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_guardarM, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_eliminarM, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_cancelarM, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_ingresarM, 0, 0);
+            this.tableLayoutPanel4.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(405, 30);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(441, 77);
+            this.tableLayoutPanel4.TabIndex = 20;
+            // 
+            // btn_modificarM
+            // 
+            this.btn_modificarM.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificarM.Image")));
+            this.btn_modificarM.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_modificarM.Location = new System.Drawing.Point(165, 3);
+            this.btn_modificarM.Name = "btn_modificarM";
+            this.btn_modificarM.Size = new System.Drawing.Size(77, 71);
+            this.btn_modificarM.TabIndex = 5;
+            this.btn_modificarM.Text = "Modificar";
+            this.btn_modificarM.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_modificarM.UseVisualStyleBackColor = true;
+            this.btn_modificarM.Click += new System.EventHandler(this.btn_modificarM_Click);
+            // 
+            // btn_guardarM
+            // 
+            this.btn_guardarM.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardarM.Image")));
+            this.btn_guardarM.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_guardarM.Location = new System.Drawing.Point(87, 3);
+            this.btn_guardarM.Name = "btn_guardarM";
+            this.btn_guardarM.Size = new System.Drawing.Size(72, 71);
+            this.btn_guardarM.TabIndex = 4;
+            this.btn_guardarM.Text = "Guardar";
+            this.btn_guardarM.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_guardarM.UseVisualStyleBackColor = true;
+            // 
+            // btn_eliminarM
+            // 
+            this.btn_eliminarM.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminarM.Image")));
+            this.btn_eliminarM.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_eliminarM.Location = new System.Drawing.Point(248, 3);
+            this.btn_eliminarM.Name = "btn_eliminarM";
+            this.btn_eliminarM.Size = new System.Drawing.Size(73, 71);
+            this.btn_eliminarM.TabIndex = 2;
+            this.btn_eliminarM.Text = "Eliminar";
+            this.btn_eliminarM.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_eliminarM.UseVisualStyleBackColor = true;
+            this.btn_eliminarM.Click += new System.EventHandler(this.btn_eliminarM_Click);
+            // 
+            // btn_cancelarM
+            // 
+            this.btn_cancelarM.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelarM.Image")));
+            this.btn_cancelarM.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cancelarM.Location = new System.Drawing.Point(328, 3);
+            this.btn_cancelarM.Name = "btn_cancelarM";
+            this.btn_cancelarM.Size = new System.Drawing.Size(79, 71);
+            this.btn_cancelarM.TabIndex = 3;
+            this.btn_cancelarM.Text = "Cancelar";
+            this.btn_cancelarM.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cancelarM.UseVisualStyleBackColor = true;
+            this.btn_cancelarM.Click += new System.EventHandler(this.btn_cancelarM_Click);
+            // 
+            // btn_ingresarM
+            // 
+            this.btn_ingresarM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ingresarM.BackgroundImage")));
+            this.btn_ingresarM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ingresarM.Image = ((System.Drawing.Image)(resources.GetObject("btn_ingresarM.Image")));
+            this.btn_ingresarM.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_ingresarM.Location = new System.Drawing.Point(3, 3);
+            this.btn_ingresarM.Name = "btn_ingresarM";
+            this.btn_ingresarM.Size = new System.Drawing.Size(74, 71);
+            this.btn_ingresarM.TabIndex = 1;
+            this.btn_ingresarM.Text = "Nuevo";
+            this.btn_ingresarM.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_ingresarM.UseVisualStyleBackColor = true;
+            this.btn_ingresarM.Click += new System.EventHandler(this.btn_ingresarM_Click);
+            // 
             // Tipo_Pago
             // 
-            this.Tipo_Pago.BackColor = System.Drawing.Color.DimGray;
+            this.Tipo_Pago.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Tipo_Pago.Controls.Add(this.tabControl6);
+            this.Tipo_Pago.Controls.Add(this.tableLayoutPanel5);
             this.Tipo_Pago.Location = new System.Drawing.Point(4, 29);
             this.Tipo_Pago.Name = "Tipo_Pago";
             this.Tipo_Pago.Padding = new System.Windows.Forms.Padding(3);
-            this.Tipo_Pago.Size = new System.Drawing.Size(1348, 706);
+            this.Tipo_Pago.Size = new System.Drawing.Size(1362, 716);
             this.Tipo_Pago.TabIndex = 5;
             this.Tipo_Pago.Text = "Tipo de Pago";
             // 
             // tabControl6
             // 
-            this.tabControl6.Controls.Add(this.tabPage7);
+            this.tabControl6.Controls.Add(this.MantenimientoT);
             this.tabControl6.Controls.Add(this.tabPage8);
             this.tabControl6.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl6.Location = new System.Drawing.Point(3, 6);
+            this.tabControl6.Location = new System.Drawing.Point(3, 117);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.Padding = new System.Drawing.Point(6, 6);
             this.tabControl6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(1088, 575);
+            this.tabControl6.Size = new System.Drawing.Size(1558, 733);
             this.tabControl6.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl6.TabIndex = 1;
             // 
-            // tabPage7
+            // MantenimientoT
             // 
-            this.tabPage7.BackColor = System.Drawing.Color.DarkGray;
-            this.tabPage7.Controls.Add(this.groupBox9);
-            this.tabPage7.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage7.Controls.Add(this.groupBox10);
-            this.tabPage7.Controls.Add(this.label29);
-            this.tabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage7.Location = new System.Drawing.Point(4, 33);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage7.Size = new System.Drawing.Size(1080, 538);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "Mantenimiento";
+            this.MantenimientoT.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MantenimientoT.Controls.Add(this.gpb_estadoT);
+            this.MantenimientoT.Controls.Add(this.groupBox10);
+            this.MantenimientoT.Controls.Add(this.label29);
+            this.MantenimientoT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MantenimientoT.Location = new System.Drawing.Point(4, 33);
+            this.MantenimientoT.Name = "MantenimientoT";
+            this.MantenimientoT.Padding = new System.Windows.Forms.Padding(3);
+            this.MantenimientoT.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MantenimientoT.Size = new System.Drawing.Size(1550, 696);
+            this.MantenimientoT.TabIndex = 0;
+            this.MantenimientoT.Text = "Mantenimiento";
             // 
-            // groupBox9
+            // gpb_estadoT
             // 
-            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gpb_estadoT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox9.Controls.Add(this.radioButton9);
-            this.groupBox9.Controls.Add(this.radioButton10);
-            this.groupBox9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(378, 380);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(346, 98);
-            this.groupBox9.TabIndex = 21;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Estado";
+            this.gpb_estadoT.Controls.Add(this.rdb_inactivoT);
+            this.gpb_estadoT.Controls.Add(this.rdb_actioT);
+            this.gpb_estadoT.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_estadoT.Location = new System.Drawing.Point(396, 305);
+            this.gpb_estadoT.Name = "gpb_estadoT";
+            this.gpb_estadoT.Size = new System.Drawing.Size(312, 103);
+            this.gpb_estadoT.TabIndex = 21;
+            this.gpb_estadoT.TabStop = false;
+            this.gpb_estadoT.Text = "Estado";
             // 
-            // radioButton9
+            // rdb_inactivoT
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(134, 37);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(93, 26);
-            this.radioButton9.TabIndex = 13;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Inactivo";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rdb_inactivoT.AutoSize = true;
+            this.rdb_inactivoT.Location = new System.Drawing.Point(134, 37);
+            this.rdb_inactivoT.Name = "rdb_inactivoT";
+            this.rdb_inactivoT.Size = new System.Drawing.Size(93, 26);
+            this.rdb_inactivoT.TabIndex = 13;
+            this.rdb_inactivoT.TabStop = true;
+            this.rdb_inactivoT.Text = "Inactivo";
+            this.rdb_inactivoT.UseVisualStyleBackColor = true;
+            this.rdb_inactivoT.CheckedChanged += new System.EventHandler(this.radioButton9_CheckedChanged);
             // 
-            // radioButton10
+            // rdb_actioT
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(32, 37);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(79, 26);
-            this.radioButton10.TabIndex = 12;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Activo";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 6;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel5.Controls.Add(this.button19, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button20, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button21, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button22, 4, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button23, 0, 0);
-            this.tableLayoutPanel5.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(289, 68);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 77);
-            this.tableLayoutPanel5.TabIndex = 20;
-            // 
-            // button19
-            // 
-            this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
-            this.button19.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button19.Location = new System.Drawing.Point(165, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(77, 71);
-            this.button19.TabIndex = 5;
-            this.button19.Text = "Modificar";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
-            this.button20.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button20.Location = new System.Drawing.Point(87, 3);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(72, 71);
-            this.button20.TabIndex = 4;
-            this.button20.Text = "Guardar";
-            this.button20.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Image = ((System.Drawing.Image)(resources.GetObject("button21.Image")));
-            this.button21.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button21.Location = new System.Drawing.Point(248, 3);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(73, 71);
-            this.button21.TabIndex = 2;
-            this.button21.Text = "Eliminar";
-            this.button21.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Image = ((System.Drawing.Image)(resources.GetObject("button22.Image")));
-            this.button22.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button22.Location = new System.Drawing.Point(328, 3);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(79, 71);
-            this.button22.TabIndex = 3;
-            this.button22.Text = "Cancelar";
-            this.button22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button23.BackgroundImage")));
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
-            this.button23.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button23.Location = new System.Drawing.Point(3, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(74, 71);
-            this.button23.TabIndex = 1;
-            this.button23.Text = "Nuevo";
-            this.button23.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button23.UseVisualStyleBackColor = true;
+            this.rdb_actioT.AutoSize = true;
+            this.rdb_actioT.Location = new System.Drawing.Point(32, 37);
+            this.rdb_actioT.Name = "rdb_actioT";
+            this.rdb_actioT.Size = new System.Drawing.Size(79, 26);
+            this.rdb_actioT.TabIndex = 12;
+            this.rdb_actioT.TabStop = true;
+            this.rdb_actioT.Text = "Activo";
+            this.rdb_actioT.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
@@ -1744,13 +1628,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.label25);
             this.groupBox10.Controls.Add(this.label26);
-            this.groupBox10.Controls.Add(this.textBox22);
-            this.groupBox10.Controls.Add(this.textBox23);
+            this.groupBox10.Controls.Add(this.txt_codT);
+            this.groupBox10.Controls.Add(this.txt_nombreT);
             this.groupBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(205, 151);
+            this.groupBox10.Location = new System.Drawing.Point(223, 76);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(623, 187);
+            this.groupBox10.Size = new System.Drawing.Size(636, 186);
             this.groupBox10.TabIndex = 19;
             this.groupBox10.TabStop = false;
             // 
@@ -1772,19 +1656,21 @@
             this.label26.TabIndex = 4;
             this.label26.Text = "Nombre";
             // 
-            // textBox22
+            // txt_codT
             // 
-            this.textBox22.Location = new System.Drawing.Point(211, 64);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(276, 30);
-            this.textBox22.TabIndex = 6;
+            this.txt_codT.Location = new System.Drawing.Point(211, 64);
+            this.txt_codT.Name = "txt_codT";
+            this.txt_codT.Size = new System.Drawing.Size(276, 30);
+            this.txt_codT.TabIndex = 6;
             // 
-            // textBox23
+            // txt_nombreT
             // 
-            this.textBox23.Location = new System.Drawing.Point(211, 99);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(276, 30);
-            this.textBox23.TabIndex = 7;
+            this.txt_nombreT.Location = new System.Drawing.Point(211, 99);
+            this.txt_nombreT.Name = "txt_nombreT";
+            this.txt_nombreT.Size = new System.Drawing.Size(276, 30);
+            this.txt_nombreT.TabIndex = 7;
+            this.txt_nombreT.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
+            this.txt_nombreT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // label29
             // 
@@ -1802,13 +1688,14 @@
             this.tabPage8.Controls.Add(this.button24);
             this.tabPage8.Controls.Add(this.textBox25);
             this.tabPage8.Controls.Add(this.label30);
-            this.tabPage8.Controls.Add(this.dataGridView5);
+            this.tabPage8.Controls.Add(this.dvgPago);
             this.tabPage8.Location = new System.Drawing.Point(4, 33);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage8.Size = new System.Drawing.Size(1550, 696);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Registro";
+            this.tabPage8.Click += new System.EventHandler(this.tabPage8_Load);
             // 
             // button24
             // 
@@ -1822,6 +1709,7 @@
             this.button24.Text = "Buscar";
             this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // textBox25
             // 
@@ -1840,17 +1728,17 @@
             this.label30.TabIndex = 19;
             this.label30.Text = "Tipos de Pago Existentes";
             // 
-            // dataGridView5
+            // dvgPago
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn20});
-            this.dataGridView5.Location = new System.Drawing.Point(301, 193);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(463, 339);
-            this.dataGridView5.TabIndex = 0;
+            this.dvgPago.Location = new System.Drawing.Point(301, 193);
+            this.dvgPago.Name = "dvgPago";
+            this.dvgPago.Size = new System.Drawing.Size(463, 339);
+            this.dvgPago.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -1868,14 +1756,103 @@
             this.dataGridViewTextBoxColumn20.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 6;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel5.Controls.Add(this.btn_modT, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_guardarT, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_eliminarT, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_cancelarT, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_ingresarT, 0, 0);
+            this.tableLayoutPanel5.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(394, 22);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 77);
+            this.tableLayoutPanel5.TabIndex = 20;
+            // 
+            // btn_modT
+            // 
+            this.btn_modT.Image = ((System.Drawing.Image)(resources.GetObject("btn_modT.Image")));
+            this.btn_modT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_modT.Location = new System.Drawing.Point(165, 3);
+            this.btn_modT.Name = "btn_modT";
+            this.btn_modT.Size = new System.Drawing.Size(77, 71);
+            this.btn_modT.TabIndex = 5;
+            this.btn_modT.Text = "Modificar";
+            this.btn_modT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_modT.UseVisualStyleBackColor = true;
+            this.btn_modT.Click += new System.EventHandler(this.btn_modT_Click);
+            // 
+            // btn_guardarT
+            // 
+            this.btn_guardarT.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardarT.Image")));
+            this.btn_guardarT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_guardarT.Location = new System.Drawing.Point(87, 3);
+            this.btn_guardarT.Name = "btn_guardarT";
+            this.btn_guardarT.Size = new System.Drawing.Size(72, 71);
+            this.btn_guardarT.TabIndex = 4;
+            this.btn_guardarT.Text = "Guardar";
+            this.btn_guardarT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_guardarT.UseVisualStyleBackColor = true;
+            // 
+            // btn_eliminarT
+            // 
+            this.btn_eliminarT.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminarT.Image")));
+            this.btn_eliminarT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_eliminarT.Location = new System.Drawing.Point(248, 3);
+            this.btn_eliminarT.Name = "btn_eliminarT";
+            this.btn_eliminarT.Size = new System.Drawing.Size(73, 71);
+            this.btn_eliminarT.TabIndex = 2;
+            this.btn_eliminarT.Text = "Eliminar";
+            this.btn_eliminarT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_eliminarT.UseVisualStyleBackColor = true;
+            this.btn_eliminarT.Click += new System.EventHandler(this.btn_eliminarT_Click);
+            // 
+            // btn_cancelarT
+            // 
+            this.btn_cancelarT.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelarT.Image")));
+            this.btn_cancelarT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cancelarT.Location = new System.Drawing.Point(328, 3);
+            this.btn_cancelarT.Name = "btn_cancelarT";
+            this.btn_cancelarT.Size = new System.Drawing.Size(79, 71);
+            this.btn_cancelarT.TabIndex = 3;
+            this.btn_cancelarT.Text = "Cancelar";
+            this.btn_cancelarT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cancelarT.UseVisualStyleBackColor = true;
+            this.btn_cancelarT.Click += new System.EventHandler(this.btn_cancelarT_Click);
+            // 
+            // btn_ingresarT
+            // 
+            this.btn_ingresarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ingresarT.BackgroundImage")));
+            this.btn_ingresarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ingresarT.Image = ((System.Drawing.Image)(resources.GetObject("btn_ingresarT.Image")));
+            this.btn_ingresarT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_ingresarT.Location = new System.Drawing.Point(3, 3);
+            this.btn_ingresarT.Name = "btn_ingresarT";
+            this.btn_ingresarT.Size = new System.Drawing.Size(74, 71);
+            this.btn_ingresarT.TabIndex = 1;
+            this.btn_ingresarT.Text = "Nuevo";
+            this.btn_ingresarT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_ingresarT.UseVisualStyleBackColor = true;
+            this.btn_ingresarT.Click += new System.EventHandler(this.btn_ingresarT_Click);
+            // 
             // Usuarios
             // 
-            this.Usuarios.BackColor = System.Drawing.Color.DimGray;
+            this.Usuarios.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Usuarios.Controls.Add(this.tabControl7);
+            this.Usuarios.Controls.Add(this.tableLayoutPanel6);
             this.Usuarios.Location = new System.Drawing.Point(4, 29);
             this.Usuarios.Name = "Usuarios";
             this.Usuarios.Padding = new System.Windows.Forms.Padding(3);
-            this.Usuarios.Size = new System.Drawing.Size(1348, 706);
+            this.Usuarios.Size = new System.Drawing.Size(1362, 716);
             this.Usuarios.TabIndex = 6;
             this.Usuarios.Text = "Usuarios";
             // 
@@ -1884,20 +1861,19 @@
             this.tabControl7.Controls.Add(this.tabPage9);
             this.tabControl7.Controls.Add(this.tabPage11);
             this.tabControl7.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl7.Location = new System.Drawing.Point(3, 6);
+            this.tabControl7.Location = new System.Drawing.Point(0, 107);
             this.tabControl7.Name = "tabControl7";
             this.tabControl7.Padding = new System.Drawing.Point(6, 6);
             this.tabControl7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl7.SelectedIndex = 0;
-            this.tabControl7.Size = new System.Drawing.Size(1088, 575);
+            this.tabControl7.Size = new System.Drawing.Size(1428, 645);
             this.tabControl7.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl7.TabIndex = 1;
             // 
             // tabPage9
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage9.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.tabPage9.Controls.Add(this.groupBox11);
-            this.tabPage9.Controls.Add(this.tableLayoutPanel6);
             this.tabPage9.Controls.Add(this.groupBox12);
             this.tabPage9.Controls.Add(this.label35);
             this.tabPage9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1905,9 +1881,10 @@
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage9.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage9.Size = new System.Drawing.Size(1420, 608);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "Mantenimiento";
+            this.tabPage9.Click += new System.EventHandler(this.tabPage9_Click_1);
             // 
             // groupBox11
             // 
@@ -1917,9 +1894,9 @@
             this.groupBox11.Controls.Add(this.radioButton11);
             this.groupBox11.Controls.Add(this.radioButton12);
             this.groupBox11.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(378, 380);
+            this.groupBox11.Location = new System.Drawing.Point(377, 338);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(346, 98);
+            this.groupBox11.Size = new System.Drawing.Size(363, 123);
             this.groupBox11.TabIndex = 21;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Estado";
@@ -1946,90 +1923,6 @@
             this.radioButton12.Text = "Activo";
             this.radioButton12.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 6;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel6.Controls.Add(this.button25, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button26, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button27, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button28, 4, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button29, 0, 0);
-            this.tableLayoutPanel6.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(289, 68);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(441, 77);
-            this.tableLayoutPanel6.TabIndex = 20;
-            // 
-            // button25
-            // 
-            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
-            this.button25.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button25.Location = new System.Drawing.Point(165, 3);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(77, 71);
-            this.button25.TabIndex = 5;
-            this.button25.Text = "Modificar";
-            this.button25.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Image = ((System.Drawing.Image)(resources.GetObject("button26.Image")));
-            this.button26.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button26.Location = new System.Drawing.Point(87, 3);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(72, 71);
-            this.button26.TabIndex = 4;
-            this.button26.Text = "Guardar";
-            this.button26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Image = ((System.Drawing.Image)(resources.GetObject("button27.Image")));
-            this.button27.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button27.Location = new System.Drawing.Point(248, 3);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(73, 71);
-            this.button27.TabIndex = 2;
-            this.button27.Text = "Eliminar";
-            this.button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Image = ((System.Drawing.Image)(resources.GetObject("button28.Image")));
-            this.button28.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button28.Location = new System.Drawing.Point(328, 3);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(79, 71);
-            this.button28.TabIndex = 3;
-            this.button28.Text = "Cancelar";
-            this.button28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            this.button29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button29.BackgroundImage")));
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button29.Image = ((System.Drawing.Image)(resources.GetObject("button29.Image")));
-            this.button29.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button29.Location = new System.Drawing.Point(3, 3);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(74, 71);
-            this.button29.TabIndex = 1;
-            this.button29.Text = "Nuevo";
-            this.button29.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button29.UseVisualStyleBackColor = true;
-            // 
             // groupBox12
             // 
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2045,9 +1938,9 @@
             this.groupBox12.Controls.Add(this.textBox29);
             this.groupBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox12.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(205, 151);
+            this.groupBox12.Location = new System.Drawing.Point(240, 67);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(623, 203);
+            this.groupBox12.Size = new System.Drawing.Size(633, 233);
             this.groupBox12.TabIndex = 19;
             this.groupBox12.TabStop = false;
             // 
@@ -2108,6 +2001,7 @@
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(276, 30);
             this.textBox28.TabIndex = 7;
+            this.textBox28.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox28_KeyPress);
             // 
             // textBox29
             // 
@@ -2115,6 +2009,8 @@
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(276, 30);
             this.textBox29.TabIndex = 8;
+            this.textBox29.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
+            this.textBox29.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox29_KeyPress);
             // 
             // label35
             // 
@@ -2136,7 +2032,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 33);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1080, 538);
+            this.tabPage11.Size = new System.Drawing.Size(1420, 608);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Registro";
             // 
@@ -2212,87 +2108,169 @@
             this.dataGridViewTextBoxColumn25.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 6;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel6.Controls.Add(this.button25, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button26, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button27, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button28, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button29, 0, 0);
+            this.tableLayoutPanel6.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(369, 24);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(441, 77);
+            this.tableLayoutPanel6.TabIndex = 20;
+            // 
+            // button25
+            // 
+            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
+            this.button25.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button25.Location = new System.Drawing.Point(165, 3);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(77, 71);
+            this.button25.TabIndex = 5;
+            this.button25.Text = "Modificar";
+            this.button25.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // button26
+            // 
+            this.button26.Image = ((System.Drawing.Image)(resources.GetObject("button26.Image")));
+            this.button26.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button26.Location = new System.Drawing.Point(87, 3);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(72, 71);
+            this.button26.TabIndex = 4;
+            this.button26.Text = "Guardar";
+            this.button26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button26.UseVisualStyleBackColor = true;
+            // 
+            // button27
+            // 
+            this.button27.Image = ((System.Drawing.Image)(resources.GetObject("button27.Image")));
+            this.button27.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button27.Location = new System.Drawing.Point(248, 3);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(73, 71);
+            this.button27.TabIndex = 2;
+            this.button27.Text = "Eliminar";
+            this.button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button27.UseVisualStyleBackColor = true;
+            // 
+            // button28
+            // 
+            this.button28.Image = ((System.Drawing.Image)(resources.GetObject("button28.Image")));
+            this.button28.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button28.Location = new System.Drawing.Point(328, 3);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(79, 71);
+            this.button28.TabIndex = 3;
+            this.button28.Text = "Cancelar";
+            this.button28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button28.UseVisualStyleBackColor = true;
+            // 
+            // button29
+            // 
+            this.button29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button29.BackgroundImage")));
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button29.Image = ((System.Drawing.Image)(resources.GetObject("button29.Image")));
+            this.button29.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button29.Location = new System.Drawing.Point(3, 3);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(74, 71);
+            this.button29.TabIndex = 1;
+            this.button29.Text = "Nuevo";
+            this.button29.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button29.UseVisualStyleBackColor = true;
+            // 
             // Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.tabControl1);
             this.Name = "Mantenimientos";
             this.Text = "MantenimientoProductos";
+            this.Load += new System.EventHandler(this.Mantenimientos_Load);
             this.tabControl1.ResumeLayout(false);
             this.Clientes.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gpb_estadoC.ResumeLayout(false);
+            this.gpb_estadoC.PerformLayout();
+            this.MantenimientoC.ResumeLayout(false);
+            this.MantenimientoC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgClientes)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.Repuestos.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.MantenimientoR.ResumeLayout(false);
             this.MantenimientoR.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpb_estado.ResumeLayout(false);
+            this.gpb_estado.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgRepuestos)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.Proveedores.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.MantenimientoP.ResumeLayout(false);
+            this.MantenimientoP.PerformLayout();
+            this.gpb_estadoP.ResumeLayout(false);
+            this.gpb_estadoP.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgProveedores)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.Marca.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.MantenimientoM.ResumeLayout(false);
+            this.MantenimientoM.PerformLayout();
+            this.gpb_estadoM.ResumeLayout(false);
+            this.gpb_estadoM.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgMarca)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.Tipo_Pago.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
+            this.MantenimientoT.ResumeLayout(false);
+            this.MantenimientoT.PerformLayout();
+            this.gpb_estadoT.ResumeLayout(false);
+            this.gpb_estadoT.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPago)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.Usuarios.ResumeLayout(false);
             this.tabControl7.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2305,143 +2283,129 @@
         private System.Windows.Forms.TabPage Marca;
         private System.Windows.Forms.TabPage Tipo_Pago;
         private System.Windows.Forms.TabPage Usuarios;
-        private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage MantenimientoR;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox gpb_estado;
+        private System.Windows.Forms.RadioButton rdb_inactivo;
+        private System.Windows.Forms.RadioButton rdb_actio;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Btn_modificar;
+        private System.Windows.Forms.Button Btn_guardar;
+        private System.Windows.Forms.Button Btn_eliminar;
+        private System.Windows.Forms.Button Btn_cancelar;
+        private System.Windows.Forms.Button Btn_ingresar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_precio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_codigo;
+        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.TextBox txt_descrip;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgRepuestos;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoR;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.GroupBox gpb_estadoC;
+        private System.Windows.Forms.RadioButton rdb_inactivoC;
+        private System.Windows.Forms.RadioButton rdb_actioC;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button btn_modC;
+        private System.Windows.Forms.Button btn_guardarC;
+        private System.Windows.Forms.Button btn_eliminarC;
+        private System.Windows.Forms.Button btn_cancelarC;
+        private System.Windows.Forms.Button btn_ingresarC;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage MantenimientoC;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dvgClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TabControl tabControl4;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.TabPage MantenimientoP;
+        private System.Windows.Forms.GroupBox gpb_estadoP;
+        private System.Windows.Forms.RadioButton rdb_inactivoP;
+        private System.Windows.Forms.RadioButton rdb_actioP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btn_modP;
+        private System.Windows.Forms.Button btn_guardarP;
+        private System.Windows.Forms.Button btn_eliminarP;
+        private System.Windows.Forms.Button btn_cancelarP;
+        private System.Windows.Forms.Button btn_ingresarP;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txt_direccionP;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_codP;
+        private System.Windows.Forms.TextBox txt_nombreP;
+        private System.Windows.Forms.TextBox txt_nitP;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dvgProveedores;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.TabControl tabControl5;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.TabPage MantenimientoM;
+        private System.Windows.Forms.GroupBox gpb_estadoM;
+        private System.Windows.Forms.RadioButton rdb_inactivoM;
+        private System.Windows.Forms.RadioButton rdb_actioM;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button btn_modificarM;
+        private System.Windows.Forms.Button btn_guardarM;
+        private System.Windows.Forms.Button btn_eliminarM;
+        private System.Windows.Forms.Button btn_cancelarM;
+        private System.Windows.Forms.Button btn_ingresarM;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txt_codM;
+        private System.Windows.Forms.TextBox txt_nombreM;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dvgMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.TabControl tabControl6;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.TabPage MantenimientoT;
+        private System.Windows.Forms.GroupBox gpb_estadoT;
+        private System.Windows.Forms.RadioButton rdb_inactivoT;
+        private System.Windows.Forms.RadioButton rdb_actioT;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button btn_modT;
+        private System.Windows.Forms.Button btn_guardarT;
+        private System.Windows.Forms.Button btn_eliminarT;
+        private System.Windows.Forms.Button btn_cancelarT;
+        private System.Windows.Forms.Button btn_ingresarT;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txt_codT;
+        private System.Windows.Forms.TextBox txt_nombreT;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dvgPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
@@ -2476,5 +2440,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        internal System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_codC;
+        private System.Windows.Forms.TextBox txt_nombreC;
+        private System.Windows.Forms.TextBox txt_nitC;
     }
 }

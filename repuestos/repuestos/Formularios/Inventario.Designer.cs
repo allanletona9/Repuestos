@@ -1,6 +1,6 @@
 ﻿namespace repuestos.Formularios
 {
-    partial class Reportes
+    partial class Inventario
     {
         /// <summary>
         /// Required designer variable.
@@ -37,19 +37,19 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(392, 36);
+            this.label5.Location = new System.Drawing.Point(245, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 33);
+            this.label5.Size = new System.Drawing.Size(202, 33);
             this.label5.TabIndex = 19;
-            this.label5.Text = "REPORTES";
+            this.label5.Text = "INVENTARIO";
             // 
-            // Reportes
+            // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
-            this.Name = "Reportes";
+            this.Name = "Inventario";
             this.Text = "Reportes";
             this.ResumeLayout(false);
             this.PerformLayout();

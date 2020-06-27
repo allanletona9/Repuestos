@@ -102,7 +102,7 @@
             this.button5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(220, 60);
             this.button5.TabIndex = 6;
-            this.button5.Text = "     Seguridad";
+            this.button5.Text = "     Inventario";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
