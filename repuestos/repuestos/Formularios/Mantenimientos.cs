@@ -627,9 +627,9 @@ namespace repuestos.Formularios
         private void dvgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            txt_codC.Text = dvgRepuestos.CurrentRow.Cells[0].Value.ToString();
-            txt_nombreC.Text = dvgRepuestos.CurrentRow.Cells[1].Value.ToString();
-            txt_nitC.Text = dvgRepuestos.CurrentRow.Cells[2].Value.ToString();
+            txt_codC.Text = dvgClientes.CurrentRow.Cells[0].Value.ToString();
+            txt_nombreC.Text = dvgClientes.CurrentRow.Cells[1].Value.ToString();
+            txt_nitC.Text = dvgClientes.CurrentRow.Cells[2].Value.ToString();
            
 
             if (dvgClientes.CurrentRow.Cells[3].Value.ToString() == "1")
@@ -1001,7 +1001,7 @@ namespace repuestos.Formularios
             }
             else if (boton_eliminar == true)
             {
-                int iCodigo = Convert.ToInt32(txt_codC.Text);
+                int iCodigo = Convert.ToInt32(txt_codP.Text);
                 DataTable dtEliminar = logic.logicaEliminarproveedores(iCodigo);
                 MessageBox.Show("Proveedor Eliminado Exitosamente");
                 dvgProveedores.Rows.Clear();
@@ -1011,6 +1011,196 @@ namespace repuestos.Formularios
 
 
             tabControl4.SelectedTab = MantenimientoP;
+        }
+
+        private void btn_guardarM_Click(object sender, EventArgs e)
+        {
+            string sNombre = txt_nombreT.Text;
+     
+      
+
+
+            if (boton_ingreso == true)
+            {
+
+                if (txt_nombreT.Text == "")
+                {
+                    MessageBox.Show("Faltan campos por llenar");
+                }
+                else
+                {
+
+                    DataTable dtInsertar = logic.logicaInsertarpago(sNombre);
+                    MessageBox.Show("Tipo de pago Ingresado Exitosamente");
+                    dvgPago.Rows.Clear();
+                    limpiarFormT();
+                    // ActualizarGrid();
+                }
+
+            }
+            else if (boton_modificar == true)
+            {
+                if (txt_nombreT.Text == "" || txt_codT.Text == "")
+                {
+                    MessageBox.Show("Faltan campos por llenar");
+                }
+                else
+                {
+                    int iCodigo = Convert.ToInt32(txt_codC.Text);
+                    string sEstado = "";
+
+                    if (rdb_actioT.Checked)
+                        sEstado = "1";
+                    else
+                        sEstado = "0";
+
+
+                    DataTable dtModificar = logic.logicaModificarpago(iCodigo, sNombre, sEstado);
+                    MessageBox.Show("Tipo de pago Modificado Exitosamente");
+                    dvgPago.Rows.Clear();
+
+                    limpiarFormT();
+                    //ActualizarGrid();
+
+                }
+
+            }
+            else if (boton_eliminar == true)
+            {
+                int iCodigo = Convert.ToInt32(txt_codT.Text);
+                DataTable dtEliminar = logic.logicaEliminarpago(iCodigo);
+                MessageBox.Show("Tipo de pago Eliminado Exitosamente");
+                dvgPago.Rows.Clear();
+                limpiarFormT();
+                //ActualizarGrid();
+            }
+
+
+            tabControl6.SelectedTab = MantenimientoT;
+        }
+
+        private void btn_guardarT_Click(object sender, EventArgs e)
+        {
+            string sNombre = txt_nombreM.Text;
+
+
+
+
+            if (boton_ingreso == true)
+            {
+
+                if (txt_nombreM.Text == "")
+                {
+                    MessageBox.Show("Faltan campos por llenar");
+                }
+                else
+                {
+
+                    DataTable dtInsertar = logic.logicaInsertarmarca(sNombre);
+                    MessageBox.Show("Marca Ingresada Exitosamente");
+                    dvgMarca.Rows.Clear();
+                    limpiarFormM();
+                    // ActualizarGrid();
+                }
+
+            }
+            else if (boton_modificar == true)
+            {
+                if (txt_nombreM.Text == "" || txt_codM.Text == "")
+                {
+                    MessageBox.Show("Faltan campos por llenar");
+                }
+                else
+                {
+                    int iCodigo = Convert.ToInt32(txt_codC.Text);
+                    string sEstado = "";
+
+                    if (rdb_actioM.Checked)
+                        sEstado = "1";
+                    else
+                        sEstado = "0";
+
+
+                    DataTable dtModificar = logic.logicaModificarmarca(iCodigo, sNombre, sEstado);
+                    MessageBox.Show("Marca Modificada Exitosamente");
+                    dvgMarca.Rows.Clear();
+
+                    limpiarFormM();
+                    //ActualizarGrid();
+
+                }
+
+            }
+            else if (boton_eliminar == true)
+            {
+                int iCodigo = Convert.ToInt32(txt_codM.Text);
+                DataTable dtEliminar = logic.logicaEliminarmarca(iCodigo);
+                MessageBox.Show("Marca Eliminada Exitosamente");
+                dvgMarca.Rows.Clear();
+                limpiarFormM();
+                //ActualizarGrid();
+            }
+
+
+            tabControl5.SelectedTab = MantenimientoM;
+        }
+
+        private void dvgProveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_codP.Text = dvgProveedores.CurrentRow.Cells[0].Value.ToString();
+            txt_nombreP.Text = dvgProveedores.CurrentRow.Cells[1].Value.ToString();
+            txt_nitP.Text = dvgProveedores.CurrentRow.Cells[2].Value.ToString();
+            txt_direccionP.Text = dvgProveedores.CurrentRow.Cells[3].Value.ToString();
+
+            if (dvgProveedores.CurrentRow.Cells[4].Value.ToString() == "1")
+            {
+                rdb_actioP.Checked = true;
+            }
+            else
+            {
+                rdb_inactivoP.Checked = true;
+            }
+
+
+            tabControl4.SelectedTab = MantenimientoP;
+        }
+
+        private void dvgMarca_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_codM.Text = dvgMarca.CurrentRow.Cells[0].Value.ToString();
+            txt_nombreM.Text = dvgMarca.CurrentRow.Cells[1].Value.ToString();
+           
+
+            if (dvgMarca.CurrentRow.Cells[2].Value.ToString() == "1")
+            {
+                rdb_actioM.Checked = true;
+            }
+            else
+            {
+                rdb_inactivoM.Checked = true;
+            }
+
+
+            tabControl5.SelectedTab = MantenimientoM;
+        }
+
+        private void dvgPago_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_codT.Text = dvgPago.CurrentRow.Cells[0].Value.ToString();
+            txt_nombreT.Text = dvgPago.CurrentRow.Cells[1].Value.ToString();
+
+
+            if (dvgPago.CurrentRow.Cells[2].Value.ToString() == "1")
+            {
+                rdb_actioT.Checked = true;
+            }
+            else
+            {
+                rdb_inactivoT.Checked = true;
+            }
+
+
+            tabControl6.SelectedTab = MantenimientoT;
         }
     }
 }

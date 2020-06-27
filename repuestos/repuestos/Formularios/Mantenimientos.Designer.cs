@@ -1123,6 +1123,7 @@
             this.dvgProveedores.Name = "dvgProveedores";
             this.dvgProveedores.Size = new System.Drawing.Size(708, 339);
             this.dvgProveedores.TabIndex = 0;
+            this.dvgProveedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgProveedores_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -1437,6 +1438,7 @@
             this.dvgMarca.Name = "dvgMarca";
             this.dvgMarca.Size = new System.Drawing.Size(443, 339);
             this.dvgMarca.TabIndex = 0;
+            this.dvgMarca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgMarca_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -1500,6 +1502,7 @@
             this.btn_guardarM.Text = "Guardar";
             this.btn_guardarM.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_guardarM.UseVisualStyleBackColor = true;
+            this.btn_guardarM.Click += new System.EventHandler(this.btn_guardarM_Click);
             // 
             // btn_eliminarM
             // 
@@ -1739,6 +1742,7 @@
             this.dvgPago.Name = "dvgPago";
             this.dvgPago.Size = new System.Drawing.Size(463, 339);
             this.dvgPago.TabIndex = 0;
+            this.dvgPago.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPago_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -1802,6 +1806,7 @@
             this.btn_guardarT.Text = "Guardar";
             this.btn_guardarT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_guardarT.UseVisualStyleBackColor = true;
+            this.btn_guardarT.Click += new System.EventHandler(this.btn_guardarT_Click);
             // 
             // btn_eliminarT
             // 
