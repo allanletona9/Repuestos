@@ -271,6 +271,23 @@ public DataTable logicaEliminarproveedores(int id)
             sqlEliminar.Fill(dtEliminar);
             return dtEliminar;
         }
+
+        /*ALLAN LETONA*/
+
+        public DataTable logicaGetInventario()
+        {
+            try
+            {
+                SqlDataAdapter sqlGetInventario = dal_datos.getInventrio();
+                DataTable dtInventario = new DataTable();
+                sqlGetInventario.Fill(dtInventario);
+                return dtInventario;
+            }catch(Exception ex)
+            {
+                Console.WriteLine("Error en capa logica obtencion de inventario: " + ex.Message);
+                return null;
+            }
+        }
     }
 }
 

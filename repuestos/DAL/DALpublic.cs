@@ -451,5 +451,24 @@ public SqlDataAdapter eliminarproveedores(int id)
                 return null;
             }
         }
+
+        /*ALLAN LETONA*/
+
+        public SqlDataAdapter getInventrio()
+        {
+            try
+            {
+                string sRecuperarInventario = "SELECT rep.PK_idrepuesto,rep.descripcion_repuesto, trep.descripcion_tiporepuesto, MAX(fe.fecha_fact) AS ultima_venta, rep.codigo_fabricante, rep.precio_venta1, rep.precio_venta2, rep.precio_venta3, rep.precio_venta4 FROM tbl_tiporepuesto AS trep INNER JOIN tbl_repuestos AS rep WITH(NOLOCK) ON trep.PK_idtiporepuesto = rep.PK_idtiporepuesto INNER JOIN tbl_inventario AS inv WITH(NOLOCK) ON rep.PK_idrepuesto = inv.PK_idrepuesto CROSS JOIN tbl_factura_encabezado AS fe WITH(NOLOCK) INNER JOIN tbl_factura_detalle AS fd WITH(NOLOCK) ON fe.PK_idFactEnc = fd.PK_idFactEnc WHERE rep.PK_idrepuesto IN(fd.PK_idrepuesto) GROUP BY rep.PK_idrepuesto,rep.descripcion_repuesto, trep.descripcion_tiporepuesto, rep.codigo_fabricante, rep.precio_venta1, rep.precio_venta2, rep.precio_venta3, rep.precio_venta4 ";
+                SqlDataAdapter sqlRecuperarInventario = new SqlDataAdapter(sRecuperarInventario, cn.conectar());
+                sqlRecuperarInventario.SelectCommand.Connection.Close();
+                return sqlRecuperarInventario;
+
+            }catch(Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion del inventario: "+ex.Message);
+                return null;
+            }
+        }
+
     }
 }
