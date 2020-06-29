@@ -63,6 +63,12 @@
     <Compile Include="Formularios\Facturacion.Designer.cs">
       <DependentUpon>Facturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frm_repuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frm_repuestos.Designer.cs">
+      <DependentUpon>frm_repuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mantenimientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frm_repuestos.resx">
+      <DependentUpon>frm_repuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos.resx">
       <DependentUpon>Mantenimientos.cs</DependentUpon>

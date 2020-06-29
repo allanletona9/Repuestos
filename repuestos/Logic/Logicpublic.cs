@@ -288,6 +288,52 @@ public DataTable logicaEliminarproveedores(int id)
                 return null;
             }
         }
+
+        public DataTable logicaGetProductoKardex(int iCodigoproducto)
+        {
+            try
+            {
+                SqlDataAdapter sqlGetKardex = dal_datos.getProductoKardex(iCodigoproducto);
+                DataTable dtKardex = new DataTable();
+                sqlGetKardex.Fill(dtKardex);
+                return dtKardex;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica obtencion de producto Kardex: " + ex.Message);
+                return null;
+            }
+        }
+        public DataTable logicaGetVentasKardex(int iCodigoproducto, string fechaInicio, string fechaFin)
+        {
+            try
+            {
+                SqlDataAdapter sqlGetKardex = dal_datos.getVentasKardex(iCodigoproducto, fechaInicio, fechaFin);
+                DataTable dtKardex = new DataTable();
+                sqlGetKardex.Fill(dtKardex);
+                return dtKardex;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica obtencion de ventas Kardex: " + ex.Message);
+                return null;
+            }
+        }
+        public DataTable logicaGetComprasKardex(int iCodigoproducto, string fechaInicio, string fechaFin)
+        {
+            try
+            {
+                SqlDataAdapter sqlGetKardex = dal_datos.getComprasKardex(iCodigoproducto, fechaInicio, fechaFin);
+                DataTable dtKardex = new DataTable();
+                sqlGetKardex.Fill(dtKardex);
+                return dtKardex;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica obtencion de compras Kardex: " + ex.Message);
+                return null;
+            }
+        }
     }
 }
 
