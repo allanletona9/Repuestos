@@ -16,7 +16,7 @@ namespace DAL
 {
         try{
         
-        string sRecuperarRepuestos = "SELECT PK_Idrepuestos,nombre_repuestos,descripcion_repuesto,precio_unitario,estado_repuesto FROM tbl_repuestos ";
+        string sRecuperarRepuestos = "  select * from tbl_repuestos";
         SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
         sqlRecuperarRepuestos.SelectCommand.Connection.Close();
             return sqlRecuperarRepuestos;
@@ -466,6 +466,57 @@ public SqlDataAdapter eliminarproveedores(int id)
             }catch(Exception ex)
             {
                 Console.WriteLine("Error en la obtencion del inventario: "+ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter getProductoKardex(int iCodigoproducto)
+        {
+            try
+            {
+                string sRecuperarKardex = "SELECT r.PK_idrepuesto, r.descripcion_repuesto, i.existencias FROM tbl_repuestos AS r INNER JOIN tbl_inventario AS i WITH(NOLOCK) ON r.PK_idrepuesto = i.PK_idrepuesto WHERE i.PK_idrepuesto = '"+iCodigoproducto+ "' ;";
+                SqlDataAdapter sqlRecuperarKardex = new SqlDataAdapter(sRecuperarKardex, cn.conectar());
+                sqlRecuperarKardex.SelectCommand.Connection.Close();
+                return sqlRecuperarKardex;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion del producto de Kardex: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter getVentasKardex(int iCodigoproducto, string fechaInicio, string fechaFin)
+        {
+            try
+            {
+                string sRecuperarKardex = "  SELECT fe.fecha_fact, fe.PK_idFactEnc, r.descripcion_repuesto,'VENTA' AS venta ,fd.cantidad FROM tbl_factura_encabezado AS fe INNER JOIN tbl_factura_detalle AS fd WITH(NOLOCK) ON fe.PK_idFactEnc = fd.PK_idFactEnc INNER JOIN tbl_repuestos AS r ON fd.PK_idrepuesto = r.PK_idrepuesto WHERE r.PK_idrepuesto = '"+iCodigoproducto+"' AND fe.fecha_fact BETWEEN '"+fechaInicio+"' AND '"+fechaFin+"' ";
+                SqlDataAdapter sqlRecuperarKardex = new SqlDataAdapter(sRecuperarKardex, cn.conectar());
+                sqlRecuperarKardex.SelectCommand.Connection.Close();
+                return sqlRecuperarKardex;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de las ventas de Kardex: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter getComprasKardex(int iCodigoproducto, string fechaInicio, string fechaFin)
+        {
+            try
+            {
+                string sRecuperarKardex = "  SELECT ce.fecha_compra, ce.PK_idcompraenc, r.descripcion_repuesto, 'COMPRA' AS compra, cd.cantidad_compra FROM tbl_compras_encabezado AS ce INNER JOIN tbl_compras_detalle AS cd WITH(NOLOCK) ON ce.PK_idcompraenc = cd.PK_idcompraenc INNER JOIN tbl_repuestos AS r ON cd.PK_idrepuesto = r.PK_idrepuesto WHERE r.PK_idrepuesto = '"+iCodigoproducto+"' AND ce.fecha_compra BETWEEN '"+fechaInicio+"' AND '"+fechaFin+"'";
+                SqlDataAdapter sqlRecuperarKardex = new SqlDataAdapter(sRecuperarKardex, cn.conectar());
+                sqlRecuperarKardex.SelectCommand.Connection.Close();
+                return sqlRecuperarKardex;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de las compras de Kardex: " + ex.Message);
                 return null;
             }
         }
