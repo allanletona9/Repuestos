@@ -319,7 +319,6 @@
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form1";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FACTURACION";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

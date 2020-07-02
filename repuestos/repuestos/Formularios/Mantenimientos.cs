@@ -1202,5 +1202,15 @@ namespace repuestos.Formularios
 
             tabControl6.SelectedTab = MantenimientoT;
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox12_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
