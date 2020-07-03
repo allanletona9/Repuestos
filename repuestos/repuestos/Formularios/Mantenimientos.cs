@@ -142,10 +142,21 @@ namespace repuestos.Formularios
         void habilitarBotones()
         {
             txt_codigo.Enabled = false;
-            txt_nombre.Enabled = true;
+            txt_codR.Enabled = true;
+            txt_precio1.Enabled = true;
+            txt_precio2.Enabled = true;
+            txt_precio3.Enabled = true;
+            txt_precio4.Enabled = true;
+            txt_venta1.Enabled = true;
+            txt_venta2.Enabled = true;
+            txt_venta3.Enabled = true;
+            txt_venta4.Enabled = true;
+            txt_codF.Enabled = true;
+            txt_costo.Enabled = true;
             txt_descrip.Enabled = true;
-            txt_precio.Enabled = true;
+            txt_cantidad.Enabled = true;
             gpb_estado.Enabled = true;
+            gpb_fact_sin_exp.Enabled = true;
         }
         void habilitarBotonesC()
         {
@@ -212,10 +223,21 @@ namespace repuestos.Formularios
         void bloquearTextBox()
         {
             txt_codigo.Enabled = false;
-            txt_nombre.Enabled = false;
+            txt_codR.Enabled = false;
+            txt_precio1.Enabled = false;
+            txt_precio2.Enabled = false;
+            txt_precio3.Enabled = false;
+            txt_precio4.Enabled = false;
+            txt_venta1.Enabled = false;
+            txt_venta2.Enabled = false;
+            txt_venta3.Enabled = false;
+            txt_venta4.Enabled = false;
+            txt_codF.Enabled = false;
+            txt_costo.Enabled = false;
             txt_descrip.Enabled = false;
-            txt_precio.Enabled = false;
+            txt_cantidad.Enabled = false;
             gpb_estado.Enabled = false;
+            gpb_fact_sin_exp.Enabled = false;
         }
         void bloquearTextBoxC()
         {
@@ -248,9 +270,9 @@ namespace repuestos.Formularios
         {
             habilitarBotones();
             bloquearBotones();
-            txt_nombre.Text = "";
+            txt_costo.Text = "";
             txt_descrip.Text = "";
-            txt_precio.Text = "";    
+            txt_precio1.Text = "";    
             gpb_estado.Enabled = false;
             boton_ingreso = true;
             tabControl2.SelectedTab = MantenimientoR;
@@ -285,22 +307,41 @@ namespace repuestos.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string sNombre = txt_nombre.Text;
-            string sDescripcion = txt_descrip.Text;
-            string sPrecio_unitario = txt_precio.Text;
-           
+            
+            string sdescripcion = txt_descrip.Text;
+            string sPrecio_unitario = txt_precio1.Text;
+            int sid_tipo_repuesto = Convert.ToInt32(txt_codR.Text);
+            string scod_fabricante =txt_codF.Text;  
+            string scosto_repuesto1 =txt_precio1.Text;
+            string scosto_repuesto2 = txt_precio2.Text;
+            string scosto_repuesto3 = txt_precio3.Text;
+            string scosto_repuesto4 = txt_precio4.Text;
+            string sprecio_venta1= txt_venta1.Text;
+            string sprecio_venta2 = txt_venta2.Text;
+            string sprecio_venta3 = txt_venta3.Text;
+            string sprecio_venta4 = txt_venta4.Text;
+            string scantidad =txt_cantidad.Text;
+            string sfacturar_sin_existencia =gpb_fact_sin_exp.Text;
+            string sEstado1 = "";
+
+            
 
             if (boton_ingreso == true)
             {
-
-                if (txt_nombre.Text == "" || txt_descrip.Text == "" || txt_precio.Text == "" )
+              
+                if (txt_codF.Text == "" || txt_descrip.Text == "" || txt_precio1.Text == "" || txt_precio2.Text == "" || txt_precio3.Text == "" || txt_precio4.Text == "" || txt_venta1.Text == "" || txt_venta2.Text == "" || txt_venta3.Text == "" || txt_venta4.Text == "" || txt_cantidad.Text == "")
                 {
+                    if (rdb_actio1.Checked)
+                        sEstado1 = "1";
+                    else
+                        sEstado1 = "0";
                     MessageBox.Show("Faltan campos por llenar");
                 }
+
                 else
                 {
                 
-                    DataTable dtInsertar = logic.logicaInsertarRepuestos(sNombre, sDescripcion, sPrecio_unitario);
+                    DataTable dtInsertar = logic.logicaInsertarRepuestos(sid_tipo_repuesto, scod_fabricante, sdescripcion, scosto_repuesto1, scosto_repuesto2, scosto_repuesto3, scosto_repuesto4, sprecio_venta1, sprecio_venta2, sprecio_venta3, sprecio_venta4, scantidad, sEstado1);
                     MessageBox.Show("Repuesto Ingresado Exitosamente");
                     dvgRepuestos.Rows.Clear();
                     limpiarForm();
@@ -310,7 +351,7 @@ namespace repuestos.Formularios
             }
             else if (boton_modificar == true)
             {
-                if (txt_nombre.Text == "" || txt_descrip.Text == "" || txt_precio.Text == "" || txt_codigo.Text == "")
+                if (txt_codF.Text == "" || txt_descrip.Text == "" || txt_precio1.Text == "" || txt_precio2.Text == "" || txt_precio3.Text == "" || txt_precio4.Text == "" || txt_venta1.Text == "" || txt_venta2.Text == "" || txt_venta3.Text == "" || txt_venta4.Text == "" || txt_cantidad.Text == "" || txt_codigo.Text == "")
                 {
                     MessageBox.Show("Faltan campos por llenar");
                 }
@@ -318,14 +359,18 @@ namespace repuestos.Formularios
                 {
                     int iCodigo = Convert.ToInt32(txt_codigo.Text);
                     string sEstado = "";
-
+                    string sEstado2 = "";
                     if (rdb_actio.Checked)
                         sEstado = "1";
                     else
                         sEstado = "0";
+                    if (rdb_actio1.Checked)
+                        sEstado2 = "1";
+                    else
+                        sEstado2 = "0";
 
 
-                    DataTable dtModificar = logic.logicaModificarRepuestos(iCodigo, sNombre, sDescripcion, sPrecio_unitario, sEstado);
+                    DataTable dtModificar = logic.logicaModificarRepuestos(iCodigo, sid_tipo_repuesto, scod_fabricante, sdescripcion, scosto_repuesto1, scosto_repuesto2, scosto_repuesto3, scosto_repuesto4, sprecio_venta1, sprecio_venta2, sprecio_venta3, sprecio_venta4, scantidad, sEstado2, sEstado);
                     MessageBox.Show("Repuesto Modificado Exitosamente");
                     dvgRepuestos.Rows.Clear();
 
@@ -355,9 +400,9 @@ namespace repuestos.Formularios
             Btn_guardar.Enabled = false;
             Btn_modificar.Enabled = true;
             Btn_eliminar.Enabled = true;
-            txt_nombre.Text = " ";
+            txt_costo.Text = " ";
             txt_descrip.Text = "";
-            txt_precio.Text = "";
+            txt_precio1.Text = "";
             gpb_estado.Enabled = false;
             
         }
@@ -608,9 +653,9 @@ namespace repuestos.Formularios
         {
 
             txt_codigo.Text = dvgRepuestos.CurrentRow.Cells[0].Value.ToString();
-            txt_nombre.Text = dvgRepuestos.CurrentRow.Cells[1].Value.ToString();
+            txt_costo.Text = dvgRepuestos.CurrentRow.Cells[1].Value.ToString();
             txt_descrip.Text = dvgRepuestos.CurrentRow.Cells[2].Value.ToString();
-            txt_precio.Text = dvgRepuestos.CurrentRow.Cells[3].Value.ToString();
+            txt_precio1.Text = dvgRepuestos.CurrentRow.Cells[3].Value.ToString();
 
             if (dvgRepuestos.CurrentRow.Cells[6].Value.ToString() == "1")
             {
@@ -1209,6 +1254,11 @@ namespace repuestos.Formularios
         }
 
         private void groupBox12_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter_1(object sender, EventArgs e)
         {
 
         }
