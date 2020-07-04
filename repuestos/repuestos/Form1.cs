@@ -119,7 +119,7 @@ namespace repuestos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Formularios.Consultas(), sender);
+            OpenChildForm(new Formularios.frm_repuestos(), sender);
         }
 
         private void button3_Click(object sender, EventArgs e)

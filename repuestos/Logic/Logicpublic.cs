@@ -38,18 +38,18 @@ namespace Logic
             return dtBuscar;
         }
         
-        public DataTable logicaInsertarRepuestos(string nombre, string descripcion, string precio_unitario)
+        public DataTable logicaInsertarRepuestos(int id_tipo_repuesto,string cod_fabricante, string descripcion,string costo_repuesto1,string costo_repuesto2,string costo_repuesto3,string costo_repuesto4,string precio_venta1,string precio_venta2,string precio_venta3,string precio_venta4, string cantidad,string facturar_sin_existencia)
         {
-            SqlDataAdapter sqlInsertar =dal_datos.insertarRepuestos(nombre, descripcion, precio_unitario);
+            SqlDataAdapter sqlInsertar =dal_datos.insertarRepuestos(id_tipo_repuesto,cod_fabricante, descripcion,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia);
             DataTable dtInsertar = new DataTable();
             sqlInsertar.Fill(dtInsertar);
             return dtInsertar;
         }
 
 
-        public DataTable logicaModificarRepuestos(int id, string nombre, string descripcion, string precio_unitario, string estado)
+        public DataTable logicaModificarRepuestos(int id, int id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, string cantidad, string facturar_sin_existencia, string estado)
         {
-            SqlDataAdapter sqlModificar = dal_datos.modificarRepuestos(id, nombre, descripcion, precio_unitario, estado);
+            SqlDataAdapter sqlModificar = dal_datos.modificarRepuestos(id, id_tipo_repuesto, cod_fabricante, descripcion, costo_repuesto1, costo_repuesto2, costo_repuesto3, costo_repuesto4, precio_venta1, precio_venta2, precio_venta3, precio_venta4, cantidad, facturar_sin_existencia, estado);
             DataTable dtModificar = new DataTable();
             sqlModificar.Fill(dtModificar);
             return dtModificar;

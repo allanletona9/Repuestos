@@ -126,4 +126,27 @@
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAOiSURBVGhD7VpJaFNRFP1OKLTahRZFUKi4E5EqrgQXDgi6
+        ElcKdVsQBDdu1I0rt9algguh2KQZmnSwU0o6WdtSO2qrklo7ScfEtknbTNd3XpMSf17SDD/9P9ILh/zP
+        uz+c89+9573wIsWNkpL90ru6HFUBDkmF3lIg6QyvJJ3RIekNXnYdUBWcA+MCTqWGUyGWMaJMXyzpjR4G
+        0ig8UpmxOMRWFiCvMwQFD2kL4BglAmWj7Tcvh+ffckJ9iRO1C3DeDN6wgiQtA5x5wKbQ6aIkbcO7YbHw
+        Wm5XwiTtgnPW5+4IUA07ApLAUUsVFdY30tm6BjpksghzkkamBYDok4Eh+ra0RMFgkMLhCwTo4/w83e/s
+        pj3lJuGzCSGTAi43NdOE20Mur5defv9BN1va6ExtPZ2vt1FRZxdVTE6Rn4nqYEJOVNYIv2NLZErA9eZW
+        WvX7yTo1TfmWSmEOcKHBRiNsdsbdbjqZiohMCDhuraaF9XUyTEwmVB5HKipp+M8Sm4mF5MspEwLeOH7S
+        tGc1oUbFDOCzkJUVygk9Ic+JC6UFHGSk3T4/Pe4fEI5H4pq9lTczyOPexHoCjS3PiwulBdxobuNuc7qm
+        VjgeiV0MvU4nvR0d4/d4+xCUlMUqLeBBTy95WPPuFoyJ8PzLV17/uL7Y0MQtFuuEPC8mlBbw8HMfLft8
+        wjERng4OkWN5hV/DXhHn6hqj8mJCaQG32zsowEoon626onE5bDMzZGa1j+s7oWcPM1eS58WE0gKOWau4
+        m9z71CUcj8QVewvvl1ut7fz+tWOUBl2uqLy4UFoAUDX9m7oXFnmTisbDgOcXhWwTa8cKK71Hvf1ReXGR
+        CQGXbHZey9gDicblgJAaJhor8gGDWZgTE0oLyDFWkH12lgtAPT9jTRrPkZCvG5+gRbZyJ+U+YSgpIJJ8
+        OFDjPYtO3hORzYmSgeWOrbg5sM2O/K6EoZSAXFM0+fe/xrkllrM90Zo/wGcEbxq7U1zPra3Ri+ERyjOn
+        8dtACQGiN1/GymJvxMYsz2ylq8x10LR3Ozr5orUv2Y2bCOkKSIR8RpGOAFHZbCt5IFUBINk0ozJ5IFUB
+        4X1LOFQhD6QqAAtOn9PFbbKUuY0q5IFUBQBwkYLqD8KxbUM6AjSBHQFq4/8RkPUHHIisPmJCZP0hH44s
+        s/qYFYHD42w56NbHPK1nA9qeCXCLQT4cmBrU10Zja+DPHuDAuIDTln/2kAe3WOa1amLTKkUhSX8B0IFw
+        Am3Ez/oAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
