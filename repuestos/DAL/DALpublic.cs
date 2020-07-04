@@ -34,7 +34,7 @@ namespace DAL
             SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
             return sqlBuscar;
         }
-        public SqlDataAdapter insertarRepuestos(string nombre, string descripcion, string precio_unitario)
+        public SqlDataAdapter insertarRepuestos(int id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, string cantidad, string facturar_sin_existencia)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace DAL
                 almacena.Close();
 
                
-                string sInsertarRepuestos = "INSERT INTO tbl_repuestos( PK_Idrepuestos,nombre_repuestos,descripcion_repuesto,precio_unitario,estado_repuesto ) VALUES ('" + max + "', '"  + nombre + "', '" + descripcion + "', '" + precio_unitario +  "', '1' ) ";
+                string sInsertarRepuestos = "INSERT INTO tbl_repuestos( PK_idrepuestos,PK_idtiporepuesto,codigo_fabricante, descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,estado_repuesto ) VALUES ('" + max + "', '" + id_tipo_repuesto + "', '" + descripcion + "','" + costo_repuesto1 + "','" + costo_repuesto2 + "','" + costo_repuesto3 + "','" + costo_repuesto4 + "','" + precio_venta1 + "','" + precio_venta2 + "','" + precio_venta3 + "','" + precio_venta4 + "','" + cantidad + "', '" + facturar_sin_existencia +  "', '1' ) ";
                 SqlDataAdapter sqlInsertarRepuestos = new SqlDataAdapter(sInsertarRepuestos, cn.conectar());
                 sqlInsertarRepuestos.SelectCommand.Connection.Close();
                 return sqlInsertarRepuestos;
@@ -66,11 +66,11 @@ namespace DAL
             }
         }
 
-        public SqlDataAdapter modificarRepuestos(int id, string nombre, string descripcion, string precio_unitario, string estado)
+        public SqlDataAdapter modificarRepuestos(int id, int id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, string cantidad, string facturar_sin_existencia, string estado)
         {
             try
             {
-                string sModificar = "UPDATE tbl_repuestos SET nombre_repuestos = '" + nombre + "', descripcion_repuesto = '" + descripcion + "',precio_unitario = '" + precio_unitario + "', estado_repuesto = '" + estado + "' WHERE PK_Idrepuestos = '" + id + "'";
+                string sModificar = "UPDATE tbl_repuestos SET PK_idtiporepuesto = '" + id_tipo_repuesto + "', codigo_fabricante = '" + cod_fabricante + "',descripcion_repuesto = '" + descripcion + "',costo_repuesto1= '" + costo_repuesto1 + "',costo_repuesto2= '" + costo_repuesto2 + "',costo_repuesto3= '" + costo_repuesto3 + "',costo_repuesto4= '" + costo_repuesto4 + "',precio_venta1= '" + precio_venta1 + "',precio_venta2= '" + precio_venta2 + "',precio_venta3= '" + precio_venta3 + "',precio_venta4= '" + precio_venta4 + "',cantidad= '" + cantidad + "',facturar_sin_existencia = '" + facturar_sin_existencia + "', estado_repuesto = '" + estado + "' WHERE PK_Idrepuestos = '" + id + "'";
                 SqlDataAdapter sqlModificar = new SqlDataAdapter(sModificar, cn.conectar());
                 return sqlModificar;
 
