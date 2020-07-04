@@ -16,7 +16,7 @@ namespace DAL
 {
         try{
         
-        string sRecuperarRepuestos = "  select * from tbl_repuestos";
+        string sRecuperarRepuestos = "select * from tbl_repuestos";
         SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
         sqlRecuperarRepuestos.SelectCommand.Connection.Close();
             return sqlRecuperarRepuestos;
