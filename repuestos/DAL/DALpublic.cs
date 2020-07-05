@@ -521,5 +521,77 @@ public SqlDataAdapter eliminarproveedores(int id)
             }
         }
 
+        public SqlDataAdapter insertarFacturaEncabezado(int PK_factura, int PK_cliente, int PK_tipopago, string serie, string descuento, string fecha, double subtotal, double total, string comentario, string estado )
+        {
+            try
+            {
+                string sInsertarFactEnc = " INSERT INTO tbl_factura_encabezado(PK_idFactEnc, PK_idcliente, PK_idTipopago, serie_fact, desc_fact, fecha_fact, subtotal, total, comentario, estado_fact)" +
+                    " VALUES('"+PK_factura+ "', '" + PK_cliente + "', '" + PK_tipopago + "', '" + serie + "', '" + descuento + "', '" + fecha + "', '" + subtotal + "', '" + total + "', '" + comentario + "', '" + estado + "' ); ";
+                SqlDataAdapter sqlInsertarFactEnc = new SqlDataAdapter(sInsertarFactEnc, cn.conectar());
+                sqlInsertarFactEnc.SelectCommand.Connection.Close();
+                return sqlInsertarFactEnc;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de factura encabezado: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter insertarFacturaDetalle(int PK_factura, int PK_repuesto, double precio, int cantidad)
+        {
+            try
+            {
+                string sInsertarFactDet = "  INSERT INTO tbl_factura_detalle(PK_idFactEnc, PK_idrepuesto, precio, cantidad) " +
+                    "VALUES('"+PK_factura+ "', '" + PK_repuesto + "', '" + precio + "', '" + cantidad + "') ";
+                SqlDataAdapter sqlInsertarFactDet = new SqlDataAdapter(sInsertarFactDet, cn.conectar());
+                sqlInsertarFactDet.SelectCommand.Connection.Close();
+                return sqlInsertarFactDet;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de factura detalle: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter insertarVentaEfectivo(int PK_factura, double saldo, string estado)
+        {
+            try
+            {
+                string sInsertarVentaEfectivo = "INSERT INTO tbl_venta_efectivo(PK_idFactEnc, saldo_pendiente, estado_ventaefectivo) " +
+                    "VALUES('"+PK_factura+ "', '" + saldo + "', '" + estado + "' )";
+                SqlDataAdapter sqlInsertarVentaEfectivo = new SqlDataAdapter(sInsertarVentaEfectivo, cn.conectar());
+                sqlInsertarVentaEfectivo.SelectCommand.Connection.Close();
+                return sqlInsertarVentaEfectivo;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de venta efectivo: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter insertarVentaCredito(int PK_factura, double saldo, string estado)
+        {
+            try
+            {
+                string sInsertarVentaCredito = "  INSERT INTO tbl_venta_credito(PK_idFactEnc, saldo_pendiente, estado_ventacredito) " +
+                    "VALUES('"+ PK_factura + "','" + saldo + "', '" + estado + "')";
+                SqlDataAdapter sqlInsertarVentaCredito = new SqlDataAdapter(sInsertarVentaCredito, cn.conectar());
+                sqlInsertarVentaCredito.SelectCommand.Connection.Close();
+                return sqlInsertarVentaCredito;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de venta credito: " + ex.Message);
+                return null;
+            }
+        }
+
     }
 }
