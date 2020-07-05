@@ -86,7 +86,7 @@ namespace repuestos.Formularios
 
         private void tabPage2_Load(object sender, EventArgs e)
         {
-            logic.logic_Obtenerclientes();
+            //logic.logic_Obtenerclientes();
 
         }
 
@@ -101,7 +101,58 @@ namespace repuestos.Formularios
            
 
         }
+        void Actualizarcliente()
+        {
 
+            dvgClientes.Rows.Clear();
+            DataTable dtobtenerclientes = logic.logic_Obtenerclientes();
+            foreach (DataRow row in dtobtenerclientes.Rows)
+            {
+                dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+            }
+        }
+
+        void Actualizarrepuesto()
+        {
+
+            dvgRepuestos.Rows.Clear();
+            DataTable dtobtenerProductos = logic.logic_ObtenerRepuestos();
+            foreach (DataRow row in dtobtenerProductos.Rows)
+            {
+                dvgRepuestos.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString(), row[8].ToString(), row[9].ToString(), row[10].ToString(), row[11].ToString(), row[12].ToString(), row[13].ToString(), row[14].ToString());
+            }
+        }
+
+        void ActualizarProveedores()
+        {
+
+            dvgProveedores.Rows.Clear();
+            DataTable dtobtenerproveedores = logic.logic_Obtenerproveedores();
+            foreach (DataRow row in dtobtenerproveedores.Rows)
+            {
+                dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString());
+            }
+        }
+        void ActualizarMarca()
+        {
+
+            dvgMarca.Rows.Clear();
+            DataTable dtobtenermarca = logic.logic_Obtenermarca();
+            foreach (DataRow row in dtobtenermarca.Rows)
+            {
+                dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString());
+            }
+        }
+        void ActualizarPago()
+        {
+
+            dvgPago.Rows.Clear();
+            DataTable dtobtenerpago = logic.logic_Obtenerpago();
+            foreach (DataRow row in dtobtenerpago.Rows)
+            {
+                dvgPago.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString());
+            }
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -1261,6 +1312,57 @@ namespace repuestos.Formularios
         private void groupBox3_Enter_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl3_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (tabControl3.SelectedTab == MantenimientoC)
+            {
+                Actualizarcliente();
+            }
+        }
+
+        private void tabControl4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl4.SelectedTab == tabPage4)
+            {
+                ActualizarProveedores();
+            }
+        }
+
+        private void tabControl5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl5.SelectedTab == tabPage6)
+            {
+                ActualizarMarca();
+            }
+
+        }
+
+        private void tabControl6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl6.SelectedTab == tabPage8)
+            {
+                ActualizarPago();
+            }
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl2.SelectedTab == tabPage10)
+            {
+                Actualizarrepuesto();
+            }
         }
     }
 }

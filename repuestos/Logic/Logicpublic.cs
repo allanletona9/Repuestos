@@ -400,4 +400,3 @@ public DataTable logicaEliminarproveedores(int id)
         }
     }
 }
-

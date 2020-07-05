@@ -105,6 +105,21 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dvgRepuestos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_modificar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
@@ -307,6 +322,7 @@
             this.Clientes.Size = new System.Drawing.Size(1362, 716);
             this.Clientes.TabIndex = 2;
             this.Clientes.Text = "Clientes";
+            this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
             // tabControl3
             // 
@@ -320,6 +336,7 @@
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(1357, 581);
             this.tabControl3.TabIndex = 1;
+            this.tabControl3.SelectedIndexChanged += new System.EventHandler(this.tabControl3_SelectedIndexChanged_1);
             // 
             // tabPage1
             // 
@@ -341,6 +358,7 @@
             this.tabPage1.Size = new System.Drawing.Size(1349, 544);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label7
             // 
@@ -640,6 +658,7 @@
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1361, 622);
             this.tabControl2.TabIndex = 0;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
             // MantenimientoR
             // 
@@ -1111,12 +1130,103 @@
             // dvgRepuestos
             // 
             this.dvgRepuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgRepuestos.Location = new System.Drawing.Point(21, 166);
+            this.dvgRepuestos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column4,
+            this.Column3,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
+            this.dvgRepuestos.Location = new System.Drawing.Point(6, 166);
             this.dvgRepuestos.Name = "dvgRepuestos";
-            this.dvgRepuestos.Size = new System.Drawing.Size(1007, 339);
+            this.dvgRepuestos.Size = new System.Drawing.Size(1060, 297);
             this.dvgRepuestos.TabIndex = 0;
             this.dvgRepuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dvgRepuestos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRepuestos_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Id Tipo Repuesto";
+            this.Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cod Fabricante";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Descripcion";
+            this.Column3.Name = "Column3";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio 1Q";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Precio 2Q";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Precio 3Q";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Precio 4Q";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Precio Venta 1";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Precio Venta 2";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Precio Venta 3";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Precio Venta 4";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Cantidad";
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Sin Existencia";
+            this.Column14.Name = "Column14";
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Estado";
+            this.Column15.Name = "Column15";
             // 
             // tableLayoutPanel1
             // 
@@ -1232,6 +1342,7 @@
             this.tabControl4.Size = new System.Drawing.Size(1427, 575);
             this.tabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl4.TabIndex = 1;
+            this.tabControl4.SelectedIndexChanged += new System.EventHandler(this.tabControl4_SelectedIndexChanged);
             // 
             // MantenimientoP
             // 
@@ -1594,6 +1705,7 @@
             this.tabControl5.Size = new System.Drawing.Size(1405, 714);
             this.tabControl5.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl5.TabIndex = 1;
+            this.tabControl5.SelectedIndexChanged += new System.EventHandler(this.tabControl5_SelectedIndexChanged);
             // 
             // MantenimientoM
             // 
@@ -1900,6 +2012,7 @@
             this.tabControl6.Size = new System.Drawing.Size(1558, 733);
             this.tabControl6.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl6.TabIndex = 1;
+            this.tabControl6.SelectedIndexChanged += new System.EventHandler(this.tabControl6_SelectedIndexChanged);
             // 
             // MantenimientoT
             // 
@@ -2822,5 +2935,20 @@
         private System.Windows.Forms.TextBox txt_codF;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_codR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
     }
 }
