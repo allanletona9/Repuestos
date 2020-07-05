@@ -334,6 +334,70 @@ public DataTable logicaEliminarproveedores(int id)
                 return null;
             }
         }
+
+        public DataTable logicaInsertarFactEnc(int PK_factura, int PK_cliente, int PK_tipopago, string serie, string descuento, string fecha, double subtotal, double total, string comentario, string estado)
+        {
+            try
+            {
+                SqlDataAdapter sqlInsertFactEnc = dal_datos.insertarFacturaEncabezado(PK_factura, PK_cliente, PK_tipopago, serie, descuento, fecha, subtotal, total, comentario, estado);
+                DataTable dtFacEnc = new DataTable();
+                sqlInsertFactEnc.Fill(dtFacEnc);
+                return dtFacEnc;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica insercion de factura encabezado: " + ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable logicaInsertarFactDet(int PK_factura, int PK_repuesto, double precio, int cantidad)
+        {
+            try
+            {
+                SqlDataAdapter sqlInsertFacDet = dal_datos.insertarFacturaDetalle(PK_factura, PK_repuesto, precio, cantidad);
+                DataTable dtFacDet = new DataTable();
+                sqlInsertFacDet.Fill(dtFacDet);
+                return dtFacDet;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica insercion factura detalle: " + ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable logicaInsertarVentaEfectivo(int PK_factura, double saldo, string estado)
+        {
+            try
+            {
+                SqlDataAdapter sqlInsertFacDet = dal_datos.insertarVentaEfectivo(PK_factura, saldo, estado);
+                DataTable dtFacDet = new DataTable();
+                sqlInsertFacDet.Fill(dtFacDet);
+                return dtFacDet;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica insercion venta efectivo: " + ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable logicaInsertarVentaCredito(int PK_factura, double saldo, string estado)
+        {
+            try
+            {
+                SqlDataAdapter sqlInsertFacDet = dal_datos.insertarVentaCredito(PK_factura, saldo, estado);
+                DataTable dtFacDet = new DataTable();
+                sqlInsertFacDet.Fill(dtFacDet);
+                return dtFacDet;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa logica insercion venta credito: " + ex.Message);
+                return null;
+            }
+        }
     }
 }
 

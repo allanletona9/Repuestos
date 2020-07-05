@@ -83,7 +83,7 @@ namespace repuestos.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frm_repuestos repuestos = new frm_repuestos();
+            frm_repuestos repuestos = new frm_repuestos(1);
             AddOwnedForm(repuestos);
             repuestos.Show();
         }
