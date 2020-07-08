@@ -28,8 +28,9 @@ namespace repuestos.Formularios
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox1.ForeColor = Color.WhiteSmoke;
+ 
+
+
         }
 
         private void textBox2_Click(object sender, EventArgs e)
@@ -50,6 +51,32 @@ namespace repuestos.Formularios
             //textBox1.Select(textBox1.TextLength, 0);
         }
 
-       
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+            textBox3.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void textBox4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox4_Click_1(object sender, EventArgs e)
+        {
+            textBox4.Clear();
+            textBox4.PasswordChar = '*';
+            textBox4.ForeColor = Color.WhiteSmoke;
+        }
     }
 }
