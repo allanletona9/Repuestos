@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
 
+
 namespace repuestos.Formularios
 {
     public partial class Inventario : Form
     {
         Logicpublic logic = new Logicpublic();
-        
+        Mantenimientos mantenimiento = new Mantenimientos();
+
         public Inventario()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace repuestos.Formularios
             DataTable dtInventario = logic.logicaGetInventario();
             foreach (DataRow row in dtInventario.Rows)
             {
-                dgv_Inventario.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString());
+                dgv_Inventario.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString(), row[8].ToString());
             }
         }
 
@@ -44,6 +46,7 @@ namespace repuestos.Formularios
             if (tabInventarioGeneral.SelectedTab == tab_inventario)
             {
                 ActualizarInventario();
+            
             }
         }
 
@@ -84,6 +87,77 @@ namespace repuestos.Formularios
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             frm_repuestos repuestos = new frm_repuestos(1);
+            AddOwnedForm(repuestos);
+            repuestos.Show();
+        }
+
+        private void dgv_Inventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            textBox1.Text = dgv_Inventario.CurrentRow.Cells[1].Value.ToString();
+           
+        }
+
+        private void btn_modC_Click(object sender, EventArgs e)
+        {
+          
+
+            Mantenimientos repuestos = new Mantenimientos();
+            AddOwnedForm(repuestos);
+            repuestos.Show();
+            
+        }
+
+       public void btn_eliminarI_Click(object sender, EventArgs e)
+        {
+            
+            Mantenimientos repuestos = new Mantenimientos();       
+            repuestos.Show();
+
+            //mantenimiento.tabControl1.SelectedIndex = 2; //Para seleccionar la segunda pestaña.
+           // mantenimiento.cargar_datos();
+
+
+        }
+
+        private void btn_ingresarC_Click(object sender, EventArgs e)
+        {
+            Mantenimientos repuestos = new Mantenimientos();
+            AddOwnedForm(repuestos);
+            repuestos.Show();
+
+        }
+
+       
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
+
+        private void tab_inventario_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void dgv_Inventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Mantenimientos repuestos = new Mantenimientos();
             AddOwnedForm(repuestos);
             repuestos.Show();
         }

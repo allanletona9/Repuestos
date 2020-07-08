@@ -44,5 +44,15 @@ namespace repuestos.Formularios
             fact.txtCodCliente.Text = dgv_clientes.CurrentRow.Cells[0].Value.ToString();
             this.Close();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

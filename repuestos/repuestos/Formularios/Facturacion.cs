@@ -14,6 +14,7 @@ namespace repuestos.Formularios
     public partial class Facturacion : Form
     {
         Logicpublic logic = new Logicpublic();
+        bool boton_ingreso = true;
         DateTime fecha = DateTime.Now;
         List<int> lIdTipoPago = new List<int>();
         public Facturacion()
@@ -297,8 +298,9 @@ namespace repuestos.Formularios
                         logic.logicaInsertarVentaCredito(iFactura, saldo, estado);
                     }
 
-                    limpiarForm();
+                   
                     MessageBox.Show("Factura Guardada Exitosamente");
+                    limpiarForm();
                 }
                 catch(Exception ex)
                 {
@@ -334,6 +336,42 @@ namespace repuestos.Formularios
             txtTotal.Text = "0.00";
             dgvFactDet.Rows.Clear();
             contadorFila = 0;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string sNombre = txtNombreCliente.Text;
+            string snit = txtNit.Text;
+
+
+
+            if (boton_ingreso == true)
+            {
+
+                if (txtNombreCliente.Text == "" || txtNit.Text == "")
+                {
+                    MessageBox.Show("Faltan campos por llenar");
+                }
+                else
+                {
+
+                    DataTable dtInsertar = logic.logicaInsertarclientes(sNombre, snit);
+                    MessageBox.Show("Cliente Ingresado Exitosamente");
+                    //dvgClientes.Rows.Clear();
+                    //limpiarFormC();
+                    // ActualizarGrid();
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarForm();
+        }
+
+        private void cbo_tipoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -67,5 +67,15 @@ namespace repuestos.Formularios
             }
             
         }
+
+        private void dgvRepuestos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
