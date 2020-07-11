@@ -389,11 +389,11 @@ public DataTable logicaEliminarproveedores(int id)
             }
         }
 
-        public DataTable logicaInsertarFactEnc(int PK_factura, int PK_cliente, int PK_tipopago, string serie, string descuento, string fecha, double subtotal, double total, string comentario, string estado)
+        public DataTable logicaInsertarFactEnc(int PK_factura, int PK_cliente, int PK_tipopago, string serie, string descuento, string fecha, double subtotal, double valor_descuento, double total, string comentario, string estado)
         {
             try
             {
-                SqlDataAdapter sqlInsertFactEnc = dal_datos.insertarFacturaEncabezado(PK_factura, PK_cliente, PK_tipopago, serie, descuento, fecha, subtotal, total, comentario, estado);
+                SqlDataAdapter sqlInsertFactEnc = dal_datos.insertarFacturaEncabezado(PK_factura, PK_cliente, PK_tipopago, serie, descuento, fecha, subtotal, valor_descuento , total, comentario, estado);
                 DataTable dtFacEnc = new DataTable();
                 sqlInsertFactEnc.Fill(dtFacEnc);
                 return dtFacEnc;
@@ -451,6 +451,25 @@ public DataTable logicaEliminarproveedores(int id)
                 Console.WriteLine("Error en capa logica insercion venta credito: " + ex.Message);
                 return null;
             }
+        }
+
+        public DataTable logic_obtenerRepuestosVentas()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlObtener = dal_datos.obtenerRepuestosParaFacturacion();
+                DataTable dtobtenerProductos = new DataTable();
+                sqlObtener.Fill(dtobtenerProductos);
+                return dtobtenerProductos;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de repuestos para facturacion, capa logica: " + ex.Message);
+                return null;
+            }
+
         }
 
 

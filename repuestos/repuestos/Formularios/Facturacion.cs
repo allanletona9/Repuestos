@@ -83,85 +83,101 @@ namespace repuestos.Formularios
         public static double total = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtcodrep.Text) || string.IsNullOrEmpty(txtNombreRep.Text) || string.IsNullOrEmpty(txtPrecio.Text)
-                || string.IsNullOrEmpty(txtCant.Text))
+            if(txt_facturarsinexistencias.Text == "1")
             {
-                MessageBox.Show("Faltan campos por llenar");
-            }
-            else
-            {
-                bool productoExistente = false;
-                int posicionFila = 0;
-
-                //si no existe nada en el DGV
-                if (contadorFila == 0)
+                if (string.IsNullOrEmpty(txtcodrep.Text) || string.IsNullOrEmpty(txtNombreRep.Text) || string.IsNullOrEmpty(txtPrecio.Text)
+                    || string.IsNullOrEmpty(txtCant.Text))
                 {
-                    dgvFactDet.Rows.Add(txtcodrep.Text, txtNombreRep.Text, txtCant.Text, txtPrecio.Text);
-
-                    double importe = Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[2].Value)
-                        * Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[3].Value);
-
-                    dgvFactDet.Rows[contadorFila].Cells[4].Value = importe;
-
-                    contadorFila++;
-
-
+                    MessageBox.Show("Faltan campos por llenar");
                 }
                 else
                 {
-                    //recorrera todas las filas del Dgv
-                    foreach (DataGridViewRow Fila in dgvFactDet.Rows)
-                    {
-                        //si existe un código idéntico a cualquier del DGV
-                        if (Fila.Cells[0].Value.ToString() == txtcodrep.Text)
-                        {
-                            productoExistente = true;
-                            //posición del IdProducto identico
-                            posicionFila = Fila.Index;
-                        }
-                    }
+                    bool productoExistente = false;
+                    int posicionFila = 0;
 
-                    if (productoExistente == true)
-                    {
-                        dgvFactDet.Rows[posicionFila].Cells[2].Value = (Convert.ToDouble(txtCant.Text) +
-                            Convert.ToDouble(dgvFactDet.Rows[posicionFila].Cells[2].Value)).ToString();
-
-                        double importe = Convert.ToDouble(dgvFactDet.Rows[posicionFila].Cells[2].Value) * Convert.ToDouble(dgvFactDet.Rows[posicionFila].Cells[3].Value);
-
-                        dgvFactDet.Rows[posicionFila].Cells[4].Value = importe;
-                    }
-                    else
+                    //si no existe nada en el DGV
+                    if (contadorFila == 0)
                     {
                         dgvFactDet.Rows.Add(txtcodrep.Text, txtNombreRep.Text, txtCant.Text, txtPrecio.Text);
 
-                        double importe = Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[2].Value) * Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[3].Value);
+                        double importe = Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[2].Value)
+                            * Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[3].Value);
 
                         dgvFactDet.Rows[contadorFila].Cells[4].Value = importe;
 
                         contadorFila++;
 
+
+                    }
+                    else
+                    {
+                        //recorrera todas las filas del Dgv
+                        foreach (DataGridViewRow Fila in dgvFactDet.Rows)
+                        {
+                            //si existe un código idéntico a cualquier del DGV
+                            if (Fila.Cells[0].Value.ToString() == txtcodrep.Text)
+                            {
+                                productoExistente = true;
+                                //posición del IdProducto identico
+                                posicionFila = Fila.Index;
+                            }
+                        }
+
+                        if (productoExistente == true)
+                        {
+                            dgvFactDet.Rows[posicionFila].Cells[2].Value = (Convert.ToDouble(txtCant.Text) +
+                                Convert.ToDouble(dgvFactDet.Rows[posicionFila].Cells[2].Value)).ToString();
+
+                            double importe = Convert.ToDouble(dgvFactDet.Rows[posicionFila].Cells[2].Value) * Convert.ToDouble(dgvFactDet.Rows[posicionFila].Cells[3].Value);
+
+                            dgvFactDet.Rows[posicionFila].Cells[4].Value = importe;
+                        }
+                        else
+                        {
+                            dgvFactDet.Rows.Add(txtcodrep.Text, txtNombreRep.Text, txtCant.Text, txtPrecio.Text);
+
+                            double importe = Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[2].Value) * Convert.ToDouble(dgvFactDet.Rows[contadorFila].Cells[3].Value);
+
+                            dgvFactDet.Rows[contadorFila].Cells[4].Value = importe;
+
+                            contadorFila++;
+
+                        }
+
                     }
 
+                    total = 0;
+
+                    //recorrera todas las filas del Dgv
+                    foreach (DataGridViewRow Fila in dgvFactDet.Rows)
+                    {
+                        total += Convert.ToDouble(Fila.Cells[4].Value);
+                    }
+                    txtSubtotal.Text = " " + total.ToString();
+                    txtSaldo.Text = total.ToString();
+
+                    if (txtDesc.Text == "0" || txtDesc.Text == "")
+                        txtTotal.Text = txtSubtotal.Text;
+
+                    txtcodrep.Text = "";
+                    txtNombreRep.Text = "";
+                    txtPrecio.Text = "";
+                    txtCant.Text = "";
                 }
-
-                total = 0;
-
-                //recorrera todas las filas del Dgv
-                foreach (DataGridViewRow Fila in dgvFactDet.Rows)
-                {
-                    total += Convert.ToDouble(Fila.Cells[4].Value);
-                }
-                txtSubtotal.Text = " " + total.ToString();
-                txtSaldo.Text = total.ToString();
-
-                if (txtDesc.Text == "0" || txtDesc.Text == "")
-                    txtTotal.Text = txtSubtotal.Text;
-
-                txtcodrep.Text = "";
-                txtNombreRep.Text = "";
-                txtPrecio.Text = "";
-                txtCant.Text = "";
             }
+            else
+            {
+                int existencias_actuales = Convert.ToInt32(txtexistencias_actuales.Text);
+                int cantidad_actual = Convert.ToInt32(txtCant.Text);
+
+                if (cantidad_actual > existencias_actuales)
+                {
+                    MessageBox.Show("No es permitido facturar con existencias 0 este repuesto");
+                    return;
+                }
+            }
+
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -271,6 +287,7 @@ namespace repuestos.Formularios
                     string descuento = txtDesc.Text;
                     string fecha = lblFecha.Text;
                     double subtotal = Convert.ToDouble(txtSubtotal.Text);
+                    double valor_descuento = Convert.ToDouble(txtsubtotal_desc.Text);
                     double total = Convert.ToDouble(txtTotal.Text);
                     string comentario = txtComentario.Text;
                     string estado = "";
@@ -282,7 +299,7 @@ namespace repuestos.Formularios
                     else
                         estado = "pagado";
 
-                    logic.logicaInsertarFactEnc(iFactura, iCliente, Convert.ToInt32(sTipoPago), serie, descuento, fecha, subtotal, total, comentario, estado);
+                    logic.logicaInsertarFactEnc(iFactura, iCliente, Convert.ToInt32(sTipoPago), serie, descuento, fecha, subtotal, valor_descuento, total, comentario, estado);
 
                     foreach (DataGridViewRow row in dgvFactDet.Rows)
                     {
@@ -318,6 +335,8 @@ namespace repuestos.Formularios
 
         private void limpiarForm()
         {
+            txtexistencias_actuales.Text = "";
+            txt_facturarsinexistencias.Text = "";
             txtNoFactura.Text = "";
             txtCodCliente.Text = "";
             txtNombreCliente.Text = "";
@@ -373,6 +392,37 @@ namespace repuestos.Formularios
         private void cbo_tipoPago_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPago_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+
+                double total = Convert.ToDouble(txtTotal.Text);
+                double pago = Convert.ToDouble(txtPago.Text);
+                double saldo = 0.0;
+
+                if (pago > total)
+                {
+                    MessageBox.Show("El pago no puede ser mayor al total");
+                    txtPago.Text = "0";
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtPago.Text))
+                {
+                    txtSaldo.Text = total.ToString();
+                }
+
+                saldo = total - pago;
+
+                txtSaldo.Text = saldo.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.Write("Error: " + ex.Message);
+            }
         }
     }
 }
