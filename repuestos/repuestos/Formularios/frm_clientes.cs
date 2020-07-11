@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,16 +43,6 @@ namespace repuestos.Formularios
             fact.txtNit.Text = dgv_clientes.CurrentRow.Cells[2].Value.ToString();
             fact.txtCodCliente.Text = dgv_clientes.CurrentRow.Cells[0].Value.ToString();
             this.Close();
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgv_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
