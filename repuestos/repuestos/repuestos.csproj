@@ -75,6 +75,12 @@
     <Compile Include="Formularios\frm_repuestos.Designer.cs">
       <DependentUpon>frm_repuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mantenimientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frm_repuestos.resx">
       <DependentUpon>frm_repuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos.resx">
       <DependentUpon>Mantenimientos.cs</DependentUpon>

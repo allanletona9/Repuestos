@@ -9,7 +9,7 @@ namespace DAL
         {
             string sCadenaConexion = "server=DESKTOP-M8BBGJ3\\SQLEXPRESS; database=db_repuestos;Integrated Security= True  ";
             SqlConnection conectar = new SqlConnection();
-            
+            /*DESKTOP-M8BBGJ3\\SQLEXPRESS*/
             try
             {
                 conectar.ConnectionString = sCadenaConexion;

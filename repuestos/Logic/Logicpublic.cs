@@ -37,19 +37,21 @@ namespace Logic
             sqlBuscar.Fill(dtBuscar);
             return dtBuscar;
         }
-        
-        public DataTable logicaInsertarRepuestos(int id_tipo_repuesto,string cod_fabricante, string descripcion,string costo_repuesto1,string costo_repuesto2,string costo_repuesto3,string costo_repuesto4,string precio_venta1,string precio_venta2,string precio_venta3,string precio_venta4, string cantidad,string facturar_sin_existencia)
+
+       
+
+        public DataTable logicaInsertarRepuestos(int id_repuesto, string id_tipo_repuesto,string cod_fabricante, string descripcion,string costo_repuesto1,string costo_repuesto2,string costo_repuesto3,string costo_repuesto4,string precio_venta1,string precio_venta2,string precio_venta3,string precio_venta4, int cantidad,string facturar_sin_existencia,int precio_factura)
         {
-            SqlDataAdapter sqlInsertar =dal_datos.insertarRepuestos(id_tipo_repuesto,cod_fabricante, descripcion,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia);
+            SqlDataAdapter sqlInsertar =dal_datos.insertarRepuestos(id_repuesto,id_tipo_repuesto,cod_fabricante, descripcion,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura);
             DataTable dtInsertar = new DataTable();
             sqlInsertar.Fill(dtInsertar);
             return dtInsertar;
         }
 
 
-        public DataTable logicaModificarRepuestos(int id, int id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, string cantidad, string facturar_sin_existencia, string estado)
+        public DataTable logicaModificarRepuestos(int id, string id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, int cantidad, string facturar_sin_existencia,int precio_factura, string estado)
         {
-            SqlDataAdapter sqlModificar = dal_datos.modificarRepuestos(id, id_tipo_repuesto, cod_fabricante, descripcion, costo_repuesto1, costo_repuesto2, costo_repuesto3, costo_repuesto4, precio_venta1, precio_venta2, precio_venta3, precio_venta4, cantidad, facturar_sin_existencia, estado);
+            SqlDataAdapter sqlModificar = dal_datos.modificarRepuestos(id, id_tipo_repuesto, cod_fabricante, descripcion, costo_repuesto1, costo_repuesto2, costo_repuesto3, costo_repuesto4, precio_venta1, precio_venta2, precio_venta3, precio_venta4, cantidad, facturar_sin_existencia,precio_factura, estado);
             DataTable dtModificar = new DataTable();
             sqlModificar.Fill(dtModificar);
             return dtModificar;
@@ -272,6 +274,58 @@ public DataTable logicaEliminarproveedores(int id)
             return dtEliminar;
         }
 
+        ///Usuarios///////
+        public DataTable logic_Obtenerusuarios()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlObtener = dal_datos.obtenerusuarios();
+                DataTable dtobtenerusuarios = new DataTable();
+                sqlObtener.Fill(dtobtenerusuarios);
+                return dtobtenerusuarios;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de usuarios, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+
+        public DataTable logicaBuscarusuarios(string nombre)
+        {
+            SqlDataAdapter sqlBuscar = dal_datos.buscarusuarios(nombre);
+            DataTable dtBuscar = new DataTable();
+            sqlBuscar.Fill(dtBuscar);
+            return dtBuscar;
+        }
+
+        public DataTable logicaInsertarusuarios(string nombre, string apellido, string password)
+        {
+            SqlDataAdapter sqlInsertar = dal_datos.insertarusuarios(nombre,apellido, password);
+            DataTable dtInsertar = new DataTable();
+            sqlInsertar.Fill(dtInsertar);
+            return dtInsertar;
+        }
+
+
+        public DataTable logicaModificarusuarios(int id, string nombre, string apellido, string password, string estado)
+        {
+            SqlDataAdapter sqlModificar = dal_datos.modificarusuarios(id, nombre, apellido, password, estado);
+            DataTable dtModificar = new DataTable();
+            sqlModificar.Fill(dtModificar);
+            return dtModificar;
+        }
+
+        public DataTable logicaEliminarusuarios(int id)
+        {
+            SqlDataAdapter sqlEliminar = dal_datos.eliminarusuarios(id);
+            DataTable dtEliminar = new DataTable();
+            sqlEliminar.Fill(dtEliminar);
+            return dtEliminar;
+        }
         /*ALLAN LETONA*/
 
         public DataTable logicaGetInventario()
@@ -398,5 +452,94 @@ public DataTable logicaEliminarproveedores(int id)
                 return null;
             }
         }
+
+
+        ////////////////insertar inventario////   
+        public DataTable logicaInsertarinventario(int id_repuesto)
+        {
+            SqlDataAdapter sqlInsertar = dal_datos.insertarinventario(id_repuesto);
+            DataTable dtInsertarI = new DataTable();
+            sqlInsertar.Fill(dtInsertarI);
+            return dtInsertarI;
+        }
+        public DataTable logic_ObtenerInv()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlObtener = dal_datos.obtenerInv();
+                DataTable dtobtenerProductos = new DataTable();
+                sqlObtener.Fill(dtobtenerProductos);
+                return dtobtenerProductos;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de inventario, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+
+        public DataTable logicaBuscarInventario(string id)
+        {
+            SqlDataAdapter sqlBuscar = dal_datos.buscarinventario(id);
+            DataTable dtBuscar = new DataTable();
+            sqlBuscar.Fill(dtBuscar);
+            return dtBuscar;
+        }
+        ////////Tipo de Repuesto////
+        public DataTable logic_Obtenertiporep()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlObtener = dal_datos.obtenerTipoRepuesto();
+                DataTable dtobtenertipoRep = new DataTable();
+                sqlObtener.Fill(dtobtenertipoRep);
+                return dtobtenertipoRep;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+
+        public DataTable logicaBuscarTipoRe(string nombre)
+        {
+            SqlDataAdapter sqlBuscar = dal_datos.buscarTipoRe(nombre);
+            DataTable dtBuscar = new DataTable();
+            sqlBuscar.Fill(dtBuscar);
+            return dtBuscar;
+        }
+        public DataTable logicaInsertarTipoRe(string nombre)
+        {
+            SqlDataAdapter sqlInsertar = dal_datos.insertartiporepuesto(nombre);
+            DataTable dtInsertar = new DataTable();
+            sqlInsertar.Fill(dtInsertar);
+            return dtInsertar;
+        }
+
+
+        public DataTable logicaModificarTipoRe(int id, string nombre, string estado)
+        {
+            SqlDataAdapter sqlModificar = dal_datos.modificartiporepuesto(id, nombre, estado);
+            DataTable dtModificar = new DataTable();
+            sqlModificar.Fill(dtModificar);
+            return dtModificar;
+        }
+
+        public DataTable logicaEliminarTipoRe(int id)
+        {
+            SqlDataAdapter sqlEliminar = dal_datos.eliminartiporepuesto(id);
+            DataTable dtEliminar = new DataTable();
+            sqlEliminar.Fill(dtEliminar);
+            return dtEliminar;
+        }
+
+
     }
 }

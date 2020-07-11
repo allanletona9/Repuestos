@@ -30,30 +30,23 @@ namespace DAL
 
         public SqlDataAdapter buscarRepuestos(string nombre)
         {
-            string sBuscar = "SELECT PK_Idrepuestos,nombre_repuestos,descripcion_repuesto,precio_unitario,estado_repuesto FROM tbl_repuestos WHERE nombre_repuestos LIKE '%" + nombre + "%';";
+            string sBuscar = "SELECT PK_idrepuesto,PK_idtiporepuesto,codigo_fabricante, descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura,estado_repuesto FROM tbl_repuestos WHERE descripcion_repuesto LIKE '%" + nombre + "%';";
             SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
             return sqlBuscar;
         }
-        public SqlDataAdapter insertarRepuestos(int id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, string cantidad, string facturar_sin_existencia)
+
+
+
+       
+
+        public SqlDataAdapter insertarRepuestos(int id_repuesto,string id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, int cantidad, string facturar_sin_existencia,int precio_factura)
         {
             try
             {
-                /*METODO PARA AUTO INCREMENTAR EL ID SIGUIENTE*/
-                int max = 0;
-                string sMax = "SELECT MAX(PK_Idrepuestos) FROM tbl_repuestos";
-                SqlCommand sqlMax = new SqlCommand(sMax, cn.conectar());
-                SqlDataReader almacena = sqlMax.ExecuteReader();
-
-                while (almacena.Read())
-                {
-                    max = almacena.GetInt32(0);
-                }
-
-                max++;
-                almacena.Close();
+               
 
                
-                string sInsertarRepuestos = "INSERT INTO tbl_repuestos( PK_idrepuestos,PK_idtiporepuesto,codigo_fabricante, descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,estado_repuesto ) VALUES ('" + max + "', '" + id_tipo_repuesto + "', '" + descripcion + "','" + costo_repuesto1 + "','" + costo_repuesto2 + "','" + costo_repuesto3 + "','" + costo_repuesto4 + "','" + precio_venta1 + "','" + precio_venta2 + "','" + precio_venta3 + "','" + precio_venta4 + "','" + cantidad + "', '" + facturar_sin_existencia +  "', '1' ) ";
+                string sInsertarRepuestos = "INSERT INTO tbl_repuestos( PK_idrepuesto ,PK_idtiporepuesto,codigo_fabricante, descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura,estado_repuesto ) VALUES (  '" + id_repuesto + "', '" + id_tipo_repuesto + "', '" + cod_fabricante + "','" + descripcion + "','" + costo_repuesto1 + "','" + costo_repuesto2 + "','" + costo_repuesto3 + "','" + costo_repuesto4 + "','" + precio_venta1 + "','" + precio_venta2 + "','" + precio_venta3 + "','" + precio_venta4 + "','" + cantidad + "', '" + facturar_sin_existencia + "','" + precio_factura + "', '1' ) ";
                 SqlDataAdapter sqlInsertarRepuestos = new SqlDataAdapter(sInsertarRepuestos, cn.conectar());
                 sqlInsertarRepuestos.SelectCommand.Connection.Close();
                 return sqlInsertarRepuestos;
@@ -66,11 +59,11 @@ namespace DAL
             }
         }
 
-        public SqlDataAdapter modificarRepuestos(int id, int id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, string cantidad, string facturar_sin_existencia, string estado)
+        public SqlDataAdapter modificarRepuestos(int id, string id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, int cantidad, string facturar_sin_existencia,int precio_factura, string estado)
         {
             try
             {
-                string sModificar = "UPDATE tbl_repuestos SET PK_idtiporepuesto = '" + id_tipo_repuesto + "', codigo_fabricante = '" + cod_fabricante + "',descripcion_repuesto = '" + descripcion + "',costo_repuesto1= '" + costo_repuesto1 + "',costo_repuesto2= '" + costo_repuesto2 + "',costo_repuesto3= '" + costo_repuesto3 + "',costo_repuesto4= '" + costo_repuesto4 + "',precio_venta1= '" + precio_venta1 + "',precio_venta2= '" + precio_venta2 + "',precio_venta3= '" + precio_venta3 + "',precio_venta4= '" + precio_venta4 + "',cantidad= '" + cantidad + "',facturar_sin_existencia = '" + facturar_sin_existencia + "', estado_repuesto = '" + estado + "' WHERE PK_Idrepuestos = '" + id + "'";
+                string sModificar = "UPDATE tbl_repuestos SET PK_idtiporepuesto = '" + id_tipo_repuesto + "', codigo_fabricante = '" + cod_fabricante + "',descripcion_repuesto = '" + descripcion + "',costo_repuesto1= '" + costo_repuesto1 + "',costo_repuesto2= '" + costo_repuesto2 + "',costo_repuesto3= '" + costo_repuesto3 + "',costo_repuesto4= '" + costo_repuesto4 + "',precio_venta1= '" + precio_venta1 + "',precio_venta2= '" + precio_venta2 + "',precio_venta3= '" + precio_venta3 + "',precio_venta4= '" + precio_venta4 + "',cantidad= '" + cantidad + "',facturar_sin_existencia = '" + facturar_sin_existencia + "',precio_factura = '" + precio_factura + "', estado_repuesto = '" + estado + "' WHERE PK_Idrepuesto = '" + id + "'";
                 SqlDataAdapter sqlModificar = new SqlDataAdapter(sModificar, cn.conectar());
                 return sqlModificar;
 
@@ -86,7 +79,7 @@ namespace DAL
         {
             try
             {
-                string sEliminar = "UPDATE tbl_repuestos SET estado_repuesto = '0' WHERE PK_Idrepuestos = '" + id + "'";
+                string sEliminar = "UPDATE tbl_repuestos SET estado_repuesto = '0' WHERE PK_idrepuesto = '" + id + "'";
                 SqlDataAdapter sqlEliminar = new SqlDataAdapter(sEliminar, cn.conectar());
                 return sqlEliminar;
             }
@@ -126,22 +119,8 @@ namespace DAL
         {
             try
             {
-                /*METODO PARA AUTO INCREMENTAR EL ID SIGUIENTE*/
-                int max = 0;
-                string sMax = "SELECT MAX(PK_idcliente) FROM tbl_cliente";
-                SqlCommand sqlMax = new SqlCommand(sMax, cn.conectar());
-                SqlDataReader almacena = sqlMax.ExecuteReader();
-
-                while (almacena.Read())
-                {
-                    max = almacena.GetInt32(0);
-                }
-
-                max++;
-                almacena.Close();
-
-
-                string sInsertarclientes = "INSERT INTO tbl_cliente( PK_idcliente,nombre_cliente,nit_cliente,estado_cliente ) VALUES ('" + max + "', '" + nombre + "', '" + nit + "', '1' ) ";
+                
+                string sInsertarclientes = "INSERT INTO tbl_cliente( nombre_cliente,nit_cliente,estado_cliente ) VALUES ( '"+ nombre + "', '" + nit + "', '1' ) ";
                 SqlDataAdapter sqlInsertarclientes = new SqlDataAdapter(sInsertarclientes, cn.conectar());
                 sqlInsertarclientes.SelectCommand.Connection.Close();
                 return sqlInsertarclientes;
@@ -213,23 +192,9 @@ namespace DAL
 public SqlDataAdapter insertarproveedores(string nombre, string nit,string direccion)
 {
     try
-    {
-        /*METODO PARA AUTO INCREMENTAR EL ID SIGUIENTE*/
-        int max = 0;
-        string sMax = "SELECT MAX(PK_idproveedor) FROM tbl_proveedor";
-        SqlCommand sqlMax = new SqlCommand(sMax, cn.conectar());
-        SqlDataReader almacena = sqlMax.ExecuteReader();
+    {  
 
-        while (almacena.Read())
-        {
-            max = almacena.GetInt32(0);
-        }
-
-        max++;
-        almacena.Close();
-
-
-        string sInsertarproveedor = "INSERT INTO tbl_( SELECT PK_idproveedor,nombre_proveedor,nit_proveedor,direccion_proveedor,estado_proveedor  ) VALUES ('" + max + "', '" + nombre + "', '" + nit + "','" + direccion + "', '1' ) ";
+        string sInsertarproveedor = "INSERT INTO tbl_proveedor(nombre_proveedor,nit_proveedor,direccion_proveedor,estado_proveedor  ) VALUES ( '" + nombre + "', '" + nit + "','" + direccion + "', '1' ) ";
         SqlDataAdapter sqlInsertarproveedores = new SqlDataAdapter(sInsertarproveedor, cn.conectar());
         sqlInsertarproveedores.SelectCommand.Connection.Close();
         return sqlInsertarproveedores;
@@ -303,22 +268,9 @@ public SqlDataAdapter eliminarproveedores(int id)
         {
             try
             {
-                /*METODO PARA AUTO INCREMENTAR EL ID SIGUIENTE*/
-                int max = 0;
-                string sMax = "SELECT MAX(PK_idmarca) FROM tbl_marcas_vehiculo";
-                SqlCommand sqlMax = new SqlCommand(sMax, cn.conectar());
-                SqlDataReader almacena = sqlMax.ExecuteReader();
+              
 
-                while (almacena.Read())
-                {
-                    max = almacena.GetInt32(0);
-                }
-
-                max++;
-                almacena.Close();
-
-
-                string sInsertarmarca = "INSERT INTO tbl_marcas_vehiculo ( SELECT PK_idmarca,nombre_marca,estado_marca ) VALUES ('" + max + "', '" + nombre + "', '1' ) ";
+                string sInsertarmarca = "INSERT INTO tbl_marcas_vehiculo (nombre_marca,estado_marca ) VALUES ( '" + nombre + "', '1' ) ";
                 SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
                 sqlInsertarmarca.SelectCommand.Connection.Close();
                 return sqlInsertarmarca;
@@ -384,7 +336,7 @@ public SqlDataAdapter eliminarproveedores(int id)
 
         public SqlDataAdapter buscarpago(string nombre)
         {
-            string sBuscar = "SELECT PK_idTipopago,nombre_tipopago,estado_tipopago WHERE nombre_tipopago LIKE '%" + nombre + "%';";
+            string sBuscar = "SELECT PK_idTipopago,nombre_tipopago,estado_tipopago FROM tbl_tipo_pago WHERE nombre_tipopago LIKE '%" + nombre + "%';";
             SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
             return sqlBuscar;
         }
@@ -393,22 +345,9 @@ public SqlDataAdapter eliminarproveedores(int id)
         {
             try
             {
-                /*METODO PARA AUTO INCREMENTAR EL ID SIGUIENTE*/
-                int max = 0;
-                string sMax = "SELECT MAX(PK_idTipopago) FROM tbl_tipo_pago";
-                SqlCommand sqlMax = new SqlCommand(sMax, cn.conectar());
-                SqlDataReader almacena = sqlMax.ExecuteReader();
+               
 
-                while (almacena.Read())
-                {
-                    max = almacena.GetInt32(0);
-                }
-
-                max++;
-                almacena.Close();
-
-
-                string sInsertarpago = "INSERT INTO tbl_tipo_pago ( SELECT PK_idTipopago,nombre_tipopago,estado_tipopago) VALUES ('" + max + "', '" + nombre + "', '1' ) ";
+                string sInsertarpago = "INSERT INTO tbl_tipo_pago (nombre_tipopago,estado_tipopago) VALUES ( '" + nombre + "', '1' ) ";
                 SqlDataAdapter sqlInsertarpago = new SqlDataAdapter(sInsertarpago, cn.conectar());
                 sqlInsertarpago.SelectCommand.Connection.Close();
                 return sqlInsertarpago;
@@ -451,7 +390,80 @@ public SqlDataAdapter eliminarproveedores(int id)
                 return null;
             }
         }
+        ////////////////////////////Usuarios////////////////////////////////
+        public SqlDataAdapter obtenerusuarios()
+        {
+            try
+            {
 
+                string sRecuperarusuarios = "SELECT PK_idusuario,nombre_usuario,apellido_usuario,password_usuario,estado_usuario FROM tbl_usuarios ";
+                SqlDataAdapter sqlRecuperarusuarios = new SqlDataAdapter(sRecuperarusuarios, cn.conectar());
+                sqlRecuperarusuarios.SelectCommand.Connection.Close();
+                return sqlRecuperarusuarios;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de usuarios: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter buscarusuarios(string nombre)
+        {
+            string sBuscar = "SELECT PK_idusuario,nombre_usuario,apellido_usuario,password_usuario,estado_usuario FROM tbl_usuarios WHERE nombre_usuario LIKE '%" + nombre + "%';";
+            SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
+            return sqlBuscar;
+        }
+
+        public SqlDataAdapter insertarusuarios(string nombre, string apellido, string password)
+        {
+            try
+            {
+
+                string sInsertarusuarios = "INSERT INTO tbl_usuarios(nombre_usuario,apellido_usuario,password_usuario,estado_usuario  ) VALUES ( '" + nombre + "', '" + apellido + "','" + password + "', '1' ) ";
+                SqlDataAdapter sqlInsertarusuarios = new SqlDataAdapter(sInsertarusuarios, cn.conectar());
+                sqlInsertarusuarios.SelectCommand.Connection.Close();
+                return sqlInsertarusuarios;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de usuarios en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter modificarusuarios(int id, string nombre, string apellido, string password, string estado)
+        {
+            try
+            {
+                string sModificar = "UPDATE tbl_usuarios SET nombre_usuario = '" + nombre + "', apellido_usuario = '" + apellido + "', password_usuario = '" + password + "', estado_usuario  = '" + estado + "' WHERE PK_idusuario = '" + id + "'";
+                SqlDataAdapter sqlModificar = new SqlDataAdapter(sModificar, cn.conectar());
+                return sqlModificar;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la modificacion del usuario: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter eliminarusuarios(int id)
+        {
+            try
+            {
+                string sEliminar = "UPDATE tbl_usuarios SET estado_usuario  = '0' WHERE PK_idusuario = '" + id + "'";
+                SqlDataAdapter sqlEliminar = new SqlDataAdapter(sEliminar, cn.conectar());
+                return sqlEliminar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la eliminacion del usuario en capa datos: " + ex.Message);
+                return null;
+            }
+        }
         /*ALLAN LETONA*/
 
         public SqlDataAdapter getInventrio()
@@ -589,6 +601,122 @@ public SqlDataAdapter eliminarproveedores(int id)
             catch (Exception ex)
             {
                 Console.WriteLine("Error en la insercion de venta credito: " + ex.Message);
+                return null;
+            }
+        }
+        ///////////////insertar inventario////////////
+        public SqlDataAdapter insertarinventario(int id_repuesto)
+        {
+            try
+            {
+
+                string sInsertarinventario = "INSERT INTO tbl_inventario( PK_idrepuesto,existencias ) VALUES ( '" + id_repuesto + "', '0' ) ";
+                SqlDataAdapter sqlInsertarinventario = new SqlDataAdapter(sInsertarinventario, cn.conectar());
+                sqlInsertarinventario.SelectCommand.Connection.Close();
+                return sqlInsertarinventario;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de Inventario en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+        public SqlDataAdapter buscarinventario(string id)
+        {
+            string sBuscar = "SELECT PK_idInventario,PK_idrepuesto,existencias FROM tbl_inventario WHERE PK_idrepuesto LIKE '%" + id + "%';";
+            SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
+            return sqlBuscar;
+        }
+
+        public SqlDataAdapter obtenerInv()
+        {
+            try
+            {
+
+                string sRecuperarInv = "select * from tbl_inventario";
+                SqlDataAdapter sqlRecuperarInv = new SqlDataAdapter(sRecuperarInv, cn.conectar());
+                sqlRecuperarInv.SelectCommand.Connection.Close();
+                return sqlRecuperarInv;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Repuestos: " + ex.Message);
+                return null;
+            }
+        }
+        ///tipo de repuesto//
+        public SqlDataAdapter obtenerTipoRepuesto()
+        {
+            try
+            {
+
+                string sRecuperarTipoRep = "SELECT PK_idtiporepuesto,descripcion_tiporepuesto,estado_tiporepuesto FROM tbl_tiporepuesto ";
+                SqlDataAdapter sqlRecuperarTipoRep = new SqlDataAdapter(sRecuperarTipoRep, cn.conectar());
+                sqlRecuperarTipoRep.SelectCommand.Connection.Close();
+                return sqlRecuperarTipoRep;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Tipos de Repuestos: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter buscarTipoRe(string nombre)
+        {
+            string sBuscar = "SELECT PK_idtiporepuesto,descripcion_tiporepuesto,estado_tiporepuesto  FROM tbl_tiporepuesto  WHERE descripcion_tiporepuesto LIKE'%" + nombre + "%';";
+            SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
+            return sqlBuscar;
+        }
+        public SqlDataAdapter insertartiporepuesto(string nombre)
+        {
+            try
+            {
+
+
+                string sInsertartipore = "INSERT INTO tbl_tiporepuesto  (descripcion_tiporepuesto,estado_tiporepuesto ) VALUES ( '" + nombre + "', '1' ) ";
+                SqlDataAdapter sqlInsertartipore = new SqlDataAdapter(sInsertartipore, cn.conectar());
+                sqlInsertartipore.SelectCommand.Connection.Close();
+                return sqlInsertartipore;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de tipo de repuesto en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter modificartiporepuesto(int id, string nombre, string estado)
+        {
+            try
+            {
+                string sModificar = "UPDATE tbl_tiporepuesto SET descripcion_tiporepuesto = '" + nombre + "', estado_tiporepuesto  = '" + estado + "' WHERE PK_idtiporepuesto = '" + id + "'";
+                SqlDataAdapter sqlModificar = new SqlDataAdapter(sModificar, cn.conectar());
+                return sqlModificar;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la modificacion del tipo de repuesto: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter eliminartiporepuesto(int id)
+        {
+            try
+            {
+                string sEliminar = "UPDATE tbl_tiporepuesto SET estado_tiporepuesto = '0' WHERE PK_idtiporepuesto = '" + id + "'";
+                SqlDataAdapter sqlEliminar = new SqlDataAdapter(sEliminar, cn.conectar());
+                return sqlEliminar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la eliminacion del tipo de repuesto: " + ex.Message);
                 return null;
             }
         }

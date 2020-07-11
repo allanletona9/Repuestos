@@ -182,5 +182,11 @@ namespace repuestos
         {
             this.WindowState =FormWindowState.Minimized;
         }
+
+        private void horafecha_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblfecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

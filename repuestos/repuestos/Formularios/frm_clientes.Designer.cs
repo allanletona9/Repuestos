@@ -1,4 +1,4 @@
-﻿namespace repuestos.Formularios
+namespace repuestos.Formularios
 {
     partial class frm_clientes
     {
