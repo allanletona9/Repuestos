@@ -13,7 +13,7 @@ namespace DAL
     {
         conexion cn = new conexion();
         public SqlDataAdapter obtenerProductos()
-{
+        {
         try{
         
         string sRecuperarRepuestos = "select * from tbl_repuestos";
@@ -470,8 +470,9 @@ public SqlDataAdapter eliminarproveedores(int id)
         {
             try
             {
-                string sRecuperarInventario = "SELECT rep.PK_idrepuesto,rep.descripcion_repuesto, trep.descripcion_tiporepuesto, MAX(fe.fecha_fact) AS ultima_venta, rep.codigo_fabricante, rep.precio_venta1, rep.precio_venta2, rep.precio_venta3, rep.precio_venta4 FROM tbl_tiporepuesto AS trep INNER JOIN tbl_repuestos AS rep WITH(NOLOCK) ON trep.PK_idtiporepuesto = rep.PK_idtiporepuesto INNER JOIN tbl_inventario AS inv WITH(NOLOCK) ON rep.PK_idrepuesto = inv.PK_idrepuesto CROSS JOIN tbl_factura_encabezado AS fe WITH(NOLOCK) INNER JOIN tbl_factura_detalle AS fd WITH(NOLOCK) ON fe.PK_idFactEnc = fd.PK_idFactEnc WHERE rep.PK_idrepuesto IN(fd.PK_idrepuesto) GROUP BY rep.PK_idrepuesto,rep.descripcion_repuesto, trep.descripcion_tiporepuesto, rep.codigo_fabricante, rep.precio_venta1, rep.precio_venta2, rep.precio_venta3, rep.precio_venta4 ";
+                string sRecuperarInventario = "spc_obtiene_inventario";
                 SqlDataAdapter sqlRecuperarInventario = new SqlDataAdapter(sRecuperarInventario, cn.conectar());
+                sqlRecuperarInventario.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
                 sqlRecuperarInventario.SelectCommand.Connection.Close();
                 return sqlRecuperarInventario;
 
@@ -533,12 +534,12 @@ public SqlDataAdapter eliminarproveedores(int id)
             }
         }
 
-        public SqlDataAdapter insertarFacturaEncabezado(int PK_factura, int PK_cliente, int PK_tipopago, string serie, string descuento, string fecha, double subtotal, double total, string comentario, string estado )
+        public SqlDataAdapter insertarFacturaEncabezado(int PK_factura, int PK_cliente, int PK_tipopago, string serie, string descuento, string fecha, double subtotal, double valor_descuento, double total, string comentario, string estado )
         {
             try
             {
-                string sInsertarFactEnc = " INSERT INTO tbl_factura_encabezado(PK_idFactEnc, PK_idcliente, PK_idTipopago, serie_fact, desc_fact, fecha_fact, subtotal, total, comentario, estado_fact)" +
-                    " VALUES('"+PK_factura+ "', '" + PK_cliente + "', '" + PK_tipopago + "', '" + serie + "', '" + descuento + "', '" + fecha + "', '" + subtotal + "', '" + total + "', '" + comentario + "', '" + estado + "' ); ";
+                string sInsertarFactEnc = " INSERT INTO tbl_factura_encabezado(PK_idFactEnc, PK_idcliente, PK_idTipopago, serie_fact, desc_fact, fecha_fact, subtotal, descuento, total, comentario, estado_fact)" +
+                    " VALUES('"+PK_factura+ "', '" + PK_cliente + "', '" + PK_tipopago + "', '" + serie + "', '" + descuento + "', '" + fecha + "', '" + subtotal + "', '"+ valor_descuento + "' ,'" + total + "', '" + comentario + "', '" + estado + "' ); ";
                 SqlDataAdapter sqlInsertarFactEnc = new SqlDataAdapter(sInsertarFactEnc, cn.conectar());
                 sqlInsertarFactEnc.SelectCommand.Connection.Close();
                 return sqlInsertarFactEnc;
@@ -604,6 +605,27 @@ public SqlDataAdapter eliminarproveedores(int id)
                 return null;
             }
         }
+
+        public SqlDataAdapter obtenerRepuestosParaFacturacion()
+        {
+            try
+            {
+
+                string sRecuperarRepuestos = "SELECT rep.PK_idrepuesto, rep.PK_idtiporepuesto ,rep.codigo_fabricante, rep.descripcion_repuesto, trep.descripcion_tiporepuesto, inv.existencias , rep.precio_factura, rep.facturar_sin_existencia, rep.precio_venta1, rep.precio_venta2, rep.precio_venta3, rep.precio_venta4 FROM tbl_tiporepuesto AS trep INNER JOIN tbl_repuestos AS rep WITH(NOLOCK) ON trep.PK_idtiporepuesto = rep.PK_idtiporepuesto INNER JOIN tbl_inventario AS inv WITH(NOLOCK) ON rep.PK_idrepuesto = inv.PK_idrepuesto ";
+                SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
+                sqlRecuperarRepuestos.SelectCommand.Connection.Close();
+                return sqlRecuperarRepuestos;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Repuestos para facturacion: " + ex.Message);
+                return null;
+            }
+        }
+
+        /*------------------------------------------------------------------------------------------------------------*/
+
         ///////////////insertar inventario////////////
         public SqlDataAdapter insertarinventario(int id_repuesto)
         {

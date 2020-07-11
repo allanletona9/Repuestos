@@ -58,17 +58,18 @@
             this.btn_ingresarC = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.dgv_Inventario = new System.Windows.Forms.DataGridView();
+            this.tab_compras = new System.Windows.Forms.TabPage();
+            this.tabInventarioGeneral = new System.Windows.Forms.TabControl();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descipcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ultventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigofabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pre1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prec2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prec3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prec4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_compras = new System.Windows.Forms.TabPage();
-            this.tabInventarioGeneral = new System.Windows.Forms.TabControl();
             this.tab_kardex.SuspendLayout();
             this.gbKardex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKardex)).BeginInit();
@@ -394,6 +395,7 @@
             this.Codigo,
             this.Descipcion,
             this.Tipo,
+            this.Column6,
             this.ultventa,
             this.codigofabricante,
             this.pre1,
@@ -408,6 +410,29 @@
             this.dgv_Inventario.TabIndex = 0;
             this.dgv_Inventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Inventario_CellContentClick);
             this.dgv_Inventario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Inventario_CellDoubleClick);
+            // 
+            // tab_compras
+            // 
+            this.tab_compras.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_compras.Location = new System.Drawing.Point(4, 27);
+            this.tab_compras.Name = "tab_compras";
+            this.tab_compras.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_compras.Size = new System.Drawing.Size(1223, 544);
+            this.tab_compras.TabIndex = 0;
+            this.tab_compras.Text = "Compras";
+            // 
+            // tabInventarioGeneral
+            // 
+            this.tabInventarioGeneral.Controls.Add(this.tab_compras);
+            this.tabInventarioGeneral.Controls.Add(this.tab_inventario);
+            this.tabInventarioGeneral.Controls.Add(this.tab_kardex);
+            this.tabInventarioGeneral.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabInventarioGeneral.Location = new System.Drawing.Point(2, 2);
+            this.tabInventarioGeneral.Name = "tabInventarioGeneral";
+            this.tabInventarioGeneral.SelectedIndex = 0;
+            this.tabInventarioGeneral.Size = new System.Drawing.Size(1231, 575);
+            this.tabInventarioGeneral.TabIndex = 20;
+            this.tabInventarioGeneral.SelectedIndexChanged += new System.EventHandler(this.tabInventarioGeneral_SelectedIndexChanged);
             // 
             // Codigo
             // 
@@ -426,6 +451,12 @@
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Existencias";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // ultventa
             // 
@@ -462,29 +493,6 @@
             this.prec4.HeaderText = "Prec. 4 Q";
             this.prec4.Name = "prec4";
             this.prec4.ReadOnly = true;
-            // 
-            // tab_compras
-            // 
-            this.tab_compras.BackColor = System.Drawing.SystemColors.Control;
-            this.tab_compras.Location = new System.Drawing.Point(4, 27);
-            this.tab_compras.Name = "tab_compras";
-            this.tab_compras.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_compras.Size = new System.Drawing.Size(1223, 544);
-            this.tab_compras.TabIndex = 0;
-            this.tab_compras.Text = "Compras";
-            // 
-            // tabInventarioGeneral
-            // 
-            this.tabInventarioGeneral.Controls.Add(this.tab_compras);
-            this.tabInventarioGeneral.Controls.Add(this.tab_inventario);
-            this.tabInventarioGeneral.Controls.Add(this.tab_kardex);
-            this.tabInventarioGeneral.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInventarioGeneral.Location = new System.Drawing.Point(2, 2);
-            this.tabInventarioGeneral.Name = "tabInventarioGeneral";
-            this.tabInventarioGeneral.SelectedIndex = 0;
-            this.tabInventarioGeneral.Size = new System.Drawing.Size(1231, 575);
-            this.tabInventarioGeneral.TabIndex = 20;
-            this.tabInventarioGeneral.SelectedIndexChanged += new System.EventHandler(this.tabInventarioGeneral_SelectedIndexChanged);
             // 
             // Inventario
             // 
@@ -533,15 +541,6 @@
         private System.Windows.Forms.DateTimePicker dtp_inicio;
         private System.Windows.Forms.TabPage tab_inventario;
         private System.Windows.Forms.DataGridView dgv_Inventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descipcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ultventa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigofabricante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pre1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prec2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prec3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prec4;
         private System.Windows.Forms.TabPage tab_compras;
         private System.Windows.Forms.TabControl tabInventarioGeneral;
         private System.Windows.Forms.Label label11;
@@ -551,5 +550,15 @@
         private System.Windows.Forms.Button btn_eliminarI;
         private System.Windows.Forms.Button btn_ingresarC;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descipcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ultventa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigofabricante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pre1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prec2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prec3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prec4;
     }
 }

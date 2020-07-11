@@ -30,10 +30,10 @@ namespace repuestos.Formularios
         void ActualizarRepuestos()
         {
             dgvRepuestos.Rows.Clear();
-            DataTable dtInventario = logic.logic_ObtenerRepuestos();
+            DataTable dtInventario = logic.logic_obtenerRepuestosVentas();
             foreach (DataRow row in dtInventario.Rows)
             {
-                string sPrecioFactura = row[14].ToString();
+                string sPrecioFactura = row[6].ToString();
                 string precio;
 
                 if (sPrecioFactura == "1")
@@ -45,8 +45,7 @@ namespace repuestos.Formularios
                 else
                     precio = row[11].ToString();
 
-
-                dgvRepuestos.Rows.Add(row[0].ToString(), row[2].ToString(), row[3].ToString(), precio.ToString());
+                dgvRepuestos.Rows.Add(row[0].ToString(), row[2].ToString(), row[3].ToString(), precio.ToString(), row[7].ToString(), row[5].ToString());
             }
         }
 
@@ -63,6 +62,8 @@ namespace repuestos.Formularios
                 fact.txtcodrep.Text = dgvRepuestos.CurrentRow.Cells[0].Value.ToString();
                 fact.txtNombreRep.Text = dgvRepuestos.CurrentRow.Cells[2].Value.ToString();
                 fact.txtPrecio.Text = dgvRepuestos.CurrentRow.Cells[3].Value.ToString();
+                fact.txt_facturarsinexistencias.Text = dgvRepuestos.CurrentRow.Cells[4].Value.ToString();
+                fact.txtexistencias_actuales.Text = dgvRepuestos.CurrentRow.Cells[5].Value.ToString();
                 this.Close();
             }
             

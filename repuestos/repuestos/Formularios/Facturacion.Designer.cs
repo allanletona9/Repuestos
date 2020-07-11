@@ -42,6 +42,8 @@
             this.txtNoFactura = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnaddrep = new System.Windows.Forms.GroupBox();
+            this.txt_facturarsinexistencias = new System.Windows.Forms.TextBox();
+            this.txtexistencias_actuales = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtcodrep = new System.Windows.Forms.TextBox();
@@ -214,6 +216,8 @@
             // 
             // btnaddrep
             // 
+            this.btnaddrep.Controls.Add(this.txt_facturarsinexistencias);
+            this.btnaddrep.Controls.Add(this.txtexistencias_actuales);
             this.btnaddrep.Controls.Add(this.txtPrecio);
             this.btnaddrep.Controls.Add(this.label14);
             this.btnaddrep.Controls.Add(this.txtcodrep);
@@ -245,6 +249,22 @@
             this.btnaddrep.TabIndex = 1;
             this.btnaddrep.TabStop = false;
             this.btnaddrep.Text = "Detalle Factura";
+            // 
+            // txt_facturarsinexistencias
+            // 
+            this.txt_facturarsinexistencias.Location = new System.Drawing.Point(892, 12);
+            this.txt_facturarsinexistencias.Name = "txt_facturarsinexistencias";
+            this.txt_facturarsinexistencias.Size = new System.Drawing.Size(40, 21);
+            this.txt_facturarsinexistencias.TabIndex = 32;
+            this.txt_facturarsinexistencias.Visible = false;
+            // 
+            // txtexistencias_actuales
+            // 
+            this.txtexistencias_actuales.Location = new System.Drawing.Point(938, 12);
+            this.txtexistencias_actuales.Name = "txtexistencias_actuales";
+            this.txtexistencias_actuales.Size = new System.Drawing.Size(41, 21);
+            this.txtexistencias_actuales.TabIndex = 31;
+            this.txtexistencias_actuales.Visible = false;
             // 
             // txtPrecio
             // 
@@ -426,6 +446,7 @@
             this.txtPago.Size = new System.Drawing.Size(116, 21);
             this.txtPago.TabIndex = 16;
             this.txtPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPago_KeyPress);
+            this.txtPago.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPago_KeyUp);
             // 
             // label4
             // 
@@ -674,5 +695,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox txt_facturarsinexistencias;
+        public System.Windows.Forms.TextBox txtexistencias_actuales;
     }
 }
