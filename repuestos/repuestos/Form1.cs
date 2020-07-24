@@ -19,6 +19,7 @@ namespace repuestos
         private int tempIndex;
         private Form activeForm;
         //constructor
+        public string _Mensaje;
         public Form1()
         {
             InitializeComponent();
@@ -109,6 +110,9 @@ namespace repuestos
        
         private void Form1_Load(object sender, EventArgs e)
         {
+           
+            Login mv = new Login();
+            mv.Close();
 
         }
 
@@ -119,7 +123,7 @@ namespace repuestos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Formularios.frm_repuestos(0), sender);
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -140,8 +144,11 @@ namespace repuestos
 
         private void button6_Click(object sender, EventArgs e)
         {
+           
+            this.Hide();
+            Login Log = new Login();
+            Log.ShowDialog();
 
-           this.Close();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
