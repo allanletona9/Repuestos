@@ -115,6 +115,13 @@ namespace DAL
             return sqlBuscar;
         }
 
+        public SqlDataAdapter buscarnit(string nit)
+        {
+            string sBuscar = "SELECT PK_idcliente,nombre_cliente,nit_cliente,estado_cliente FROM tbl_cliente WHERE nit_cliente LIKE '%" + nit + "%';";
+            SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
+            return sqlBuscar;
+        }
+
         public SqlDataAdapter insertarclientes(string nombre, string nit)
         {
             try
