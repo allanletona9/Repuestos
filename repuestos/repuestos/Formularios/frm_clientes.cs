@@ -44,5 +44,67 @@ namespace repuestos.Formularios
             fact.txtCodCliente.Text = dgv_clientes.CurrentRow.Cells[0].Value.ToString();
             this.Close();
         }
+
+        private void dgv_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgv_clientes.Rows.Clear();
+            string sNombre = textBox1.Text;
+            string snit = textBox1.Text;
+
+            try
+            {
+                DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
+                DataTable dtBuscar = logic.logicaBuscarclientes(sNombre);
+
+                foreach (DataRow row in dtBuscar.Rows )
+                {
+                    dgv_clientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+                foreach (DataRow row in dtBuscar2.Rows)
+                {
+                    dgv_clientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa diseno recuperar clientes: " + ex.Message);
+            }
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            dgv_clientes.Rows.Clear();
+            string sNombre = textBox1.Text;
+            string snit = textBox1.Text;
+
+            try
+            {
+                DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
+                DataTable dtBuscar = logic.logicaBuscarclientes(sNombre);
+
+                foreach (DataRow row in dtBuscar.Rows)
+                {
+                    dgv_clientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+                foreach (DataRow row in dtBuscar2.Rows)
+                {
+                    dgv_clientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa diseno recuperar clientes: " + ex.Message);
+            }
+        }
     }
 }

@@ -94,9 +94,9 @@ namespace Logic
         public DataTable logicaBuscarnit(string nit)
         {
             SqlDataAdapter sqlBuscar = dal_datos.buscarnit(nit);
-            DataTable dtBuscar = new DataTable();
-            sqlBuscar.Fill(dtBuscar);
-            return dtBuscar;
+            DataTable dtBuscar2 = new DataTable();
+            sqlBuscar.Fill(dtBuscar2);
+            return dtBuscar2;
         }
 
         public DataTable logicaInsertarclientes(string nombre, string nit)

@@ -457,9 +457,11 @@ namespace repuestos.Formularios
         {
             dvgClientes.Rows.Clear();
             string sNombre = textBox10.Text;
+            string snit= textBox10.Text;
 
             try
             {
+                DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
                 DataTable dtBuscar = logic.logicaBuscarclientes(sNombre);
 
                 foreach (DataRow row in dtBuscar.Rows)
@@ -467,6 +469,12 @@ namespace repuestos.Formularios
                     dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
 
                 }
+                foreach (DataRow row in dtBuscar2.Rows)
+                {
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+
 
             }
             catch (Exception ex)
@@ -1573,12 +1581,19 @@ namespace repuestos.Formularios
         {
             dvgClientes.Rows.Clear();
             string sNombre = textBox10.Text;
+            string snit= textBox10.Text;
 
             try
             {
+                DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
                 DataTable dtBuscar = logic.logicaBuscarclientes(sNombre);
 
                 foreach (DataRow row in dtBuscar.Rows)
+                {
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+                foreach (DataRow row in dtBuscar2.Rows)
                 {
                     dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
 
