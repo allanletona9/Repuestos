@@ -467,5 +467,11 @@ namespace repuestos.Formularios
            
 
         }
+
+        private void btnGuardarImprimir_Click(object sender, EventArgs e)
+        {
+            ContenedorFactura facturar = new ContenedorFactura();
+            facturar.Show();
+        }
     }
 }

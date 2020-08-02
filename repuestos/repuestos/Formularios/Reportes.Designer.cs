@@ -34,10 +34,10 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.crystalReportViewer4 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.crystalReportViewer5 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -82,6 +82,7 @@
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // tabPage2
             // 
@@ -104,6 +105,7 @@
             this.crystalReportViewer2.Name = "crystalReportViewer2";
             this.crystalReportViewer2.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer2.TabIndex = 0;
+            this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
             // 
             // tabPage3
             // 
@@ -116,6 +118,18 @@
             this.tabPage3.Text = "Proveedores";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // crystalReportViewer3
+            // 
+            this.crystalReportViewer3.ActiveViewIndex = -1;
+            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer3.Location = new System.Drawing.Point(3, 3);
+            this.crystalReportViewer3.Name = "crystalReportViewer3";
+            this.crystalReportViewer3.Size = new System.Drawing.Size(1071, 603);
+            this.crystalReportViewer3.TabIndex = 1;
+            this.crystalReportViewer3.Load += new System.EventHandler(this.crystalReportViewer3_Load);
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.crystalReportViewer4);
@@ -127,28 +141,6 @@
             this.tabPage4.Text = "Inventario";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.crystalReportViewer5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1077, 609);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Kardex";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // crystalReportViewer3
-            // 
-            this.crystalReportViewer3.ActiveViewIndex = -1;
-            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer3.Location = new System.Drawing.Point(3, 3);
-            this.crystalReportViewer3.Name = "crystalReportViewer3";
-            this.crystalReportViewer3.Size = new System.Drawing.Size(1071, 603);
-            this.crystalReportViewer3.TabIndex = 1;
-            // 
             // crystalReportViewer4
             // 
             this.crystalReportViewer4.ActiveViewIndex = -1;
@@ -159,6 +151,17 @@
             this.crystalReportViewer4.Name = "crystalReportViewer4";
             this.crystalReportViewer4.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer4.TabIndex = 1;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.crystalReportViewer5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1077, 609);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Kardex";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // crystalReportViewer5
             // 

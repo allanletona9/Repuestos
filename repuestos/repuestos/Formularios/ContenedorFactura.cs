@@ -16,5 +16,16 @@ namespace repuestos.Formularios
         {
             InitializeComponent();
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void ContenedorFactura_Load(object sender, EventArgs e)
+        {
+            Factura reportefac = new Factura();
+            crystalReportViewer1.ReportSource = reportefac;
+        }
     }
 }

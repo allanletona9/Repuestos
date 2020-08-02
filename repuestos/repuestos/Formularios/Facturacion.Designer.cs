@@ -371,6 +371,7 @@
             this.btnGuardarImprimir.Text = "Guardar, Imprimir";
             this.btnGuardarImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarImprimir.UseVisualStyleBackColor = true;
+            this.btnGuardarImprimir.Click += new System.EventHandler(this.btnGuardarImprimir_Click);
             // 
             // btnGuardar
             // 
