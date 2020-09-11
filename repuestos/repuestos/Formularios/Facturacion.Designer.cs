@@ -155,6 +155,8 @@
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(160, 21);
             this.txtNit.TabIndex = 8;
+            this.txtNit.Enter += new System.EventHandler(this.txtNit_Enter);
+            this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
             // 
             // NIT
             // 
@@ -369,6 +371,7 @@
             this.btnGuardarImprimir.Text = "Guardar, Imprimir";
             this.btnGuardarImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarImprimir.UseVisualStyleBackColor = true;
+            this.btnGuardarImprimir.Click += new System.EventHandler(this.btnGuardarImprimir_Click);
             // 
             // btnGuardar
             // 

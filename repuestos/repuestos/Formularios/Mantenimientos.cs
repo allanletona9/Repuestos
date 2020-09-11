@@ -44,7 +44,7 @@ namespace repuestos.Formularios
             bloquearTextBoxT();
             bloquearTextBoxTP();
             bloquearTextBoxU();
-            llenarTipoRepuesto();
+           
 
 
         }
@@ -86,8 +86,11 @@ namespace repuestos.Formularios
 
         public void tabPage9_Click(object sender, EventArgs e)
         {
-         
+            llenarTipoRepuesto();
         }
+        
+            
+        
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -116,7 +119,19 @@ namespace repuestos.Formularios
             comboBox1.Items.Add("Precio Venta 3");
             comboBox1.Items.Add("Precio Venta 4");
             Actualizarrepuesto();
-
+            txt_precio1.Text= "0.00";
+            txt_precio2.Text = "0.00";
+            txt_precio3.Text = "0.00";
+            txt_precio4.Text = "0.00";
+            txt_venta1.Text = "0.00";
+            txt_venta2.Text = "0.00";
+            txt_venta3.Text = "0.00";
+            txt_venta4.Text = "0.00";
+            txt_cantidad.Text = "0.00";
+            textBox9.Text = "0 %";
+            textBox8.Text = "0 %";
+            textBox7.Text = "0 %";
+            textBox6.Text = "0 %";
         }
         public void cargar_Repuestos()
         {
@@ -257,6 +272,7 @@ namespace repuestos.Formularios
             comboBox1.Enabled = true;
             gpb_estado.Enabled = true;
             gpb_fact_sin_exp.Enabled = true;
+            llenarTipoRepuesto();
         }
         void habilitarBotonesC()
         {
@@ -305,6 +321,7 @@ namespace repuestos.Formularios
             Btn_ingresar.Enabled = false;
             Btn_modificar.Enabled = false;
             Btn_guardar.Enabled = true;
+            llenarTipoRepuesto();
         }
         void bloquearBotonesC()
         {
@@ -417,19 +434,34 @@ namespace repuestos.Formularios
             habilitarBotones();
             bloquearBotones();
             txt_descrip.Text = "";
-            txt_precio1.Text = "";    
             gpb_estado.Enabled = false;
             boton_ingreso = true;
             tabControl2.SelectedTab = MantenimientoR;
+            llenarTipoRepuesto();
+            txt_precio1.Text = "0.00";
+            txt_precio2.Text = "0.00";
+            txt_precio3.Text = "0.00";
+            txt_precio4.Text = "0.00";
+            txt_venta1.Text = "0.00";
+            txt_venta2.Text = "0.00";
+            txt_venta3.Text = "0.00";
+            txt_venta4.Text = "0.00";
+            txt_cantidad.Text = "0.00";
+            textBox9.Text = "0 %";
+            textBox8.Text = "0 %";
+            textBox7.Text = "0 %";
+            textBox6.Text = "0 %";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             dvgClientes.Rows.Clear();
             string sNombre = textBox10.Text;
+            string snit= textBox10.Text;
 
             try
             {
+                DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
                 DataTable dtBuscar = logic.logicaBuscarclientes(sNombre);
 
                 foreach (DataRow row in dtBuscar.Rows)
@@ -437,6 +469,12 @@ namespace repuestos.Formularios
                     dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
 
                 }
+                foreach (DataRow row in dtBuscar2.Rows)
+                {
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+
 
             }
             catch (Exception ex)
@@ -457,11 +495,26 @@ namespace repuestos.Formularios
             boton_eliminar = false;
             boton_modificar = false;
             boton_ingreso = false;
+            txt_precio1.Text = "0.00";
+            txt_precio2.Text = "0.00";
+            txt_precio3.Text = "0.00";
+            txt_precio4.Text = "0.00";
+            txt_venta1.Text = "0.00";
+            txt_venta2.Text = "0.00";
+            txt_venta3.Text = "0.00";
+            txt_venta4.Text = "0.00";
+            txt_cantidad.Text = "0.00";
+            textBox9.Text = "0 %";
+            textBox8.Text = "0 %";
+            textBox7.Text = "0 %";
+            textBox6.Text = "0 %";
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             
+
             string sdescripcion = txt_descrip.Text;
             //string sPrecio_unitario = txt_precio1.Text;
            
@@ -694,7 +747,7 @@ namespace repuestos.Formularios
 
         private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.soloLetras(e);
+  
         }
 
         private void textBox18_KeyPress(object sender, KeyPressEventArgs e)
@@ -1052,7 +1105,7 @@ namespace repuestos.Formularios
                     MessageBox.Show("Cliente Ingresado Exitosamente");
                     dvgClientes.Rows.Clear();
                     limpiarFormC();
-                    // ActualizarGrid();
+                    Actualizarcliente();
                 }
 
             }
@@ -1078,7 +1131,7 @@ namespace repuestos.Formularios
                     dvgClientes.Rows.Clear();
 
                     limpiarFormC();
-                    //ActualizarGrid();
+                    Actualizarcliente();
 
                 }
 
@@ -1090,7 +1143,7 @@ namespace repuestos.Formularios
                 MessageBox.Show("Cliente Eliminado Exitosamente");
                 dvgClientes.Rows.Clear();
                 limpiarFormP();
-                //ActualizarGrid();
+                Actualizarcliente();
             }
 
 
@@ -1128,7 +1181,7 @@ namespace repuestos.Formularios
                     MessageBox.Show("proveedor Ingresado Exitosamente");
                     dvgProveedores.Rows.Clear();
                     limpiarFormP();
-                    // ActualizarGrid();
+                    ActualizarProveedores();
                 }
 
             }
@@ -1154,7 +1207,7 @@ namespace repuestos.Formularios
                     dvgProveedores.Rows.Clear();
 
                     limpiarFormP();
-                    //ActualizarGrid();
+                    ActualizarProveedores();
 
                 }
 
@@ -1166,7 +1219,7 @@ namespace repuestos.Formularios
                 MessageBox.Show("Proveedor Eliminado Exitosamente");
                 dvgProveedores.Rows.Clear();
                 limpiarFormP();
-                //ActualizarGrid();
+                ActualizarProveedores();
             }
 
 
@@ -1194,7 +1247,7 @@ namespace repuestos.Formularios
                     MessageBox.Show("Tipo de pago Ingresado Exitosamente");
                     dvgPago.Rows.Clear();
                     limpiarFormT();
-                    // ActualizarGrid();
+                    ActualizarPago();
                 }
 
             }
@@ -1220,7 +1273,7 @@ namespace repuestos.Formularios
                     dvgPago.Rows.Clear();
 
                     limpiarFormT();
-                    //ActualizarGrid();
+                    ActualizarPago();
 
                 }
 
@@ -1232,7 +1285,7 @@ namespace repuestos.Formularios
                 MessageBox.Show("Tipo de pago Eliminado Exitosamente");
                 dvgPago.Rows.Clear();
                 limpiarFormT();
-                //ActualizarGrid();
+                ActualizarPago();
             }
 
 
@@ -1260,7 +1313,7 @@ namespace repuestos.Formularios
                     MessageBox.Show("Marca Ingresada Exitosamente");
                     dvgMarca.Rows.Clear();
                     limpiarFormM();
-                    // ActualizarGrid();
+                    ActualizarMarca();
                 }
 
             }
@@ -1286,7 +1339,7 @@ namespace repuestos.Formularios
                     dvgMarca.Rows.Clear();
 
                     limpiarFormM();
-                    //ActualizarGrid();
+                    ActualizarMarca();
 
                 }
 
@@ -1298,7 +1351,7 @@ namespace repuestos.Formularios
                 MessageBox.Show("Marca Eliminada Exitosamente");
                 dvgMarca.Rows.Clear();
                 limpiarFormM();
-                //ActualizarGrid();
+                ActualizarMarca();
             }
 
 
@@ -1528,12 +1581,19 @@ namespace repuestos.Formularios
         {
             dvgClientes.Rows.Clear();
             string sNombre = textBox10.Text;
+            string snit= textBox10.Text;
 
             try
             {
+                DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
                 DataTable dtBuscar = logic.logicaBuscarclientes(sNombre);
 
                 foreach (DataRow row in dtBuscar.Rows)
+                {
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+
+                }
+                foreach (DataRow row in dtBuscar2.Rows)
                 {
                     dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
 
@@ -1678,7 +1738,7 @@ namespace repuestos.Formularios
                     MessageBox.Show("Usuario Ingresado Exitosamente");
                     dvg_usuarios.Rows.Clear();
                     limpiarFormU();
-                    // ActualizarGrid();
+                    Actualizarusuarios();
                 }
 
             }
@@ -1704,7 +1764,7 @@ namespace repuestos.Formularios
                     dvg_usuarios.Rows.Clear();
 
                     limpiarFormU();
-                    //ActualizarGrid();
+                    Actualizarusuarios();
 
                 }
 
@@ -1716,7 +1776,7 @@ namespace repuestos.Formularios
                 MessageBox.Show("usuario Eliminado Exitosamente");
                 dvg_usuarios.Rows.Clear();
                 limpiarFormP();
-                //ActualizarGrid();
+                Actualizarusuarios();
             }
 
 

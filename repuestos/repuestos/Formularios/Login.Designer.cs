@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Txt_clave = new System.Windows.Forms.TextBox();
+            this.Txt_usuario = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -53,8 +54,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.Txt_clave);
+            this.groupBox1.Controls.Add(this.Txt_usuario);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.pictureBox2);
@@ -70,33 +72,47 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
-            // textBox4
+            // checkBox1
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(169, 177);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(248, 19);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.Text = "PASSWORD";
-            this.textBox4.Click += new System.EventHandler(this.textBox4_Click_1);
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox1.Location = new System.Drawing.Point(441, 187);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(94, 22);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Ver clave";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // textBox3
+            // Txt_clave
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(169, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 19);
-            this.textBox3.TabIndex = 19;
-            this.textBox3.Text = "USUARIO";
-            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.Txt_clave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.Txt_clave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_clave.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_clave.ForeColor = System.Drawing.Color.White;
+            this.Txt_clave.Location = new System.Drawing.Point(169, 177);
+            this.Txt_clave.Name = "Txt_clave";
+            this.Txt_clave.Size = new System.Drawing.Size(248, 19);
+            this.Txt_clave.TabIndex = 20;
+            this.Txt_clave.Text = "PASSWORD";
+            this.Txt_clave.UseSystemPasswordChar = true;
+            this.Txt_clave.Click += new System.EventHandler(this.textBox4_Click_1);
+            this.Txt_clave.TextChanged += new System.EventHandler(this.textBox4_Click);
+            // 
+            // Txt_usuario
+            // 
+            this.Txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.Txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_usuario.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_usuario.ForeColor = System.Drawing.Color.White;
+            this.Txt_usuario.Location = new System.Drawing.Point(169, 114);
+            this.Txt_usuario.Name = "Txt_usuario";
+            this.Txt_usuario.Size = new System.Drawing.Size(248, 19);
+            this.Txt_usuario.TabIndex = 19;
+            this.Txt_usuario.Text = "USUARIO";
+            this.Txt_usuario.Click += new System.EventHandler(this.textBox3_Click);
+            this.Txt_usuario.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox1
             // 
@@ -254,13 +270,14 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Txt_clave;
+        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.TextBox Txt_usuario;
     }
 }

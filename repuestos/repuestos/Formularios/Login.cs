@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logic;
 
 namespace repuestos.Formularios
 {
@@ -15,15 +16,67 @@ namespace repuestos.Formularios
         public Login()
         {
             InitializeComponent();
+            Txt_clave.UseSystemPasswordChar = true;
         }
 
-   
+
+        string nombreUsuario = "";
+        public string obtenerNombreUsuario()
+        {
+            nombreUsuario = Txt_usuario.Text;
+            return nombreUsuario;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 principal = new Form1();
-            AddOwnedForm(principal);
-            principal.Show();
+           
+
+
+            ProcedimientoLogin procedimientoLogin = new ProcedimientoLogin();
+
+            if (Txt_usuario.Text.Trim() == "")
+            {
+                MessageBox.Show("Debe ingresar un usuario");
+            }
+            else
+            {
+                if (Txt_clave.Text.Trim() == "")
+                {
+                    MessageBox.Show("Debe ingresar su contraseña");
+                }
+                else
+                {
+                    try
+                    {
+                        bool bExisteUsuario = procedimientoLogin.llamarProcedimiento(Txt_usuario.Text, Txt_clave.Text);
+
+                        if (bExisteUsuario)
+                        {
+                           
+                            MessageBox.Show("Se logeo al sistema", "Login");
+                            Form1 principal = new Form1();
+                            AddOwnedForm(principal);                        
+                            principal.label2.Text = Txt_usuario.Text;
+                            this.Hide();
+                            principal.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario o Contraseña Incorrecta", "Verificacion de Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        MessageBox.Show("No Conecto La Base de Datos", "Verificar Conexión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+
+
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -63,8 +116,8 @@ namespace repuestos.Formularios
 
         private void textBox3_Click(object sender, EventArgs e)
         {
-            textBox3.Clear();
-            textBox3.ForeColor = Color.WhiteSmoke;
+            Txt_usuario.Clear();
+            Txt_usuario.ForeColor = Color.WhiteSmoke;
         }
 
         private void textBox4_Click(object sender, EventArgs e)
@@ -74,9 +127,21 @@ namespace repuestos.Formularios
 
         private void textBox4_Click_1(object sender, EventArgs e)
         {
-            textBox4.Clear();
-            textBox4.PasswordChar = '*';
-            textBox4.ForeColor = Color.WhiteSmoke;
+            Txt_clave.Clear();
+            //Txt_clave.PasswordChar = false;
+            Txt_clave.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == false)
+            {
+                Txt_clave.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                Txt_clave.UseSystemPasswordChar = false;
+            }
         }
     }
 }

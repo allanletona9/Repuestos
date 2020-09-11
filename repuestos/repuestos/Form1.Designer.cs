@@ -38,6 +38,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnfacturacion = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.btnMinimized = new System.Windows.Forms.Button();
@@ -50,14 +52,12 @@
             this.lblhora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTitulo.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -201,6 +201,27 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 191);
             this.panelLogo.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(87, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "---";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(37, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(131, 131);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -348,27 +369,6 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 131);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(84, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "---";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,12 +384,12 @@
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,8 +416,8 @@
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer horafecha;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label label2;
     }
 }
 

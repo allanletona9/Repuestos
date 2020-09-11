@@ -363,23 +363,31 @@ namespace repuestos.Formularios
             string sNombre = txtNombreCliente.Text;
             string snit = txtNit.Text;
 
-
+            DataTable dtBuscar2 = logic.logicaBuscarnit(snit);
+            foreach (DataRow row in dtBuscar2.Rows)
+            {
+                if (row[2].ToString() == txtNit.Text)
+                {
+                    MessageBox.Show("Nit de Cliente existente");
+                    return;
+                }
+            }
 
             if (boton_ingreso == true)
             {
 
                 if (txtNombreCliente.Text == "" || txtNit.Text == "")
                 {
+                   
                     MessageBox.Show("Faltan campos por llenar");
                 }
+                 
                 else
                 {
 
                     DataTable dtInsertar = logic.logicaInsertarclientes(sNombre, snit);
                     MessageBox.Show("Cliente Ingresado Exitosamente");
-                    //dvgClientes.Rows.Clear();
-                    //limpiarFormC();
-                    // ActualizarGrid();
+                
                 }
             }
         }
@@ -423,6 +431,47 @@ namespace repuestos.Formularios
             {
                 Console.Write("Error: " + ex.Message);
             }
+        }
+
+        private void txtNit_Enter(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            string sNit = txtNit.Text;
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                try
+            {
+                DataTable dtBuscar = logic.logicaBuscarnit(sNit);
+                  
+                   foreach (DataRow row in dtBuscar.Rows)
+                {
+                    
+                    txtCodCliente.Text = row[0].ToString();
+                    txtNombreCliente.Text = row[1].ToString();
+                    txtNit.Text = row[2].ToString();
+                    } 
+                   
+
+                }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa diseno recuperar clientes: " + ex.Message);
+            }
+
+            }
+           
+
+        }
+
+        private void btnGuardarImprimir_Click(object sender, EventArgs e)
+        {
+            ContenedorFactura facturar = new ContenedorFactura();
+            facturar.Show();
         }
     }
 }

@@ -115,6 +115,13 @@ namespace DAL
             return sqlBuscar;
         }
 
+        public SqlDataAdapter buscarnit(string nit)
+        {
+            string sBuscar = "SELECT PK_idcliente,nombre_cliente,nit_cliente,estado_cliente FROM tbl_cliente WHERE nit_cliente LIKE '%" + nit + "%';";
+            SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
+            return sqlBuscar;
+        }
+
         public SqlDataAdapter insertarclientes(string nombre, string nit)
         {
             try
@@ -396,7 +403,7 @@ public SqlDataAdapter eliminarproveedores(int id)
             try
             {
 
-                string sRecuperarusuarios = "SELECT PK_idusuario,nombre_usuario,apellido_usuario,password_usuario,estado_usuario FROM tbl_usuarios ";
+                string sRecuperarusuarios = "SELECT PK_idusuario,nombre_persona,nombre_usuario,password_usuario,estado_usuario FROM tbl_usuarios ";
                 SqlDataAdapter sqlRecuperarusuarios = new SqlDataAdapter(sRecuperarusuarios, cn.conectar());
                 sqlRecuperarusuarios.SelectCommand.Connection.Close();
                 return sqlRecuperarusuarios;
@@ -411,7 +418,7 @@ public SqlDataAdapter eliminarproveedores(int id)
 
         public SqlDataAdapter buscarusuarios(string nombre)
         {
-            string sBuscar = "SELECT PK_idusuario,nombre_usuario,apellido_usuario,password_usuario,estado_usuario FROM tbl_usuarios WHERE nombre_usuario LIKE '%" + nombre + "%';";
+            string sBuscar = "SELECT PK_idusuario,nombre_persona,nombre_usuario,password_usuario,estado_usuario FROM tbl_usuarios WHERE nombre_persona LIKE '%" + nombre + "%';";
             SqlDataAdapter sqlBuscar = new SqlDataAdapter(sBuscar, cn.conectar());
             return sqlBuscar;
         }
@@ -421,7 +428,7 @@ public SqlDataAdapter eliminarproveedores(int id)
             try
             {
 
-                string sInsertarusuarios = "INSERT INTO tbl_usuarios(nombre_usuario,apellido_usuario,password_usuario,estado_usuario  ) VALUES ( '" + nombre + "', '" + apellido + "','" + password + "', '1' ) ";
+                string sInsertarusuarios = "INSERT INTO tbl_usuarios(nombre_persona,nombre_usuario,password_usuario,estado_usuario  ) VALUES ( '" + nombre + "', '" + apellido + "','" + password + "', '1' ) ";
                 SqlDataAdapter sqlInsertarusuarios = new SqlDataAdapter(sInsertarusuarios, cn.conectar());
                 sqlInsertarusuarios.SelectCommand.Connection.Close();
                 return sqlInsertarusuarios;
@@ -438,7 +445,7 @@ public SqlDataAdapter eliminarproveedores(int id)
         {
             try
             {
-                string sModificar = "UPDATE tbl_usuarios SET nombre_usuario = '" + nombre + "', apellido_usuario = '" + apellido + "', password_usuario = '" + password + "', estado_usuario  = '" + estado + "' WHERE PK_idusuario = '" + id + "'";
+                string sModificar = "UPDATE tbl_usuarios SET nombre_persona = '" + nombre + "', nombre_usuario = '" + apellido + "', password_usuario = '" + password + "', estado_usuario  = '" + estado + "' WHERE PK_idusuario = '" + id + "'";
                 SqlDataAdapter sqlModificar = new SqlDataAdapter(sModificar, cn.conectar());
                 return sqlModificar;
 
