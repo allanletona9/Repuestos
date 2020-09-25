@@ -82,6 +82,7 @@
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // tabPage2
@@ -105,6 +106,7 @@
             this.crystalReportViewer2.Name = "crystalReportViewer2";
             this.crystalReportViewer2.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer2.TabIndex = 0;
+            this.crystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
             // 
             // tabPage3
@@ -128,6 +130,7 @@
             this.crystalReportViewer3.Name = "crystalReportViewer3";
             this.crystalReportViewer3.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer3.TabIndex = 1;
+            this.crystalReportViewer3.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer3.Load += new System.EventHandler(this.crystalReportViewer3_Load);
             // 
             // tabPage4
@@ -151,6 +154,8 @@
             this.crystalReportViewer4.Name = "crystalReportViewer4";
             this.crystalReportViewer4.Size = new System.Drawing.Size(1071, 603);
             this.crystalReportViewer4.TabIndex = 1;
+            this.crystalReportViewer4.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crystalReportViewer4.Load += new System.EventHandler(this.crystalReportViewer4_Load);
             // 
             // tabPage5
             // 

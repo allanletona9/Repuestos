@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.tab_kardex = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbKardex = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,17 +40,18 @@
             this.txtcodigoprod2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvKardex = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.No_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Movimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtcodigoprod1 = new System.Windows.Forms.TextBox();
             this.dtp_fin = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
             this.tab_inventario = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,18 +60,18 @@
             this.btn_ingresarC = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.dgv_Inventario = new System.Windows.Forms.DataGridView();
-            this.tab_compras = new System.Windows.Forms.TabPage();
-            this.tabInventarioGeneral = new System.Windows.Forms.TabControl();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descipcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ultventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigofabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pre1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prec2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prec3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prec4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ultima_Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_1Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_2Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_3Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_4Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_compras = new System.Windows.Forms.TabPage();
+            this.tabInventarioGeneral = new System.Windows.Forms.TabControl();
             this.tab_kardex.SuspendLayout();
             this.gbKardex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKardex)).BeginInit();
@@ -82,6 +84,7 @@
             // tab_kardex
             // 
             this.tab_kardex.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_kardex.Controls.Add(this.button3);
             this.tab_kardex.Controls.Add(this.label1);
             this.tab_kardex.Controls.Add(this.gbKardex);
             this.tab_kardex.Controls.Add(this.btnConsultar);
@@ -95,6 +98,19 @@
             this.tab_kardex.Size = new System.Drawing.Size(1223, 544);
             this.tab_kardex.TabIndex = 2;
             this.tab_kardex.Text = "Kardex";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(1049, 16);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(56, 64);
+            this.button3.TabIndex = 26;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -180,46 +196,46 @@
             this.dgvKardex.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKardex.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKardex.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Fecha,
+            this.No_Documento,
+            this.Descripcion,
+            this.Movimiento,
+            this.Cantidad});
             this.dgvKardex.Location = new System.Drawing.Point(17, 106);
             this.dgvKardex.Name = "dgvKardex";
             this.dgvKardex.ReadOnly = true;
             this.dgvKardex.Size = new System.Drawing.Size(1088, 319);
             this.dgvKardex.TabIndex = 0;
             // 
-            // Column1
+            // Fecha
             // 
-            this.Column1.HeaderText = "Fecha";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             // 
-            // Column5
+            // No_Documento
             // 
-            this.Column5.HeaderText = "No. Documento";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.No_Documento.HeaderText = "No. Documento";
+            this.No_Documento.Name = "No_Documento";
+            this.No_Documento.ReadOnly = true;
             // 
-            // Column2
+            // Descripcion
             // 
-            this.Column2.HeaderText = "Descripcion";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             // 
-            // Column3
+            // Movimiento
             // 
-            this.Column3.HeaderText = "Movimiento";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Movimiento.HeaderText = "Movimiento";
+            this.Movimiento.Name = "Movimiento";
+            this.Movimiento.ReadOnly = true;
             // 
-            // Column4
+            // Cantidad
             // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // btnConsultar
             // 
@@ -277,6 +293,7 @@
             // tab_inventario
             // 
             this.tab_inventario.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_inventario.Controls.Add(this.button2);
             this.tab_inventario.Controls.Add(this.textBox1);
             this.tab_inventario.Controls.Add(this.tableLayoutPanel2);
             this.tab_inventario.Controls.Add(this.label11);
@@ -289,9 +306,23 @@
             this.tab_inventario.Text = "Inventario";
             this.tab_inventario.Click += new System.EventHandler(this.tab_inventario_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(134, 449);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 61);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Exportar Excel";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 467);
+            this.textBox1.Location = new System.Drawing.Point(27, 467);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 26);
             this.textBox1.TabIndex = 24;
@@ -395,13 +426,13 @@
             this.Codigo,
             this.Descipcion,
             this.Tipo,
-            this.Column6,
-            this.ultventa,
-            this.codigofabricante,
-            this.pre1,
-            this.prec2,
-            this.prec3,
-            this.prec4});
+            this.Existencias,
+            this.Ultima_Venta,
+            this.Codigo_Fabricante,
+            this.Precio_1Q,
+            this.Precio_2Q,
+            this.Precio_3Q,
+            this.Precio_4Q});
             this.dgv_Inventario.Location = new System.Drawing.Point(3, 89);
             this.dgv_Inventario.Name = "dgv_Inventario";
             this.dgv_Inventario.ReadOnly = true;
@@ -410,6 +441,66 @@
             this.dgv_Inventario.TabIndex = 0;
             this.dgv_Inventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Inventario_CellContentClick);
             this.dgv_Inventario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Inventario_CellDoubleClick);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Descipcion
+            // 
+            this.Descipcion.HeaderText = "Descipcion";
+            this.Descipcion.Name = "Descipcion";
+            this.Descipcion.ReadOnly = true;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            // 
+            // Existencias
+            // 
+            this.Existencias.HeaderText = "Existencias";
+            this.Existencias.Name = "Existencias";
+            this.Existencias.ReadOnly = true;
+            // 
+            // Ultima_Venta
+            // 
+            this.Ultima_Venta.HeaderText = "Ultima Venta";
+            this.Ultima_Venta.Name = "Ultima_Venta";
+            this.Ultima_Venta.ReadOnly = true;
+            // 
+            // Codigo_Fabricante
+            // 
+            this.Codigo_Fabricante.HeaderText = "Codigo Fabricante";
+            this.Codigo_Fabricante.Name = "Codigo_Fabricante";
+            this.Codigo_Fabricante.ReadOnly = true;
+            // 
+            // Precio_1Q
+            // 
+            this.Precio_1Q.HeaderText = "Prec. 1 Q";
+            this.Precio_1Q.Name = "Precio_1Q";
+            this.Precio_1Q.ReadOnly = true;
+            // 
+            // Precio_2Q
+            // 
+            this.Precio_2Q.HeaderText = "Prec. 2 Q";
+            this.Precio_2Q.Name = "Precio_2Q";
+            this.Precio_2Q.ReadOnly = true;
+            // 
+            // Precio_3Q
+            // 
+            this.Precio_3Q.HeaderText = "Prec. 3 Q";
+            this.Precio_3Q.Name = "Precio_3Q";
+            this.Precio_3Q.ReadOnly = true;
+            // 
+            // Precio_4Q
+            // 
+            this.Precio_4Q.HeaderText = "Prec. 4 Q";
+            this.Precio_4Q.Name = "Precio_4Q";
+            this.Precio_4Q.ReadOnly = true;
             // 
             // tab_compras
             // 
@@ -433,66 +524,6 @@
             this.tabInventarioGeneral.Size = new System.Drawing.Size(1231, 575);
             this.tabInventarioGeneral.TabIndex = 20;
             this.tabInventarioGeneral.SelectedIndexChanged += new System.EventHandler(this.tabInventarioGeneral_SelectedIndexChanged);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Descipcion
-            // 
-            this.Descipcion.HeaderText = "Descipcion";
-            this.Descipcion.Name = "Descipcion";
-            this.Descipcion.ReadOnly = true;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Existencias";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // ultventa
-            // 
-            this.ultventa.HeaderText = "Ultima Venta";
-            this.ultventa.Name = "ultventa";
-            this.ultventa.ReadOnly = true;
-            // 
-            // codigofabricante
-            // 
-            this.codigofabricante.HeaderText = "Codigo Fabricante";
-            this.codigofabricante.Name = "codigofabricante";
-            this.codigofabricante.ReadOnly = true;
-            // 
-            // pre1
-            // 
-            this.pre1.HeaderText = "Prec. 1 Q";
-            this.pre1.Name = "pre1";
-            this.pre1.ReadOnly = true;
-            // 
-            // prec2
-            // 
-            this.prec2.HeaderText = "Prec. 2 Q";
-            this.prec2.Name = "prec2";
-            this.prec2.ReadOnly = true;
-            // 
-            // prec3
-            // 
-            this.prec3.HeaderText = "Prec. 3 Q";
-            this.prec3.Name = "prec3";
-            this.prec3.ReadOnly = true;
-            // 
-            // prec4
-            // 
-            this.prec4.HeaderText = "Prec. 4 Q";
-            this.prec4.Name = "prec4";
-            this.prec4.ReadOnly = true;
             // 
             // Inventario
             // 
@@ -529,11 +560,6 @@
         private System.Windows.Forms.TextBox txtcodigoprod2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvKardex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.TextBox txtcodigoprod1;
@@ -550,15 +576,22 @@
         private System.Windows.Forms.Button btn_eliminarI;
         private System.Windows.Forms.Button btn_ingresarC;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No_Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Movimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descipcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ultventa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigofabricante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pre1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prec2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prec3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prec4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ultima_Venta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Fabricante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_1Q;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_2Q;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_3Q;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_4Q;
     }
 }
