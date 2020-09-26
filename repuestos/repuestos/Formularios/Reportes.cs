@@ -42,5 +42,11 @@ namespace repuestos.Formularios
             Proveedores reporteprov = new Proveedores();
             crystalReportViewer3.ReportSource = reporteprov;
         }
+
+        private void crystalReportViewer4_Load(object sender, EventArgs e)
+        {
+            RptInventario inventarioo= new RptInventario();
+            crystalReportViewer4.ReportSource = inventarioo;
+        }
     }
 }

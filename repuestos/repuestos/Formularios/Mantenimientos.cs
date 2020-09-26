@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic;
 using System.Data.SqlClient;
+using Button = System.Windows.Forms.Button;
 
 namespace repuestos.Formularios
 {
@@ -2118,6 +2121,213 @@ namespace repuestos.Formularios
         private void txt_codigo_TextChanged(object sender, EventArgs e)
         {
          
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            ExportarDatos(dvgClientes);
+        }
+        private void ExportarDatos(DataGridView dvgClientes)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application(); // Instancia a la libreria de Microsoft Office
+                excel.Application.Workbooks.Add(true); //Con esto añadimos una hoja en el Excel para exportar los archivos
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in dvgClientes.Columns) //Aquí empezamos a leer las columnas del listado a exportar
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in dvgClientes.Rows) //Aquí leemos las filas de las columnas leídas
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in dvgClientes.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+
+        private void ExportarDatosR(DataGridView dvgRepuestos)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application(); // Instancia a la libreria de Microsoft Office
+                excel.Application.Workbooks.Add(true); //Con esto añadimos una hoja en el Excel para exportar los archivos
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in dvgRepuestos.Columns) //Aquí empezamos a leer las columnas del listado a exportar
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in dvgRepuestos.Rows) //Aquí leemos las filas de las columnas leídas
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in dvgRepuestos.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ExportarDatosR(dvgRepuestos);
+        }
+
+        private void ExportarDatosP(DataGridView dvgProveedores)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application(); // Instancia a la libreria de Microsoft Office
+                excel.Application.Workbooks.Add(true); //Con esto añadimos una hoja en el Excel para exportar los archivos
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in dvgProveedores.Columns) //Aquí empezamos a leer las columnas del listado a exportar
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in dvgProveedores.Rows) //Aquí leemos las filas de las columnas leídas
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in dvgProveedores.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ExportarDatosP(dvgProveedores);
+        }
+        private void ExportarDatosM(DataGridView dvgMarca)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application(); // Instancia a la libreria de Microsoft Office
+                excel.Application.Workbooks.Add(true); //Con esto añadimos una hoja en el Excel para exportar los archivos
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in dvgMarca.Columns) //Aquí empezamos a leer las columnas del listado a exportar
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in dvgMarca.Rows) //Aquí leemos las filas de las columnas leídas
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in dvgMarca.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ExportarDatosM(dvgMarca);
+        }
+        private void ExportarDatosPago(DataGridView dvgPago)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application(); // Instancia a la libreria de Microsoft Office
+                excel.Application.Workbooks.Add(true); //Con esto añadimos una hoja en el Excel para exportar los archivos
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in dvgPago.Columns) //Aquí empezamos a leer las columnas del listado a exportar
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in dvgPago.Rows) //Aquí leemos las filas de las columnas leídas
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in dvgPago.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            ExportarDatosPago(dvgPago);
+        }
+        private void ExportarDatosTipo(DataGridView dvg_TipoRep)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application(); // Instancia a la libreria de Microsoft Office
+                excel.Application.Workbooks.Add(true); //Con esto añadimos una hoja en el Excel para exportar los archivos
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in dvg_TipoRep.Columns) //Aquí empezamos a leer las columnas del listado a exportar
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in dvg_TipoRep.Rows) //Aquí leemos las filas de las columnas leídas
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in dvg_TipoRep.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ExportarDatosTipo(dvg_TipoRep);
         }
     }
 }
