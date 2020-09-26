@@ -159,7 +159,7 @@ namespace repuestos.Formularios
             DataTable dtobtenerclientes = logic.logic_Obtenerclientes();
             foreach (DataRow row in dtobtenerclientes.Rows)
             {
-                dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString());
+                dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[4].ToString());
             }
         }
 
@@ -180,7 +180,7 @@ namespace repuestos.Formularios
             DataTable dtobtenerproveedores = logic.logic_Obtenerproveedores();
             foreach (DataRow row in dtobtenerproveedores.Rows)
             {
-                dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[5].ToString());
             }
         }
         void ActualizarMarca()
@@ -190,7 +190,7 @@ namespace repuestos.Formularios
             DataTable dtobtenermarca = logic.logic_Obtenermarca();
             foreach (DataRow row in dtobtenermarca.Rows)
             {
-                dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString());
+                dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
             }
         }
         void ActualizarPago()
@@ -200,7 +200,7 @@ namespace repuestos.Formularios
             DataTable dtobtenerpago = logic.logic_Obtenerpago();
             foreach (DataRow row in dtobtenerpago.Rows)
             {
-                dvgPago.Rows.Add(row[0].ToString(), row[1].ToString());
+                dvgPago.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
             }
         }
 
@@ -211,7 +211,7 @@ namespace repuestos.Formularios
             DataTable dtobtenerusuarios = logic.logic_Obtenerusuarios();
             foreach (DataRow row in dtobtenerusuarios.Rows)
             {
-                dvg_usuarios.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                dvg_usuarios.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[5].ToString());
             }
         }
         
@@ -469,12 +469,12 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[4].ToString());
 
                 }
                 foreach (DataRow row in dtBuscar2.Rows)
                 {
-                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[4].ToString());
 
                 }
 
@@ -1009,7 +1009,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[5].ToString());
 
                 }
 
@@ -1031,7 +1031,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString());
+                    dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
 
                 }
 
@@ -1053,7 +1053,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgPago.Rows.Add(row[0].ToString(),row[1].ToString());
+                    dvgPago.Rows.Add(row[0].ToString(),row[1].ToString(), row[3].ToString());
 
                 }
 
@@ -1503,7 +1503,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString());
+                    dvgMarca.Rows.Add(row[0].ToString(), row[1].ToString(),row[3].ToString());
 
                 }
 
@@ -1525,7 +1525,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgPago.Rows.Add(row[0].ToString(), row[1].ToString());
+                    dvgPago.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
 
                 }
 
@@ -1547,7 +1547,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvgProveedores.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[5].ToString());
 
                 }
 
@@ -1593,12 +1593,12 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[4].ToString());
 
                 }
                 foreach (DataRow row in dtBuscar2.Rows)
                 {
-                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvgClientes.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[4].ToString());
 
                 }
 
@@ -1820,7 +1820,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvg_usuarios.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvg_usuarios.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[5].ToString());
 
                 }
 
@@ -1842,7 +1842,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvg_usuarios.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                    dvg_usuarios.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[5].ToString());
 
                 }
 
@@ -1881,7 +1881,11 @@ namespace repuestos.Formularios
 
         private void txt_precio1_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt_costo_TextChanged(object sender, EventArgs e)
@@ -1937,7 +1941,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvg_TipoRep.Rows.Add(row[0].ToString(), row[1].ToString());
+                    dvg_TipoRep.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
 
                 }
 
@@ -1956,7 +1960,7 @@ namespace repuestos.Formularios
             DataTable dtobtenertipoRep = logic.logic_Obtenertiporep();
             foreach (DataRow row in dtobtenertipoRep.Rows)
             {
-                dvg_TipoRep.Rows.Add(row[0].ToString(), row[1].ToString());
+                dvg_TipoRep.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
             }
         }
 
@@ -2003,7 +2007,7 @@ namespace repuestos.Formularios
 
                 foreach (DataRow row in dtBuscar.Rows)
                 {
-                    dvg_TipoRep.Rows.Add(row[0].ToString(), row[1].ToString());
+                    dvg_TipoRep.Rows.Add(row[0].ToString(), row[1].ToString(), row[3].ToString());
 
                 }
 
@@ -2328,6 +2332,113 @@ namespace repuestos.Formularios
         private void button8_Click(object sender, EventArgs e)
         {
             ExportarDatosTipo(dvg_TipoRep);
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_precio2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_venta1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_precio2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_venta2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_precio3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_venta3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_precio4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_venta4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox25_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_buscarRe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox30_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

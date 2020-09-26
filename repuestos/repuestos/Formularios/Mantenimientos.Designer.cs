@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimientos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Clientes = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -52,6 +55,7 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modC = new System.Windows.Forms.Button();
             this.btn_guardarC = new System.Windows.Forms.Button();
@@ -154,6 +158,7 @@
             this.Nombre_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nit_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modP = new System.Windows.Forms.Button();
             this.btn_guardarP = new System.Windows.Forms.Button();
@@ -232,6 +237,7 @@
             this.dvg_TipoRep = new System.Windows.Forms.DataGridView();
             this.Codigo_Tipo_Repuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Tipo_Repuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modTP = new System.Windows.Forms.Button();
             this.btn_tipoRe = new System.Windows.Forms.Button();
@@ -259,16 +265,18 @@
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.dvg_usuarios = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modU = new System.Windows.Forms.Button();
             this.btn_guardarU = new System.Windows.Forms.Button();
             this.btn_eliminarU = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.btn_ingresarU = new System.Windows.Forms.Button();
+            this.Estado4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Clientes.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -552,6 +560,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(364, 26);
             this.textBox10.TabIndex = 20;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // label12
@@ -573,7 +582,8 @@
             this.dvgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
-            this.Nit});
+            this.Nit,
+            this.Estado});
             this.dvgClientes.Location = new System.Drawing.Point(102, 190);
             this.dvgClientes.Name = "dvgClientes";
             this.dvgClientes.ReadOnly = true;
@@ -600,6 +610,12 @@
             this.Nit.HeaderText = "Nit";
             this.Nit.Name = "Nit";
             this.Nit.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -802,6 +818,7 @@
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(205, 26);
             this.txt_cantidad.TabIndex = 29;
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             // 
             // groupBox3
             // 
@@ -838,6 +855,7 @@
             this.txt_venta4.Name = "txt_venta4";
             this.txt_venta4.Size = new System.Drawing.Size(140, 26);
             this.txt_venta4.TabIndex = 28;
+            this.txt_venta4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_venta4_KeyPress);
             // 
             // txt_venta3
             // 
@@ -846,6 +864,7 @@
             this.txt_venta3.Name = "txt_venta3";
             this.txt_venta3.Size = new System.Drawing.Size(140, 26);
             this.txt_venta3.TabIndex = 27;
+            this.txt_venta3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_venta3_KeyPress);
             // 
             // txt_venta2
             // 
@@ -854,6 +873,7 @@
             this.txt_venta2.Name = "txt_venta2";
             this.txt_venta2.Size = new System.Drawing.Size(140, 26);
             this.txt_venta2.TabIndex = 26;
+            this.txt_venta2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_venta2_KeyPress);
             // 
             // txt_venta1
             // 
@@ -862,6 +882,7 @@
             this.txt_venta1.Name = "txt_venta1";
             this.txt_venta1.Size = new System.Drawing.Size(140, 26);
             this.txt_venta1.TabIndex = 25;
+            this.txt_venta1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_venta1_KeyPress);
             // 
             // label39
             // 
@@ -936,6 +957,7 @@
             this.txt_precio4.Name = "txt_precio4";
             this.txt_precio4.Size = new System.Drawing.Size(140, 26);
             this.txt_precio4.TabIndex = 17;
+            this.txt_precio4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio4_KeyPress);
             // 
             // label28
             // 
@@ -954,6 +976,7 @@
             this.txt_precio3.Name = "txt_precio3";
             this.txt_precio3.Size = new System.Drawing.Size(140, 26);
             this.txt_precio3.TabIndex = 15;
+            this.txt_precio3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio3_KeyPress);
             // 
             // label27
             // 
@@ -972,6 +995,8 @@
             this.txt_precio2.Name = "txt_precio2";
             this.txt_precio2.Size = new System.Drawing.Size(140, 26);
             this.txt_precio2.TabIndex = 13;
+            this.txt_precio2.TextChanged += new System.EventHandler(this.txt_precio2_TextChanged);
+            this.txt_precio2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio2_KeyPress);
             // 
             // label22
             // 
@@ -1679,6 +1704,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(364, 26);
             this.textBox15.TabIndex = 20;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
             // 
             // label18
@@ -1703,7 +1729,8 @@
             this.Codigo_Proveedor,
             this.Nombre_Proveedor,
             this.Nit_Proveedor,
-            this.Direccion_Proveedor});
+            this.Direccion_Proveedor,
+            this.Estado3});
             this.dvgProveedores.Location = new System.Drawing.Point(63, 193);
             this.dvgProveedores.Name = "dvgProveedores";
             this.dvgProveedores.ReadOnly = true;
@@ -1735,6 +1762,12 @@
             this.Direccion_Proveedor.HeaderText = "Direccion";
             this.Direccion_Proveedor.Name = "Direccion_Proveedor";
             this.Direccion_Proveedor.ReadOnly = true;
+            // 
+            // Estado3
+            // 
+            this.Estado3.HeaderText = "Estado";
+            this.Estado3.Name = "Estado3";
+            this.Estado3.ReadOnly = true;
             // 
             // tableLayoutPanel3
             // 
@@ -2019,6 +2052,7 @@
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(364, 26);
             this.textBox20.TabIndex = 20;
+            this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             this.textBox20.Enter += new System.EventHandler(this.textBox20_Enter);
             this.textBox20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox20_KeyPress);
             // 
@@ -2040,7 +2074,8 @@
             this.dvgMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo_Marca,
-            this.Nombre_Marca});
+            this.Nombre_Marca,
+            this.Estado4});
             this.dvgMarca.Location = new System.Drawing.Point(188, 184);
             this.dvgMarca.Name = "dvgMarca";
             this.dvgMarca.ReadOnly = true;
@@ -2343,6 +2378,7 @@
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(364, 27);
             this.textBox25.TabIndex = 20;
+            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
             this.textBox25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox25_KeyPress);
             // 
             // label30
@@ -2363,7 +2399,8 @@
             this.dvgPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo_Pago,
-            this.Nombre_Pago});
+            this.Nombre_Pago,
+            this.Estado5});
             this.dvgPago.Location = new System.Drawing.Point(196, 173);
             this.dvgPago.Name = "dvgPago";
             this.dvgPago.ReadOnly = true;
@@ -2657,6 +2694,7 @@
             this.txt_buscarRe.Name = "txt_buscarRe";
             this.txt_buscarRe.Size = new System.Drawing.Size(364, 26);
             this.txt_buscarRe.TabIndex = 25;
+            this.txt_buscarRe.TextChanged += new System.EventHandler(this.txt_buscarRe_TextChanged);
             this.txt_buscarRe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscarRe_KeyPress);
             // 
             // label43
@@ -2674,13 +2712,38 @@
             this.dvg_TipoRep.AllowUserToAddRows = false;
             this.dvg_TipoRep.AllowUserToDeleteRows = false;
             this.dvg_TipoRep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg_TipoRep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dvg_TipoRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg_TipoRep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo_Tipo_Repuesto,
-            this.Nombre_Tipo_Repuesto});
+            this.Nombre_Tipo_Repuesto,
+            this.Estado2});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvg_TipoRep.DefaultCellStyle = dataGridViewCellStyle14;
             this.dvg_TipoRep.Location = new System.Drawing.Point(232, 173);
             this.dvg_TipoRep.Name = "dvg_TipoRep";
             this.dvg_TipoRep.ReadOnly = true;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvg_TipoRep.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dvg_TipoRep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvg_TipoRep.Size = new System.Drawing.Size(664, 270);
             this.dvg_TipoRep.TabIndex = 23;
@@ -2698,6 +2761,12 @@
             this.Nombre_Tipo_Repuesto.HeaderText = "Nombre";
             this.Nombre_Tipo_Repuesto.Name = "Nombre_Tipo_Repuesto";
             this.Nombre_Tipo_Repuesto.ReadOnly = true;
+            // 
+            // Estado2
+            // 
+            this.Estado2.HeaderText = "Estado";
+            this.Estado2.Name = "Estado2";
+            this.Estado2.ReadOnly = true;
             // 
             // tableLayoutPanel7
             // 
@@ -3008,6 +3077,7 @@
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(364, 26);
             this.textBox30.TabIndex = 20;
+            this.textBox30.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
             this.textBox30.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox30_KeyPress);
             // 
             // label36
@@ -3030,7 +3100,7 @@
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24});
+            this.Estado6});
             this.dvg_usuarios.Location = new System.Drawing.Point(183, 193);
             this.dvg_usuarios.Name = "dvg_usuarios";
             this.dvg_usuarios.ReadOnly = true;
@@ -3038,30 +3108,6 @@
             this.dvg_usuarios.Size = new System.Drawing.Size(708, 339);
             this.dvg_usuarios.TabIndex = 0;
             this.dvg_usuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_usuarios_CellDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
             // 
             // tableLayoutPanel6
             // 
@@ -3151,6 +3197,42 @@
             this.btn_ingresarU.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_ingresarU.UseVisualStyleBackColor = true;
             this.btn_ingresarU.Click += new System.EventHandler(this.btn_ingresarU_Click);
+            // 
+            // Estado4
+            // 
+            this.Estado4.HeaderText = "Estado";
+            this.Estado4.Name = "Estado4";
+            this.Estado4.ReadOnly = true;
+            // 
+            // Estado5
+            // 
+            this.Estado5.HeaderText = "Estado";
+            this.Estado5.Name = "Estado5";
+            this.Estado5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // Estado6
+            // 
+            this.Estado6.HeaderText = "Estado";
+            this.Estado6.Name = "Estado6";
+            this.Estado6.ReadOnly = true;
             // 
             // Mantenimientos
             // 
@@ -3408,10 +3490,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.TabPage Repuestos;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.TabControl tabControl2;
@@ -3463,9 +3541,6 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.DataGridView dvg_TipoRep;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nit;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Tipo_Repuesto;
@@ -3496,5 +3571,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Tipo_Repuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Tipo_Repuesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado6;
     }
 }

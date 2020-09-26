@@ -154,6 +154,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(204, 26);
             this.txtExistencias.TabIndex = 5;
+            this.txtExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencias_KeyPress);
             // 
             // txtDescripcion
             // 
@@ -178,6 +179,7 @@
             this.txtcodigoprod2.Name = "txtcodigoprod2";
             this.txtcodigoprod2.Size = new System.Drawing.Size(207, 26);
             this.txtcodigoprod2.TabIndex = 2;
+            this.txtcodigoprod2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigoprod2_KeyPress);
             // 
             // label2
             // 
