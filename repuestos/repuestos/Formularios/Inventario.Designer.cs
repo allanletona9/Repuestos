@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.tab_kardex = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -110,6 +111,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tab_kardex.SuspendLayout();
             this.gbKardex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKardex)).BeginInit();
@@ -595,7 +597,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 37);
             this.button4.TabIndex = 9;
-            this.button4.Text = "Consultar";
+            this.button4.Text = "Agregar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -763,6 +765,7 @@
             this.button5.Text = "Nuevo";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btn_cancelarC
             // 
@@ -775,6 +778,7 @@
             this.btn_cancelarC.Text = "Cancelar";
             this.btn_cancelarC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cancelarC.UseVisualStyleBackColor = true;
+            this.btn_cancelarC.Click += new System.EventHandler(this.btn_cancelarC_Click);
             // 
             // tabInventarioGeneral
             // 
@@ -813,6 +817,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(325, 26);
             this.comboBox1.TabIndex = 12;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -840,6 +845,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(325, 26);
             this.comboBox2.TabIndex = 12;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // textBox7
             // 
@@ -958,6 +964,11 @@
             this.label18.TabIndex = 27;
             this.label18.Text = "El presente documento no figura como documento tributario";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1074,5 +1085,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

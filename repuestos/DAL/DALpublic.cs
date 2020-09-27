@@ -189,6 +189,82 @@ namespace DAL
             }
         }
 
+        // Diego Gomez
+        public SqlDataAdapter ObtenerPreoveedores()
+        {
+            try
+            {
+
+                string sRecuperarTipoRep = "select PK_idproveedor,nombre_proveedor,nit_proveedor,direccion_proveedor from tbl_proveedor where estado_proveedor='1'";
+                SqlDataAdapter sqlRecuperarTipoRep = new SqlDataAdapter(sRecuperarTipoRep, cn.conectar());
+                sqlRecuperarTipoRep.SelectCommand.Connection.Close();
+                return sqlRecuperarTipoRep;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Tipos de Repuestos: " + ex.Message);
+                return null;
+            }
+        }
+
+
+        public SqlDataAdapter ObtenerPrductosOC()
+        {
+            try
+            {
+
+                string sRecuperarTipoRep = "select PK_idrepuesto,descripcion_repuesto from tbl_repuestos";
+                SqlDataAdapter sqlRecuperarTipoRep = new SqlDataAdapter(sRecuperarTipoRep, cn.conectar());
+                sqlRecuperarTipoRep.SelectCommand.Connection.Close();
+                return sqlRecuperarTipoRep;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Tipos de Repuestos: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter logicaconsultadatos(string valor)
+        {
+            try
+            {
+                string sInsertarmarca = "select PK_idproveedor,nombre_proveedor,nit_proveedor,direccion_proveedor,estado_proveedor,Case When estado_proveedor = 1 then 'Activo' Else 'Inactivo' End as Estado2 from tbl_proveedor where nombre_proveedor='" + valor + "'";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter productosoc(string valor)
+        {
+            try
+            {
+                string sInsertarmarca = "select PK_idrepuesto,PK_idtiporepuesto,descripcion_repuesto from tbl_repuestos where descripcion_repuesto='" + valor + "'";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+
+
+        // ------------------------------------------------------------------------------------------------------------------------------
+
+
         public SqlDataAdapter buscarproveedores(string nombre)
 {
     string sBuscar = "SELECT PK_idproveedor,nombre_proveedor,nit_proveedor,direccion_proveedor,estado_proveedor,Case When estado_proveedor = 1 then 'Activo' Else 'Inactivo' End as Estado2 FROM tbl_proveedor  WHERE nombre_proveedor LIKE '%" + nombre + "%';";

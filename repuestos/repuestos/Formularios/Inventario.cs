@@ -18,6 +18,7 @@ namespace repuestos.Formularios
     {
         Logicpublic logic = new Logicpublic();
         Mantenimientos mantenimiento = new Mantenimientos();
+        List<int> lIdTipoPago = new List<int>();
 
         public Inventario()
         {
@@ -31,6 +32,7 @@ namespace repuestos.Formularios
         private void Inventario_Load(object sender, EventArgs e)
         {
 
+            bloquear();
         }
 
         void ActualizarInventario()
@@ -229,6 +231,26 @@ namespace repuestos.Formularios
                 MessageBox.Show("No hay Registros a Exportar.");
             }
         }
+
+
+        void bloquear()
+        {
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            textBox6.Enabled = false;
+            textBox7.Enabled = false;
+            textBox8.Enabled = false;
+            textBox9.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            button4.Enabled = false;
+            btn_guardarC.Enabled = false;
+            btn_cancelarC.Enabled = false;
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             ExportarDatosInv(dgv_Inventario);
@@ -250,6 +272,135 @@ namespace repuestos.Formularios
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void llenarproveedores()
+        {
+            comboBox2.Items.Clear();
+            lIdTipoPago.Clear();
+            try
+            {
+                DataTable dtobtenertipoRep = logic.logic_ObtenerPreoveedores();
+
+                foreach (DataRow row in dtobtenertipoRep.Rows)
+                {
+                    comboBox2.Items.Add(row[1].ToString());
+                    lIdTipoPago.Add(Convert.ToInt32(row[0].ToString()));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa diseno recuperando los tipos de pago: " + ex.Message);
+            }
+        }
+
+
+        private void llenarproductos()
+        {
+            comboBox1.Items.Clear();
+            lIdTipoPago.Clear();
+            try
+            {
+                DataTable dtobtenertipoRep = logic.logic_ObtenerPrductosOC();
+
+                foreach (DataRow row in dtobtenertipoRep.Rows)
+                {
+                    comboBox1.Items.Add(row[1].ToString());
+                    lIdTipoPago.Add(Convert.ToInt32(row[0].ToString()));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa diseno recuperando los tipos de pago: " + ex.Message);
+            }
+        }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            textBox6.Enabled = false;
+            textBox7.Enabled = false;
+            textBox8.Enabled = false;
+            textBox9.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = true;
+            textBox5.Enabled = true;
+            button4.Enabled = true;
+            btn_guardarC.Enabled = true;
+            btn_cancelarC.Enabled = true;
+
+            llenarproveedores();
+            llenarproductos();
+        }
+
+        private void btn_cancelarC_Click(object sender, EventArgs e)
+        {
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            textBox6.Enabled = false;
+            textBox7.Enabled = false;
+            textBox8.Enabled = false;
+            textBox9.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            button4.Enabled = true;
+            btn_guardarC.Enabled = false;
+            btn_cancelarC.Enabled = false;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = comboBox2.SelectedItem.ToString();
+
+            if (valor == null)
+            {
+                MessageBox.Show("Faltan campos por llenar");
+            }
+            else
+            {
+
+                DataTable dtConsultar = logic.logicaconsultadatos(valor);
+                foreach (DataRow row in dtConsultar.Rows)
+                {
+                    textBox6.Text = row[1].ToString();
+                    textBox8.Text = row[2].ToString();
+                    textBox9.Text = row[3].ToString();
+                    textBox7.Text = row[5].ToString();
+
+                }
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = comboBox1.SelectedItem.ToString();
+
+            if (valor == null)
+            {
+                MessageBox.Show("Faltan campos por llenar");
+            }
+            else
+            {
+
+                DataTable dtConsultar = logic.productosoc(valor);
+                foreach (DataRow row in dtConsultar.Rows)
+                {
+                    textBox3.Text = row[2].ToString();
+
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label17.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

@@ -142,6 +142,83 @@ namespace Logic
 
     }
 
+        //   Diego Gomez
+        public DataTable logic_ObtenerPreoveedores()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlObtener = dal_datos.ObtenerPreoveedores();
+                DataTable dtobtenertipoRep = new DataTable();
+                sqlObtener.Fill(dtobtenertipoRep);
+                return dtobtenertipoRep;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+
+        public DataTable logic_ObtenerPrductosOC()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlObtener = dal_datos.ObtenerPrductosOC();
+                DataTable dtobtenertipoRep = new DataTable();
+                sqlObtener.Fill(dtobtenertipoRep);
+                return dtobtenertipoRep;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+
+        public DataTable logicaconsultadatos(string valor)
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.logicaconsultadatos(valor);
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+
+
+        public DataTable productosoc(string valor)
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.productosoc(valor);
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+        // ----------------------------------------------------------------------------------------------------------------------------------------
+
         public DataTable logicaBuscarproveedores(string nombre)
 {
     SqlDataAdapter sqlBuscar = dal_datos.buscarproveedores(nombre);
