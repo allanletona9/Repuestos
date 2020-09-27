@@ -350,9 +350,23 @@ namespace repuestos.Formularios
             textBox3.Enabled = false;
             textBox4.Enabled = false;
             textBox5.Enabled = false;
-            button4.Enabled = true;
+            button4.Enabled = false;
             btn_guardarC.Enabled = false;
             btn_cancelarC.Enabled = false;
+
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            dataGridView1.Columns.Clear();
+
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -494,7 +508,7 @@ namespace repuestos.Formularios
                 DataTable dtConsultar = logic.ocEncabezadoProve(nombre);
                 foreach (DataRow row in dtConsultar.Rows)
                 {
-                    string id = textBox10.Text;
+                   string id = textBox10.Text;
 
                 DataTable dtinsertar = logic.ocEncabezado(total,fecha,id);
 

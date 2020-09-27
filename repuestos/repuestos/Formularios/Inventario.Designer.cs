@@ -978,7 +978,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(70, 54);
+            this.textBox10.Location = new System.Drawing.Point(1150, 255);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(114, 26);
             this.textBox10.TabIndex = 15;
@@ -987,7 +987,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 577);
+            this.ClientSize = new System.Drawing.Size(1132, 577);
             this.Controls.Add(this.tabInventarioGeneral);
             this.Name = "Inventario";
             this.Text = "Reportes";
