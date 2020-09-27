@@ -217,6 +217,42 @@ namespace Logic
             }
 
         }
+
+        public DataTable ocEncabezadoProve(string nombre)
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.ocEncabezadoProve(nombre);
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+        
+        public DataTable ocEncabezado(string total,string fecha, string id)
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.ocEncabezado(total,fecha,id);
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
         // ----------------------------------------------------------------------------------------------------------------------------------------
 
         public DataTable logicaBuscarproveedores(string nombre)

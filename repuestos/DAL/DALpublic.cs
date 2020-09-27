@@ -261,6 +261,39 @@ namespace DAL
             }
         }
 
+        public SqlDataAdapter ocEncabezadoProve(string nombre)
+        {
+            try
+            {
+                string sInsertarmarca = "select PK_idproveedor from tbl_proveedor where nombre_proveedor='"+ nombre + "'";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+        
+        public SqlDataAdapter ocEncabezado(string total,string fecha, string id)
+        {
+            try
+            {
+                string sInsertarmarca = "update tbl_compras_encabezado set PK_idproveedor = '" +id+ "', fecha_compra = '" +fecha+ "',total_compra = '" +total+ "',estado_compra='1'";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
 
         // ------------------------------------------------------------------------------------------------------------------------------
 

@@ -112,6 +112,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalc = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.tab_kardex.SuspendLayout();
             this.gbKardex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKardex)).BeginInit();
@@ -553,6 +554,7 @@
             // tab_compras
             // 
             this.tab_compras.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_compras.Controls.Add(this.textBox10);
             this.tab_compras.Controls.Add(this.totalc);
             this.tab_compras.Controls.Add(this.label18);
             this.tab_compras.Controls.Add(this.groupBox3);
@@ -723,6 +725,7 @@
             this.btn_guardarC.Text = "Guardar";
             this.btn_guardarC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_guardarC.UseVisualStyleBackColor = true;
+            this.btn_guardarC.Click += new System.EventHandler(this.btn_guardarC_Click);
             // 
             // button5
             // 
@@ -771,6 +774,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(103, 26);
             this.textBox5.TabIndex = 10;
+            this.textBox5.Text = "0";
             // 
             // label10
             // 
@@ -972,6 +976,13 @@
             this.totalc.Size = new System.Drawing.Size(77, 26);
             this.totalc.TabIndex = 13;
             // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(70, 54);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(114, 26);
+            this.textBox10.TabIndex = 15;
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1089,5 +1100,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.TextBox totalc;
+        private System.Windows.Forms.TextBox textBox10;
     }
 }

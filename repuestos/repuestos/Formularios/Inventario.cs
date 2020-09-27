@@ -329,7 +329,7 @@ namespace repuestos.Formularios
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             textBox4.Enabled = true;
-            textBox5.Enabled = true;
+            textBox5.Enabled = false;
             button4.Enabled = true;
             btn_guardarC.Enabled = true;
             btn_cancelarC.Enabled = true;
@@ -423,7 +423,9 @@ namespace repuestos.Formularios
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label17.Text = DateTime.Now.ToLongDateString();
+
+            label17.Text = DateTime.Now.ToString("yyyy-MM-dd");
+             
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -447,6 +449,21 @@ namespace repuestos.Formularios
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
+                textBox5.Enabled = false;
+
+                string cant = textBox5.Text;
+                string mul = totalc.Text;
+
+                int var1 = Convert.ToInt32(cant);
+                int var2 = Convert.ToInt32(mul);
+                int suma = 0;
+
+                suma = var1 + var2;
+
+               string total1 = suma.ToString();
+
+                textBox5.Text = total1;
+
             }
             catch
             {
@@ -459,6 +476,31 @@ namespace repuestos.Formularios
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_guardarC_Click(object sender, EventArgs e)
+        {
+            string total = textBox5.Text;
+            string nombre = textBox6.Text;
+            string fecha = DateTime.Now.ToString("yyyy-MM-dd");
+
+            if ((total == null) && (fecha == null))
+            {
+                MessageBox.Show("Faltan campos por llenar");
+            }
+            else
+            {
+
+                DataTable dtConsultar = logic.ocEncabezadoProve(nombre);
+                foreach (DataRow row in dtConsultar.Rows)
+                {
+                    string id = textBox10.Text;
+
+                DataTable dtinsertar = logic.ocEncabezado(total,fecha,id);
+
+
+                }
+            }
         }
     }
 }
