@@ -248,7 +248,7 @@ namespace DAL
         {
             try
             {
-                string sInsertarmarca = "select PK_idrepuesto,PK_idtiporepuesto,descripcion_repuesto from tbl_repuestos where descripcion_repuesto='" + valor + "'";
+                string sInsertarmarca = "select PK_idrepuesto,PK_idtiporepuesto,descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4 from tbl_repuestos where descripcion_repuesto='" + valor + "'";
                 SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
                 sqlInsertarmarca.SelectCommand.Connection.Close();
                 return sqlInsertarmarca;

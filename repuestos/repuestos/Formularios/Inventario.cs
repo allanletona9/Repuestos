@@ -392,8 +392,31 @@ namespace repuestos.Formularios
                 DataTable dtConsultar = logic.productosoc(valor);
                 foreach (DataRow row in dtConsultar.Rows)
                 {
-                    textBox3.Text = row[2].ToString();
-
+                    
+                     if(row[3].ToString() != "0")
+                    {
+                        textBox3.Text = row[2].ToString();
+                        textBox2.Text = row[3].ToString();
+                    }
+                    else if (row[4].ToString() != "0")
+                    {
+                        textBox3.Text = row[2].ToString();
+                        textBox2.Text = row[4].ToString();
+                    }
+                    else if (row[5].ToString() != "0")
+                    {
+                        textBox3.Text = row[2].ToString();
+                        textBox2.Text = row[5].ToString();
+                    }
+                    else if (row[6].ToString() != "0")
+                    {
+                        textBox3.Text = row[2].ToString();
+                        textBox2.Text = row[6].ToString();
+                    }
+                     else
+                        {
+                             MessageBox.Show("Datos de Repuesto no Encontrado,\nVerificarlo en Mantenimientos/Repuestos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -401,6 +424,41 @@ namespace repuestos.Formularios
         private void timer1_Tick(object sender, EventArgs e)
         {
             label17.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int cantidad = 0;
+                int costo = 0;
+                int total = 0;
+
+                costo = Convert.ToInt32(textBox2.Text);
+                cantidad = Convert.ToInt32(textBox4.Text);
+
+                total = costo * cantidad;
+
+                totalc.Text = total.ToString();
+
+
+                dataGridView1.Rows.Add(textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
+                comboBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("Favor Ingresar Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
