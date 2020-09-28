@@ -220,6 +220,11 @@ namespace repuestos.Formularios
 
         private void txtPago_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
                 try
@@ -249,6 +254,11 @@ namespace repuestos.Formularios
 
         private void txtDesc_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
                 try
@@ -441,6 +451,12 @@ namespace repuestos.Formularios
         private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+
             string sNit = txtNit.Text;
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
@@ -472,6 +488,60 @@ namespace repuestos.Formularios
         {
             ContenedorFactura facturar = new ContenedorFactura();
             facturar.Show();
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtSaldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtSubtotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtsubtotal_desc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtCant_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

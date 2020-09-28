@@ -54,7 +54,6 @@ namespace repuestos.Formularios
                         if (bExisteUsuario)
                         {
                            
-                            MessageBox.Show("Se logeo al sistema", "Login");
                             Form1 principal = new Form1();
                             AddOwnedForm(principal);                        
                             principal.label2.Text = Txt_usuario.Text;

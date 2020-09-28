@@ -274,6 +274,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(116, 21);
             this.txtPrecio.TabIndex = 30;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // label14
             // 
@@ -313,6 +314,7 @@
             this.txtCant.Name = "txtCant";
             this.txtCant.Size = new System.Drawing.Size(66, 21);
             this.txtCant.TabIndex = 26;
+            this.txtCant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCant_KeyPress);
             // 
             // label13
             // 
@@ -422,6 +424,7 @@
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(116, 21);
             this.txtSaldo.TabIndex = 18;
+            this.txtSaldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldo_KeyPress);
             // 
             // label10
             // 
@@ -506,6 +509,7 @@
             this.txtTotal.Size = new System.Drawing.Size(116, 21);
             this.txtTotal.TabIndex = 12;
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
             // label8
             // 
@@ -524,6 +528,7 @@
             this.txtsubtotal_desc.Name = "txtsubtotal_desc";
             this.txtsubtotal_desc.Size = new System.Drawing.Size(116, 21);
             this.txtsubtotal_desc.TabIndex = 10;
+            this.txtsubtotal_desc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsubtotal_desc_KeyPress);
             // 
             // label7
             // 
@@ -559,6 +564,7 @@
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(116, 21);
             this.txtSubtotal.TabIndex = 6;
+            this.txtSubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubtotal_KeyPress);
             // 
             // label5
             // 
