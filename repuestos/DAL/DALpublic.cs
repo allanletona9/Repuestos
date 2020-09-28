@@ -282,7 +282,58 @@ namespace DAL
         {
             try
             {
-                string sInsertarmarca = "update tbl_compras_encabezado set PK_idproveedor = '" +id+ "', fecha_compra = '" +fecha+ "',total_compra = '" +total+ "',estado_compra='1'";
+                string sInsertarmarca = " insert into tbl_compras_encabezado (PK_idproveedor,fecha_compra,total_compra,estado_compra) values ('" +id+ "','" +fecha+ "','" +total+ "','1') use db_repuestos";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+        
+        public SqlDataAdapter ocDetalleRepuesto(string producto)
+        {
+            try
+            {
+                string sInsertarmarca = "select PK_idrepuesto from tbl_repuestos where descripcion_repuesto='"+producto+"'";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+        
+        public SqlDataAdapter ocDetallEcompra()
+        {
+            try
+            {
+                string sInsertarmarca = "select top 1 PK_idcompraenc from tbl_compras_encabezado order by PK_idcompraenc desc ";
+                SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
+                sqlInsertarmarca.SelectCommand.Connection.Close();
+                return sqlInsertarmarca;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de marca en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+        
+        public SqlDataAdapter InsertarOC(String idOC, string Idre, String precio, string cantidad)
+        {
+            try
+            {
+                string sInsertarmarca = "insert into tbl_compras_detalle (PK_idcompraenc,PK_idrepuesto,precio_compra,cantidad_compra) values ('" +idOC+ "','" +Idre+ "',' "+precio+" ','"+cantidad+"')";
                 SqlDataAdapter sqlInsertarmarca = new SqlDataAdapter(sInsertarmarca, cn.conectar());
                 sqlInsertarmarca.SelectCommand.Connection.Close();
                 return sqlInsertarmarca;
@@ -598,6 +649,7 @@ public SqlDataAdapter eliminarproveedores(int id)
                 return null;
             }
         }
+     
 
         public SqlDataAdapter getProductoKardex(int iCodigoproducto)
         {
@@ -728,6 +780,25 @@ public SqlDataAdapter eliminarproveedores(int id)
             {
 
                 string sRecuperarRepuestos = "SELECT rep.PK_idrepuesto, rep.PK_idtiporepuesto ,rep.codigo_fabricante, rep.descripcion_repuesto, trep.descripcion_tiporepuesto, inv.existencias , rep.precio_factura, rep.facturar_sin_existencia, rep.precio_venta1, rep.precio_venta2, rep.precio_venta3, rep.precio_venta4 FROM tbl_tiporepuesto AS trep INNER JOIN tbl_repuestos AS rep WITH(NOLOCK) ON trep.PK_idtiporepuesto = rep.PK_idtiporepuesto INNER JOIN tbl_inventario AS inv WITH(NOLOCK) ON rep.PK_idrepuesto = inv.PK_idrepuesto ";
+                SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
+                sqlRecuperarRepuestos.SelectCommand.Connection.Close();
+                return sqlRecuperarRepuestos;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Repuestos para facturacion: " + ex.Message);
+                return null;
+            }
+        }
+         
+        
+        public SqlDataAdapter ordenescompra()
+        {
+            try
+            {
+
+                string sRecuperarRepuestos = "select * from tbl_compras_encabezado";
                 SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
                 sqlRecuperarRepuestos.SelectCommand.Connection.Close();
                 return sqlRecuperarRepuestos;

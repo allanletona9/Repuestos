@@ -22,6 +22,7 @@ namespace repuestos.Formularios
 
         public Inventario()
         {
+            MaximizeBox = false;
             InitializeComponent();
         }
 
@@ -32,7 +33,12 @@ namespace repuestos.Formularios
         private void Inventario_Load(object sender, EventArgs e)
         {
 
+            textBox10.SendToBack();
+            textBox11.SendToBack();
+            totalc.SendToBack();
+            actualizarordenes();
             bloquear();
+            MaximizeBox = false;
         }
 
         void ActualizarInventario()
@@ -44,6 +50,8 @@ namespace repuestos.Formularios
                 dgv_Inventario.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString(), row[8].ToString(), row[9].ToString());
             }
         }
+
+
 
         private void tabInventarioGeneral_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -249,6 +257,7 @@ namespace repuestos.Formularios
             btn_guardarC.Enabled = false;
             btn_cancelarC.Enabled = false;
 
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -409,21 +418,25 @@ namespace repuestos.Formularios
                     
                      if(row[3].ToString() != "0")
                     {
+                        textBox11.Text = row[0].ToString();
                         textBox3.Text = row[2].ToString();
                         textBox2.Text = row[3].ToString();
                     }
                     else if (row[4].ToString() != "0")
                     {
+                        textBox11.Text = row[0].ToString();
                         textBox3.Text = row[2].ToString();
                         textBox2.Text = row[4].ToString();
                     }
                     else if (row[5].ToString() != "0")
                     {
+                        textBox11.Text = row[0].ToString();
                         textBox3.Text = row[2].ToString();
                         textBox2.Text = row[5].ToString();
                     }
                     else if (row[6].ToString() != "0")
                     {
+                        textBox11.Text = row[0].ToString();
                         textBox3.Text = row[2].ToString();
                         textBox2.Text = row[6].ToString();
                     }
@@ -442,6 +455,25 @@ namespace repuestos.Formularios
              
         }
 
+
+        void limpiar()
+        {
+
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            dataGridView1.Columns.Clear();
+
+        }
+
+
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -458,7 +490,7 @@ namespace repuestos.Formularios
                 totalc.Text = total.ToString();
 
 
-                dataGridView1.Rows.Add(textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
+                dataGridView1.Rows.Add(textBox11.Text,textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
                 comboBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -506,15 +538,156 @@ namespace repuestos.Formularios
             {
 
                 DataTable dtConsultar = logic.ocEncabezadoProve(nombre);
+               
                 foreach (DataRow row in dtConsultar.Rows)
                 {
-                   string id = textBox10.Text;
 
-                DataTable dtinsertar = logic.ocEncabezado(total,fecha,id);
+                    textBox10.Text = row[0].ToString();
+                    string id = textBox10.Text;
+                    DataTable dtinsertar = logic.ocEncabezado(total,fecha,id);
 
 
+
+                    string datos1;
+                    string datos2;
+                    string datos3;
+                    string datos4;
+                    string datos5;
+                    string idproducto;
+                    string idOC;
+
+
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        datos1 = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                        datos2 = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                        datos3 = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                        datos4 = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                        datos5 = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                      //  MessageBox.Show("Datos: " + datos2);
+                        DataTable dtConsultars = logic.ocDetalleRepuesto(datos2);
+
+                        foreach (DataRow rowss in dtConsultars.Rows)
+                        {
+                            idproducto = rowss[0].ToString();
+                           // MessageBox.Show("Id Productos " + idproducto);
+
+                            DataTable dtConsultarss = logic.ocDetallEcompra();
+
+                            foreach (DataRow rowssS in dtConsultarss.Rows)
+                            {
+                                idOC = rowssS[0].ToString();
+                               // MessageBox.Show("Id orden de Compra " + idOC);
+                                DataTable insertarOC = logic.InsertarOC(idOC,idproducto, datos4, datos3);
+
+                            }
+                        }
+
+                       
+                    }
+
+                    MessageBox.Show("Orden de Compra Guardada");
+                    comboBox1.Text = "";
+                    comboBox2.Text = "";
+                    textBox6.Text = "";
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox9.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    dataGridView1.Columns.Clear();
+                    bloquear();
+
+                    limpiar();
                 }
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           
+            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+            string datos1;
+            string datos2;
+            string datos3;
+            string datos4;
+            string datos5;
+
+            int suma = 0;
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                datos1 = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                datos2 = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                datos3 = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                datos4 = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                datos5 = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                int totals = Convert.ToInt32(datos5);
+
+                suma = totals ;
+            }
+
+            string total1 = suma.ToString();
+            textBox5.Text = total1;
+        }
+
+
+        void actualizarordenes()
+        {
+            try
+            {
+                DataTable dtobtenertipoRep = logic.ordenescompra();
+
+                foreach (DataRow row in dtobtenertipoRep.Rows)
+                {
+                   dataGridView2.Rows.Add(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa diseno recuperando los tipos de pago: " + ex.Message);
+            }
+        }
+
+        void actualizar()
+        {
+            string datos1;
+            string datos2;
+            string datos3;
+            string datos4;
+            string datos5;
+
+            int suma = 0;
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                datos1 = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                datos2 = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                datos3 = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                datos4 = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                datos5 = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                int totals = Convert.ToInt32(datos5);
+
+                suma = totals + totals;
+            }
+
+            string total1 = suma.ToString();
+            textBox5.Text = total1;
+        }
+
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }
+    

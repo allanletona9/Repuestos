@@ -252,6 +252,78 @@ namespace Logic
                 return null;
             }
 
+        } 
+        
+        public DataTable ocDetalleRepuesto(string producto)
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.ocDetalleRepuesto(producto);
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        } 
+        
+        public DataTable ocDetallEcompra()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.ocDetallEcompra();
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+        
+        public DataTable InsertarOC(String idOC, string Idre,String precio,string cantidad)
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.InsertarOC(idOC,Idre,precio,cantidad);
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
+        }
+        
+        public DataTable ordenescompra()
+        {
+            try
+            {
+
+                SqlDataAdapter sqlInsertar = dal_datos.ordenescompra();
+                DataTable dtInsertar = new DataTable();
+                sqlInsertar.Fill(dtInsertar);
+                return dtInsertar;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de tipo de repuesto, capa logica: " + ex.Message);
+                return null;
+            }
+
         }
         // ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -463,6 +535,7 @@ public DataTable logicaEliminarproveedores(int id)
                 return null;
             }
         }
+       
 
         public DataTable logicaGetProductoKardex(int iCodigoproducto)
         {
