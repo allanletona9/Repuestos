@@ -588,7 +588,7 @@ public SqlDataAdapter eliminarproveedores(int id)
             try
             {
 
-                string sInsertarusuarios = "INSERT INTO tbl_usuarios(nombre_persona,nombre_usuario,password_usuario,estado_usuario  ) VALUES ( '" + nombre + "', '" + apellido + "','" + password + "', '1' ) ";
+                string sInsertarusuarios = "INSERT INTO tbl_usuarios(nombre_usuario, apellido_usuario ,password_usuario,estado_usuario  ) VALUES ( '" + nombre + "', '" + apellido + "',ENCRYPTBYPASSPHRASE('password', '" + password + "'), '1' ) ";
                 SqlDataAdapter sqlInsertarusuarios = new SqlDataAdapter(sInsertarusuarios, cn.conectar());
                 sqlInsertarusuarios.SelectCommand.Connection.Close();
                 return sqlInsertarusuarios;
