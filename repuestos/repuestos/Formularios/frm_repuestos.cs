@@ -66,6 +66,16 @@ namespace repuestos.Formularios
                 fact.txtexistencias_actuales.Text = dgvRepuestos.CurrentRow.Cells[5].Value.ToString();
                 this.Close();
             }
+            else if(iParametro == 3)
+            {
+                Consultas consults = Owner as Consultas;
+                consults.txtCodigoProd.Text = dgvRepuestos.CurrentRow.Cells[0].Value.ToString();
+                consults.txtDescripcion.Text = dgvRepuestos.CurrentRow.Cells[2].Value.ToString();
+                this.Close();
+            }else if(iParametro == 4)
+            {
+                //DIEGO
+            }
             
         }
 

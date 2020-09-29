@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimientos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Clientes = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -185,6 +182,7 @@
             this.dvgMarca = new System.Windows.Forms.DataGridView();
             this.Codigo_Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modificarM = new System.Windows.Forms.Button();
             this.btn_guardarM = new System.Windows.Forms.Button();
@@ -211,6 +209,7 @@
             this.dvgPago = new System.Windows.Forms.DataGridView();
             this.Codigo_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modT = new System.Windows.Forms.Button();
             this.btn_guardarT = new System.Windows.Forms.Button();
@@ -265,18 +264,16 @@
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.dvg_usuarios = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_modU = new System.Windows.Forms.Button();
             this.btn_guardarU = new System.Windows.Forms.Button();
             this.btn_eliminarU = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.btn_ingresarU = new System.Windows.Forms.Button();
-            this.Estado4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Clientes.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -789,7 +786,6 @@
             this.txt_preciofac.Name = "txt_preciofac";
             this.txt_preciofac.Size = new System.Drawing.Size(33, 26);
             this.txt_preciofac.TabIndex = 33;
-            this.txt_preciofac.Visible = false;
             // 
             // label5
             // 
@@ -2096,6 +2092,12 @@
             this.Nombre_Marca.Name = "Nombre_Marca";
             this.Nombre_Marca.ReadOnly = true;
             // 
+            // Estado4
+            // 
+            this.Estado4.HeaderText = "Estado";
+            this.Estado4.Name = "Estado4";
+            this.Estado4.ReadOnly = true;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 6;
@@ -2421,6 +2423,12 @@
             this.Nombre_Pago.Name = "Nombre_Pago";
             this.Nombre_Pago.ReadOnly = true;
             // 
+            // Estado5
+            // 
+            this.Estado5.HeaderText = "Estado";
+            this.Estado5.Name = "Estado5";
+            this.Estado5.ReadOnly = true;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 6;
@@ -2712,38 +2720,14 @@
             this.dvg_TipoRep.AllowUserToAddRows = false;
             this.dvg_TipoRep.AllowUserToDeleteRows = false;
             this.dvg_TipoRep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg_TipoRep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dvg_TipoRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg_TipoRep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo_Tipo_Repuesto,
             this.Nombre_Tipo_Repuesto,
             this.Estado2});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvg_TipoRep.DefaultCellStyle = dataGridViewCellStyle14;
             this.dvg_TipoRep.Location = new System.Drawing.Point(232, 173);
             this.dvg_TipoRep.Name = "dvg_TipoRep";
             this.dvg_TipoRep.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvg_TipoRep.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dvg_TipoRep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvg_TipoRep.Size = new System.Drawing.Size(664, 270);
             this.dvg_TipoRep.TabIndex = 23;
@@ -3109,6 +3093,30 @@
             this.dvg_usuarios.TabIndex = 0;
             this.dvg_usuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg_usuarios_CellDoubleClick);
             // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // Estado6
+            // 
+            this.Estado6.HeaderText = "Estado";
+            this.Estado6.Name = "Estado6";
+            this.Estado6.ReadOnly = true;
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 6;
@@ -3197,42 +3205,6 @@
             this.btn_ingresarU.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_ingresarU.UseVisualStyleBackColor = true;
             this.btn_ingresarU.Click += new System.EventHandler(this.btn_ingresarU_Click);
-            // 
-            // Estado4
-            // 
-            this.Estado4.HeaderText = "Estado";
-            this.Estado4.Name = "Estado4";
-            this.Estado4.ReadOnly = true;
-            // 
-            // Estado5
-            // 
-            this.Estado5.HeaderText = "Estado";
-            this.Estado5.Name = "Estado5";
-            this.Estado5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // Estado6
-            // 
-            this.Estado6.HeaderText = "Estado";
-            this.Estado6.Name = "Estado6";
-            this.Estado6.ReadOnly = true;
             // 
             // Mantenimientos
             // 

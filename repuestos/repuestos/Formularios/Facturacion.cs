@@ -83,7 +83,14 @@ namespace repuestos.Formularios
         public static double total = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txt_facturarsinexistencias.Text == "1")
+            if (string.IsNullOrEmpty(txtcodrep.Text) || string.IsNullOrEmpty(txtNombreRep.Text) || string.IsNullOrEmpty(txtPrecio.Text)
+                    || string.IsNullOrEmpty(txtCant.Text))
+            {
+                MessageBox.Show("Faltan campos por llenar");
+                return;
+            }
+
+            if (txt_facturarsinexistencias.Text == "1")
             {
                 if (string.IsNullOrEmpty(txtcodrep.Text) || string.IsNullOrEmpty(txtNombreRep.Text) || string.IsNullOrEmpty(txtPrecio.Text)
                     || string.IsNullOrEmpty(txtCant.Text))

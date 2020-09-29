@@ -39,7 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAceptarLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnAceptarLogin);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Location = new System.Drawing.Point(247, 6);
@@ -177,21 +177,21 @@
             this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 16;
             // 
-            // button1
+            // btnAceptarLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(169, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 46);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "ACEPTAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAceptarLogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAceptarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAceptarLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.btnAceptarLogin.FlatAppearance.BorderSize = 0;
+            this.btnAceptarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarLogin.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarLogin.Location = new System.Drawing.Point(169, 219);
+            this.btnAceptarLogin.Name = "btnAceptarLogin";
+            this.btnAceptarLogin.Size = new System.Drawing.Size(219, 46);
+            this.btnAceptarLogin.TabIndex = 14;
+            this.btnAceptarLogin.Text = "ACEPTAR";
+            this.btnAceptarLogin.UseVisualStyleBackColor = false;
+            this.btnAceptarLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -274,7 +274,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAceptarLogin;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox Txt_clave;
         private System.Windows.Forms.CheckBox checkBox1;
