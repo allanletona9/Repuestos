@@ -520,27 +520,49 @@ namespace repuestos.Formularios
 
             string sdescripcion = txt_descrip.Text;
             //string sPrecio_unitario = txt_precio1.Text;
-           
-            string sid_tipo_repuesto = lIdTipoPago[comboBox2.SelectedIndex].ToString();    
-            string scod_fabricante =txt_codF.Text;  
-            string scosto_repuesto1 =txt_precio1.Text;
-            string scosto_repuesto2 = txt_precio2.Text;
-            string scosto_repuesto3 = txt_precio3.Text;
-            string scosto_repuesto4 = txt_precio4.Text;
-            string sprecio_venta1= txt_venta1.Text;
-            string sprecio_venta2 = txt_venta2.Text;
-            string sprecio_venta3 = txt_venta3.Text;
-            string sprecio_venta4 = txt_venta4.Text;
-            int scantidad = Convert.ToInt32(txt_cantidad.Text); 
-            string spreciofac = txt_preciofac.Text;
-            string sfacturar_sin_existencia =gpb_fact_sin_exp.Text;
-            string sEstado1 = ""; 
-            int sprecio_factura = Convert.ToInt32(txt_preciofac.Text);
-            int iCodigo = Convert.ToInt32(txt_codigo.Text);
 
-           
-                  
-                   
+            string sid_tipo_repuesto ="";
+            string scod_fabricante = "";
+            string scosto_repuesto1 = "";
+            string scosto_repuesto2 = "";
+            string scosto_repuesto3 = "";
+            string scosto_repuesto4 = "";
+            string sprecio_venta1 = "";
+            string sprecio_venta2 = "";
+            string sprecio_venta3 = "";
+            string sprecio_venta4 = "";
+            int scantidad = 0;
+            string spreciofac = "";
+            string sfacturar_sin_existencia = "";
+            string sEstado1 = "";
+            int sprecio_factura = 0;
+            int iCodigo =0;
+
+            try
+            {
+                 sid_tipo_repuesto = lIdTipoPago[comboBox2.SelectedIndex].ToString();
+                 scod_fabricante = txt_codF.Text;
+                 scosto_repuesto1 = txt_precio1.Text;
+                 scosto_repuesto2 = txt_precio2.Text;
+                 scosto_repuesto3 = txt_precio3.Text;
+                 scosto_repuesto4 = txt_precio4.Text;
+                 sprecio_venta1 = txt_venta1.Text;
+                 sprecio_venta2 = txt_venta2.Text;
+                 sprecio_venta3 = txt_venta3.Text;
+                 sprecio_venta4 = txt_venta4.Text;
+                 scantidad = Convert.ToInt32(txt_cantidad.Text);
+                 spreciofac = txt_preciofac.Text;
+                 sfacturar_sin_existencia = gpb_fact_sin_exp.Text;
+                 sEstado1 = "";
+                try { sprecio_factura = Convert.ToInt32(txt_preciofac.Text); }catch{ sprecio_factura = 1;  }
+                 //iCodigo = Convert.ToInt32(txt_codigo.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Faltan campos por llenar");
+                return;
+            }
+            
           
             if (boton_ingreso == true)
             {
@@ -549,6 +571,7 @@ namespace repuestos.Formularios
                 {
                    
                     MessageBox.Show("Faltan campos por llenar");
+                    return;
                 }
 
                 else
@@ -557,8 +580,8 @@ namespace repuestos.Formularios
                         sEstado1 = "1";
                     else
                         sEstado1 = "0";
-                    DataTable dtInsertar = logic.logicaInsertarRepuestos(iCodigo, sid_tipo_repuesto, scod_fabricante, sdescripcion, scosto_repuesto1, scosto_repuesto2, scosto_repuesto3, scosto_repuesto4, sprecio_venta1, sprecio_venta2, sprecio_venta3, sprecio_venta4, scantidad,sEstado1,sprecio_factura);
-                    DataTable dtInsertarI = logic.logicaInsertarinventario(iCodigo);
+                    DataTable dtInsertar = logic.logicaInsertarRepuestos(sid_tipo_repuesto, scod_fabricante, sdescripcion, scosto_repuesto1, scosto_repuesto2, scosto_repuesto3, scosto_repuesto4, sprecio_venta1, sprecio_venta2, sprecio_venta3, sprecio_venta4, scantidad,sEstado1,sprecio_factura);
+                    //DataTable dtInsertarI = logic.logicaInsertarinventario(iCodigo);
                     MessageBox.Show("Repuestos Ingresado Exitosamente e Inventario actualizado");
                     dvgRepuestos.Rows.Clear();
                     limpiarForm();

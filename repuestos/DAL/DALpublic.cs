@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entity;
 using System.Data.SqlClient;
-
+using System.Data;
 
 namespace DAL
 {
@@ -14,18 +14,18 @@ namespace DAL
         conexion cn = new conexion();
         public SqlDataAdapter obtenerProductos()
         {
-        try{
-        
-        string sRecuperarRepuestos = "select * from tbl_repuestos";
-        SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
-        sqlRecuperarRepuestos.SelectCommand.Connection.Close();
-            return sqlRecuperarRepuestos;
+            try {
 
-        }catch(Exception ex)
-        {
-        Console.WriteLine("Error en la obtencion de Repuestos: "  +  ex.Message);
-        return null;
-}
+                string sRecuperarRepuestos = "select * from tbl_repuestos";
+                SqlDataAdapter sqlRecuperarRepuestos = new SqlDataAdapter(sRecuperarRepuestos, cn.conectar());
+                sqlRecuperarRepuestos.SelectCommand.Connection.Close();
+                return sqlRecuperarRepuestos;
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Error en la obtencion de Repuestos: " + ex.Message);
+                return null;
+            }
         }
 
         public SqlDataAdapter buscarRepuestos(string nombre)
@@ -37,16 +37,16 @@ namespace DAL
 
 
 
-       
 
-        public SqlDataAdapter insertarRepuestos(int id_repuesto,string id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, int cantidad, string facturar_sin_existencia,int precio_factura)
+
+        public SqlDataAdapter insertarRepuestos(string id_tipo_repuesto, string cod_fabricante, string descripcion, string costo_repuesto1, string costo_repuesto2, string costo_repuesto3, string costo_repuesto4, string precio_venta1, string precio_venta2, string precio_venta3, string precio_venta4, int cantidad, string facturar_sin_existencia,int precio_factura)
         {
             try
             {
                
 
                
-                string sInsertarRepuestos = "INSERT INTO tbl_repuestos( PK_idrepuesto ,PK_idtiporepuesto,codigo_fabricante, descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura,estado_repuesto ) VALUES (  '" + id_repuesto + "', '" + id_tipo_repuesto + "', '" + cod_fabricante + "','" + descripcion + "','" + costo_repuesto1 + "','" + costo_repuesto2 + "','" + costo_repuesto3 + "','" + costo_repuesto4 + "','" + precio_venta1 + "','" + precio_venta2 + "','" + precio_venta3 + "','" + precio_venta4 + "','" + cantidad + "', '" + facturar_sin_existencia + "','" + precio_factura + "', '1' ) ";
+                string sInsertarRepuestos = "INSERT INTO tbl_repuestos(PK_idtiporepuesto,codigo_fabricante, descripcion_repuesto,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura,estado_repuesto ) VALUES ('" + id_tipo_repuesto + "', '" + cod_fabricante + "','" + descripcion + "','" + costo_repuesto1 + "','" + costo_repuesto2 + "','" + costo_repuesto3 + "','" + costo_repuesto4 + "','" + precio_venta1 + "','" + precio_venta2 + "','" + precio_venta3 + "','" + precio_venta4 + "','" + cantidad + "', '" + facturar_sin_existencia + "','" + precio_factura + "', '1' ) ";
                 SqlDataAdapter sqlInsertarRepuestos = new SqlDataAdapter(sInsertarRepuestos, cn.conectar());
                 sqlInsertarRepuestos.SelectCommand.Connection.Close();
                 return sqlInsertarRepuestos;
@@ -929,6 +929,43 @@ public SqlDataAdapter eliminarproveedores(int id)
                 return null;
             }
         }
+
+        public SqlDataAdapter insertarDevolucion(Int32 idrep, Int32 cantidad)
+        {
+            try
+            {
+
+
+                string sInsertartipore = "INSERT INTO tbl_devoluciones(PK_idrepuesto,cantidad ) VALUES ( '"+idrep+"', '"+cantidad+"' ) ";
+                SqlDataAdapter sqlInsertartipore = new SqlDataAdapter(sInsertartipore, cn.conectar());
+                sqlInsertartipore.SelectCommand.Connection.Close();
+                return sqlInsertartipore;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de devoluciones en capa datos: " + ex.Message);
+                return null;
+            }
+        }
+
+        public bool aumentarInventario()
+        {
+            try
+            {
+
+                SqlCommand sqlInsertar = new SqlCommand("spAumentaInventario", cn.conectar());
+                sqlInsertar.CommandType = CommandType.StoredProcedure;
+                sqlInsertar.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en la insercion de devoluciones en capa datos: " + ex.Message);
+                return false;
+            }
+        }
+        
 
     }
 }
