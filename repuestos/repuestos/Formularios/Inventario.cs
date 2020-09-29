@@ -474,6 +474,11 @@ namespace repuestos.Formularios
         }
 
 
+        string cantidad11;
+        string precios;
+        string total11;
+        int productoigual;
+
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -484,13 +489,57 @@ namespace repuestos.Formularios
 
                 costo = Convert.ToInt32(textBox2.Text);
                 cantidad = Convert.ToInt32(textBox4.Text);
-
                 total = costo * cantidad;
-
                 totalc.Text = total.ToString();
+                string sumcantidad;
 
 
-                dataGridView1.Rows.Add(textBox11.Text,textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    if (fila.Cells[1].Value.ToString() == textBox3.Text)
+                    {
+                        cantidad11 = fila.Cells[2].Value.ToString();
+                        precios = fila.Cells[3].Value.ToString();
+                        total11 = fila.Cells[4].Value.ToString();
+                    }
+                }
+
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    sumcantidad = textBox4.Text.ToString();
+                    int cantidadnuevo = Convert.ToInt32(sumcantidad);
+                    int cantidadguardadad = Convert.ToInt32(cantidad11);
+                    int sumacantidads = 0;
+                    sumacantidads = cantidadnuevo + cantidadguardadad;
+
+                    int totales = Convert.ToInt32(total11);
+                    int precio = Convert.ToInt32(precios);
+
+                    int multotal = 0;
+
+                    multotal = sumacantidads * precio;
+
+                    if (fila.Cells[1].Value.ToString() == textBox3.Text.ToString())
+                    {
+                        fila.Cells[2].Value = sumacantidads;
+                        fila.Cells[4].Value = multotal;
+
+                        productoigual = 1;
+                    }
+
+                }
+
+
+                if (productoigual == 0)
+                {
+                    dataGridView1.Rows.Add(textBox11.Text, textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
+                }
+                else
+                {
+                    productoigual = 0;
+                }
+
+
                 comboBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -506,7 +555,7 @@ namespace repuestos.Formularios
 
                 suma = var1 + var2;
 
-               string total1 = suma.ToString();
+                string total1 = suma.ToString();
 
                 textBox5.Text = total1;
 
