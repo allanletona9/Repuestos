@@ -30,50 +30,57 @@ namespace repuestos.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
+            Form1 principal = new Form1();
+            AddOwnedForm(principal);
+            principal.label2.Text = Txt_usuario.Text;
+            this.Hide();
+            principal.ShowDialog();
+            this.Close();
 
 
-            ProcedimientoLogin procedimientoLogin = new ProcedimientoLogin();
+            //ProcedimientoLogin procedimientoLogin = new ProcedimientoLogin();
 
-            if (Txt_usuario.Text.Trim() == "")
-            {
-                MessageBox.Show("Debe ingresar un usuario");
-            }
-            else
-            {
-                if (Txt_clave.Text.Trim() == "")
-                {
-                    MessageBox.Show("Debe ingresar su contraseña");
-                }
-                else
-                {
-                    try
-                    {
-                        bool bExisteUsuario = procedimientoLogin.llamarProcedimiento(Txt_usuario.Text, Txt_clave.Text);
+            //if (Txt_usuario.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("Debe ingresar un usuario");
+            //}
+            //else
+            //{
+            //    if (Txt_clave.Text.Trim() == "")
+            //    {
+            //        MessageBox.Show("Debe ingresar su contraseña");
+            //    }
+            //    else
+            //    {
+            //        try
+            //        {
+            //            bool bExisteUsuario = procedimientoLogin.llamarProcedimiento(Txt_usuario.Text, Txt_clave.Text);
 
-                        if (bExisteUsuario)
-                        {
-                           
-                            Form1 principal = new Form1();
-                            AddOwnedForm(principal);                        
-                            principal.label2.Text = Txt_usuario.Text;
-                            this.Hide();
-                            principal.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuario o Contraseña Incorrecta", "Verificacion de Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        }
 
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                        MessageBox.Show("No Conecto La Base de Datos", "Verificar Conexión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-            }
+            //            if (bExisteUsuario)
+            //            {
+
+            //                Form1 principal = new Form1();
+            //                AddOwnedForm(principal);                        
+            //                principal.label2.Text = Txt_usuario.Text;
+            //                this.Hide();
+            //                principal.ShowDialog();
+            //                this.Close();
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Usuario o Contraseña Incorrecta", "Verificacion de Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //            }
+
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            Console.WriteLine(ex);
+            //            MessageBox.Show("No Conecto La Base de Datos", "Verificar Conexión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //        }
+            //    }
+            //}
 
 
         }

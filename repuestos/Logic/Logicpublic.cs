@@ -40,9 +40,9 @@ namespace Logic
 
        
 
-        public DataTable logicaInsertarRepuestos(int id_repuesto, string id_tipo_repuesto,string cod_fabricante, string descripcion,string costo_repuesto1,string costo_repuesto2,string costo_repuesto3,string costo_repuesto4,string precio_venta1,string precio_venta2,string precio_venta3,string precio_venta4, int cantidad,string facturar_sin_existencia,int precio_factura)
+        public DataTable logicaInsertarRepuestos(string id_tipo_repuesto,string cod_fabricante, string descripcion,string costo_repuesto1,string costo_repuesto2,string costo_repuesto3,string costo_repuesto4,string precio_venta1,string precio_venta2,string precio_venta3,string precio_venta4, int cantidad,string facturar_sin_existencia,int precio_factura)
         {
-            SqlDataAdapter sqlInsertar =dal_datos.insertarRepuestos(id_repuesto,id_tipo_repuesto,cod_fabricante, descripcion,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura);
+            SqlDataAdapter sqlInsertar =dal_datos.insertarRepuestos(id_tipo_repuesto,cod_fabricante, descripcion,costo_repuesto1,costo_repuesto2,costo_repuesto3,costo_repuesto4,precio_venta1,precio_venta2,precio_venta3,precio_venta4,cantidad,facturar_sin_existencia,precio_factura);
             DataTable dtInsertar = new DataTable();
             sqlInsertar.Fill(dtInsertar);
             return dtInsertar;
@@ -753,6 +753,28 @@ public DataTable logicaEliminarproveedores(int id)
             return dtEliminar;
         }
 
+        public DataTable insertarDevolucion(Int32 idrep, Int32 cantidad)
+        {
+            SqlDataAdapter sqlInsertar = dal_datos.insertarDevolucion(idrep, cantidad);
+            DataTable dtInsertar = new DataTable();
+            sqlInsertar.Fill(dtInsertar);
+            return dtInsertar;
+        }
+
+        public bool aumentarInventario()
+        {
+            try
+            {
+                return dal_datos.aumentarInventario();
+            }
+            catch
+            {
+                return false;
+            }
+           
+        }
+
+        
 
     }
 }
