@@ -35,6 +35,7 @@ namespace repuestos.Formularios
 
             textBox10.SendToBack();
             textBox11.SendToBack();
+            textBox12.SendToBack();
             totalc.SendToBack();
             actualizarordenes();
             bloquear();
@@ -243,7 +244,7 @@ namespace repuestos.Formularios
 
         void bloquear()
         {
-            comboBox1.Enabled = false;
+            
             comboBox2.Enabled = false;
             textBox6.Enabled = false;
             textBox7.Enabled = false;
@@ -254,6 +255,7 @@ namespace repuestos.Formularios
             textBox4.Enabled = false;
             textBox5.Enabled = false;
             button4.Enabled = false;
+            button6.Enabled = false;
             btn_guardarC.Enabled = false;
             btn_cancelarC.Enabled = false;
 
@@ -305,31 +307,12 @@ namespace repuestos.Formularios
         }
 
 
-        private void llenarproductos()
-        {
-            comboBox1.Items.Clear();
-            lIdTipoPago.Clear();
-            try
-            {
-                DataTable dtobtenertipoRep = logic.logic_ObtenerPrductosOC();
-
-                foreach (DataRow row in dtobtenertipoRep.Rows)
-                {
-                    comboBox1.Items.Add(row[1].ToString());
-                    lIdTipoPago.Add(Convert.ToInt32(row[0].ToString()));
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error en capa diseno recuperando los tipos de pago: " + ex.Message);
-            }
-        }
+        
 
 
         private void button5_Click(object sender, EventArgs e)
         {
-            comboBox1.Enabled = true;
+            
             comboBox2.Enabled = true;
             textBox6.Enabled = false;
             textBox7.Enabled = false;
@@ -340,16 +323,16 @@ namespace repuestos.Formularios
             textBox4.Enabled = true;
             textBox5.Enabled = false;
             button4.Enabled = true;
+            button6.Enabled = true;
             btn_guardarC.Enabled = true;
             btn_cancelarC.Enabled = true;
 
             llenarproveedores();
-            llenarproductos();
         }
 
         private void btn_cancelarC_Click(object sender, EventArgs e)
         {
-            comboBox1.Enabled = false;
+           
             comboBox2.Enabled = false;
             textBox6.Enabled = false;
             textBox7.Enabled = false;
@@ -360,10 +343,11 @@ namespace repuestos.Formularios
             textBox4.Enabled = false;
             textBox5.Enabled = false;
             button4.Enabled = false;
+            button6.Enabled = false;
             btn_guardarC.Enabled = false;
             btn_cancelarC.Enabled = false;
 
-            comboBox1.Text = "";
+           
             comboBox2.Text = "";
             textBox6.Text = "";
             textBox7.Text = "";
@@ -401,52 +385,6 @@ namespace repuestos.Formularios
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string valor = comboBox1.SelectedItem.ToString();
-
-            if (valor == null)
-            {
-                MessageBox.Show("Faltan campos por llenar");
-            }
-            else
-            {
-
-                DataTable dtConsultar = logic.productosoc(valor);
-                foreach (DataRow row in dtConsultar.Rows)
-                {
-                    
-                     if(row[3].ToString() != "0")
-                    {
-                        textBox11.Text = row[0].ToString();
-                        textBox3.Text = row[2].ToString();
-                        textBox2.Text = row[3].ToString();
-                    }
-                    else if (row[4].ToString() != "0")
-                    {
-                        textBox11.Text = row[0].ToString();
-                        textBox3.Text = row[2].ToString();
-                        textBox2.Text = row[4].ToString();
-                    }
-                    else if (row[5].ToString() != "0")
-                    {
-                        textBox11.Text = row[0].ToString();
-                        textBox3.Text = row[2].ToString();
-                        textBox2.Text = row[5].ToString();
-                    }
-                    else if (row[6].ToString() != "0")
-                    {
-                        textBox11.Text = row[0].ToString();
-                        textBox3.Text = row[2].ToString();
-                        textBox2.Text = row[6].ToString();
-                    }
-                     else
-                        {
-                             MessageBox.Show("Datos de Repuesto no Encontrado,\nVerificarlo en Mantenimientos/Repuestos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -459,7 +397,7 @@ namespace repuestos.Formularios
         void limpiar()
         {
 
-            comboBox1.Text = "";
+           
             comboBox2.Text = "";
             textBox6.Text = "";
             textBox7.Text = "";
@@ -532,15 +470,13 @@ namespace repuestos.Formularios
 
                 if (productoigual == 0)
                 {
-                    dataGridView1.Rows.Add(textBox11.Text, textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
+                    dataGridView1.Rows.Add(textBox12.Text, textBox3.Text, textBox4.Text, textBox2.Text, totalc.Text);
                 }
                 else
                 {
                     productoigual = 0;
                 }
 
-
-                comboBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
@@ -563,10 +499,8 @@ namespace repuestos.Formularios
             catch
             {
                 MessageBox.Show("Favor Ingresar Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
-        }
+    }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -637,7 +571,6 @@ namespace repuestos.Formularios
                     }
 
                     MessageBox.Show("Orden de Compra Guardada");
-                    comboBox1.Text = "";
                     comboBox2.Text = "";
                     textBox6.Text = "";
                     textBox7.Text = "";
@@ -659,28 +592,17 @@ namespace repuestos.Formularios
         {
            
             dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
-            string datos1;
-            string datos2;
-            string datos3;
             string datos4;
-            string datos5;
 
-            int suma = 0;
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            double valor = 0; //declaramos una variable double
+            foreach (System.Windows.Forms.DataGridViewRow row in dataGridView1.Rows)
             {
-                datos1 = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                datos2 = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                datos3 = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                datos4 = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                datos5 = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                int totals = Convert.ToInt32(datos5);
-
-                suma = totals ;
+                if (row.Cells["totales"].Value.ToString() != "")
+                {
+                    valor += Convert.ToDouble(row.Cells["totales"].Value.ToString());
+                }
             }
-
-            string total1 = suma.ToString();
+            string total1 = valor.ToString();
             textBox5.Text = total1;
         }
 
@@ -736,7 +658,22 @@ namespace repuestos.Formularios
             
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frm_repuestos orden = new frm_repuestos(4);
+            AddOwnedForm(orden);
+            orden.Show();
+        }
 
+        private void totalc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

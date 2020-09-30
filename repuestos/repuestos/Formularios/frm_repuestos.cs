@@ -72,9 +72,14 @@ namespace repuestos.Formularios
                 consults.txtCodigoProd.Text = dgvRepuestos.CurrentRow.Cells[0].Value.ToString();
                 consults.txtDescripcion.Text = dgvRepuestos.CurrentRow.Cells[2].Value.ToString();
                 this.Close();
-            }else if(iParametro == 4)
+            }
+            else if(iParametro == 4)
             {
-                //DIEGO
+                Inventario orden = Owner as Inventario;
+                orden.textBox12.Text = dgvRepuestos.CurrentRow.Cells[0].Value.ToString();
+                orden.textBox2.Text = dgvRepuestos.CurrentRow.Cells[3].Value.ToString();
+                orden.textBox3.Text = dgvRepuestos.CurrentRow.Cells[2].Value.ToString();
+                this.Close();
             }
             
         }
